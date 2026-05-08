@@ -1,0 +1,136 @@
+{
+  "fugaSpells": [
+    {
+      "selfHealth": 100,
+      "cooldownTotal": 0,
+      "cooldownActive": 0,
+      "totalCooldown": 0,
+      "activeCooldown": 0,
+      "outfitId": 0,
+      "enableTimeSpell": false,
+      "widgetPos": {
+        "x": 0,
+        "y": 0
+      },
+      "index": 1,
+      "enabled": false,
+      "spellCast": "undo cho kosoku",
+      "orangeSpell": "",
+      "onScreen": "undo cho kosoku"
+    },
+    {
+      "selfHealth": 100,
+      "cooldownTotal": 0,
+      "cooldownActive": 0,
+      "totalCooldown": 0,
+      "activeCooldown": 0,
+      "outfitId": 0,
+      "enableTimeSpell": false,
+      "widgetPos": {
+        "x": 0,
+        "y": 0
+      },
+      "index": 2,
+      "enabled": false,
+      "spellCast": "genjutsu no hanabira",
+      "orangeSpell": "",
+      "onScreen": "genjutsu no hanabira"
+    },
+    {
+      "selfHealth": 100,
+      "cooldownTotal": 0,
+      "cooldownActive": 0,
+      "totalCooldown": 0,
+      "activeCooldown": 0,
+      "outfitId": 0,
+      "enableTimeSpell": false,
+      "widgetPos": {
+        "x": 0,
+        "y": 0
+      },
+      "index": 3,
+      "enabled": false,
+      "spellCast": "dai magen shinkirou",
+      "orangeSpell": "",
+      "onScreen": "dai magen shinkirou"
+    },
+    {
+      "selfHealth": 100,
+      "cooldownTotal": 0,
+      "cooldownActive": 0,
+      "totalCooldown": 0,
+      "activeCooldown": 0,
+      "outfitId": 0,
+      "enableTimeSpell": false,
+      "widgetPos": {
+        "x": 0,
+        "y": 0
+      },
+      "index": 4,
+      "enabled": false,
+      "spellCast": "gentei jutsu",
+      "orangeSpell": "",
+      "onScreen": "gentei jutsu"
+    },
+    {
+      "selfHealth": 35,
+      "cooldownTotal": 50,
+      "cooldownActive": 5,
+      "outfitId": 0,
+      "enableTimeSpell": true,
+      "activeByOutfit": false,
+      "enabled": true,
+      "spellCast": "magen shinkirou",
+      "widgetPos": {
+        "x": 534,
+        "y": 479
+      },
+      "index": 5,
+      "isTimeSpell": false,
+      "orangeSpell": "magen shinkirou",
+      "onScreen": "magen shinkirou"
+    },
+    {
+      "selfHealth": 50,
+      "cooldownTotal": 35,
+      "cooldownActive": 10,
+      "outfitId": 0,
+      "enableTimeSpell": true,
+      "activeByOutfit": false,
+      "enabled": true,
+      "spellCast": "kawarimi no jutsu",
+      "widgetPos": {
+        "x": 542,
+        "y": 500
+      },
+      "index": 6,
+      "isTimeSpell": false,
+      "orangeSpell": "kawarimi",
+      "onScreen": "Kawa"
+    },
+    {
+      "selfHealth": 90,
+      "cooldownTotal": 1,
+      "cooldownActive": 0,
+      "outfitId": 0,
+      "enableTimeSpell": true,
+      "widgetPos": {
+        "x": 530,
+        "y": 523
+      },
+      "enabled": true,
+      "activeByOutfit": false,
+      "index": 7,
+      "isTimeSpell": false,
+      "spellCast": "bunshin no jutsu",
+      "orangeSpell": "bunshin no jutsu",
+      "onScreen": "bunshin no jutsu"
+    }
+  ],
+  "comboSpells": [
+
+  ],
+  "keySpells": [
+
+  ]
+}

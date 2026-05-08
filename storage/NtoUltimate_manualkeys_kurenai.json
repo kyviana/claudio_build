@@ -1,0 +1,78 @@
+{
+  "keys": [
+    {
+      "mode": "say",
+      "sayText": "concentrate chakra feet",
+      "enabled": false,
+      "input": "",
+      "blockOnChat": true
+    },
+    {
+      "mode": "say",
+      "sayText": "chakura kanchi",
+      "enabled": false,
+      "input": "",
+      "blockOnChat": true
+    },
+    {
+      "mode": "say",
+      "sayText": "sansai no jutsu",
+      "enabled": false,
+      "input": "",
+      "blockOnChat": true
+    },
+    {
+      "mode": "say",
+      "sayText": "undo cho kosoku",
+      "enabled": false,
+      "input": "",
+      "blockOnChat": true
+    },
+    {
+      "mode": "say",
+      "sayText": "genjutsu no hanabira",
+      "enabled": false,
+      "input": "",
+      "blockOnChat": true
+    },
+    {
+      "mode": "say",
+      "sayText": "dai magen shinkirou",
+      "enabled": false,
+      "input": "",
+      "blockOnChat": true
+    },
+    {
+      "mode": "say",
+      "sayText": "gentei jutsu",
+      "enabled": false,
+      "input": "",
+      "blockOnChat": true
+    },
+    {
+      "mode": "say",
+      "sayText": "kawarimi no jutsu",
+      "enabled": true,
+      "input": "X",
+      "blockOnChat": true,
+      "requireTarget": false
+    },
+    {
+      "mode": "say",
+      "sayText": "kai",
+      "enabled": true,
+      "input": "F",
+      "blockOnChat": true,
+      "requireTarget": false
+    },
+    {
+      "mode": "say",
+      "sayText": "magen shinkirou",
+      "enabled": true,
+      "input": "Mouse5",
+      "blockOnChat": true,
+      "requireTarget": false
+    }
+  ],
+  "enabled": true
+}
