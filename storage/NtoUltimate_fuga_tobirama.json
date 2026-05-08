@@ -1,108 +1,108 @@
 {
-  "keySpells": [
+  "comboSpells": [
 
   ],
   "fugaSpells": [
     {
       "enabled": true,
+      "widgetPos": {
+        "x": 466,
+        "y": 437
+      },
       "spellCast": "kokuangyo no jutsu",
       "orangeSpell": "kokuangyo no jutsu",
       "onScreen": "Mundo",
       "selfHealth": 1,
-      "index": 1,
+      "cooldownTotal": 50,
       "cooldownActive": 7,
       "totalCooldown": 1777431147,
       "activeCooldown": 1777431104,
       "outfitId": 0,
       "enableTimeSpell": true,
-      "widgetPos": {
-        "x": 466,
-        "y": 437
-      },
       "isTimeSpell": false,
-      "cooldownTotal": 50
+      "index": 1
     },
     {
       "enabled": true,
+      "widgetPos": {
+        "x": 468,
+        "y": 454
+      },
       "spellCast": "suiton fuin suigadan",
       "orangeSpell": "suiton fuin suigadan",
       "onScreen": "Bola",
       "selfHealth": 1,
-      "index": 2,
+      "cooldownTotal": 20,
       "cooldownActive": 5,
       "totalCooldown": 1777948759,
       "activeCooldown": 1777948744,
       "outfitId": 0,
       "enableTimeSpell": true,
-      "widgetPos": {
-        "x": 468,
-        "y": 454
-      },
       "isTimeSpell": false,
-      "cooldownTotal": 20
+      "index": 2
     },
     {
       "enabled": true,
+      "widgetPos": {
+        "x": 467,
+        "y": 472
+      },
       "spellCast": "kawarimi no jutsu",
       "orangeSpell": "kawarimi",
       "onScreen": "Kawarimi",
       "selfHealth": 40,
-      "index": 3,
+      "cooldownTotal": 35,
       "cooldownActive": 5,
       "totalCooldown": 1778110795,
       "activeCooldown": 1778110765,
       "outfitId": 0,
       "enableTimeSpell": true,
       "activeByOutfit": false,
-      "widgetPos": {
-        "x": 467,
-        "y": 472
-      },
       "isTimeSpell": false,
-      "cooldownTotal": 35
+      "index": 3
     },
     {
       "enabled": true,
+      "widgetPos": {
+        "x": 474,
+        "y": 399
+      },
       "spellCast": "mode bijuu",
       "orangeSpell": "mode bijuu",
       "onScreen": "Bijuu",
       "selfHealth": 24,
-      "index": 4,
+      "cooldownTotal": 150,
       "cooldownActive": 20,
       "totalCooldown": 1777948723,
       "activeCooldown": 1777948593,
       "outfitId": 0,
       "enableTimeSpell": true,
       "activeByOutfit": false,
-      "widgetPos": {
-        "x": 474,
-        "y": 399
-      },
       "isTimeSpell": false,
-      "cooldownTotal": 150
+      "index": 4
     },
     {
       "enabled": true,
-      "spellCast": "hiraishingiri",
-      "orangeSpell": "hiraishingiri",
-      "onScreen": "Stack",
-      "selfHealth": 50,
       "widgetPos": {
         "x": 464,
         "y": 492
       },
+      "spellCast": "hiraishingiri",
+      "orangeSpell": "hiraishingiri",
+      "onScreen": "Stack",
+      "selfHealth": 50,
+      "cooldownTotal": 4,
       "cooldownActive": 0,
       "totalCooldown": 1778115654,
       "activeCooldown": 1778115650,
       "outfitId": 0,
       "enableTimeSpell": true,
       "activeByOutfit": false,
-      "cooldownTotal": 4,
-      "isTimeSpell": false,
-      "index": 5
+      "index": 5,
+      "isTimeSpell": false
     }
   ],
-  "comboSpells": [
+  "keySpells": [
 
   ]
 }
