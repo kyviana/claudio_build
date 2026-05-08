@@ -1,0 +1,154 @@
+{
+  "fugaSpells": [
+    {
+      "orangeSpell": "",
+      "widgetPos": {
+        "y": 0,
+        "x": 0
+      },
+      "selfHealth": 100,
+      "cooldownTotal": 0,
+      "cooldownActive": 0,
+      "totalCooldown": 0,
+      "index": 1,
+      "outfitId": 0,
+      "enableTimeSpell": false,
+      "enabled": false,
+      "activeCooldown": 0,
+      "onScreen": "doton prision",
+      "spellCast": "doton prision"
+    },
+    {
+      "orangeSpell": "",
+      "widgetPos": {
+        "y": 0,
+        "x": 0
+      },
+      "selfHealth": 100,
+      "cooldownTotal": 0,
+      "cooldownActive": 0,
+      "totalCooldown": 0,
+      "index": 2,
+      "outfitId": 0,
+      "enableTimeSpell": false,
+      "enabled": false,
+      "activeCooldown": 0,
+      "onScreen": "kamui me",
+      "spellCast": "kamui me"
+    },
+    {
+      "orangeSpell": "",
+      "widgetPos": {
+        "y": 0,
+        "x": 0
+      },
+      "selfHealth": 100,
+      "cooldownTotal": 0,
+      "cooldownActive": 0,
+      "totalCooldown": 0,
+      "index": 3,
+      "outfitId": 0,
+      "enableTimeSpell": false,
+      "enabled": false,
+      "activeCooldown": 0,
+      "onScreen": "keiyaku fuin",
+      "spellCast": "keiyaku fuin"
+    },
+    {
+      "orangeSpell": "",
+      "widgetPos": {
+        "y": 0,
+        "x": 0
+      },
+      "selfHealth": 100,
+      "cooldownTotal": 0,
+      "cooldownActive": 0,
+      "totalCooldown": 0,
+      "index": 4,
+      "outfitId": 0,
+      "enableTimeSpell": false,
+      "enabled": false,
+      "activeCooldown": 0,
+      "onScreen": "kamui no jutsu",
+      "spellCast": "kamui no jutsu"
+    },
+    {
+      "orangeSpell": "",
+      "widgetPos": {
+        "y": 0,
+        "x": 0
+      },
+      "selfHealth": 100,
+      "cooldownTotal": 0,
+      "cooldownActive": 0,
+      "totalCooldown": 0,
+      "index": 5,
+      "outfitId": 0,
+      "enableTimeSpell": false,
+      "enabled": false,
+      "activeCooldown": 0,
+      "onScreen": "izanagi",
+      "spellCast": "izanagi"
+    },
+    {
+      "orangeSpell": "",
+      "widgetPos": {
+        "y": 0,
+        "x": 0
+      },
+      "selfHealth": 100,
+      "cooldownTotal": 0,
+      "cooldownActive": 0,
+      "totalCooldown": 0,
+      "index": 6,
+      "outfitId": 0,
+      "enableTimeSpell": false,
+      "enabled": false,
+      "activeCooldown": 0,
+      "onScreen": "dai kamui",
+      "spellCast": "dai kamui"
+    },
+    {
+      "orangeSpell": "kamui muzan",
+      "widgetPos": {
+        "y": 437,
+        "x": 492
+      },
+      "selfHealth": 50,
+      "cooldownTotal": 40,
+      "cooldownActive": 7,
+      "index": 7,
+      "outfitId": 0,
+      "enableTimeSpell": true,
+      "enabled": true,
+      "activeByOutfit": false,
+      "isTimeSpell": false,
+      "onScreen": "kamui muzan",
+      "spellCast": "kamui muzan"
+    },
+    {
+      "orangeSpell": "kawarimi",
+      "widgetPos": {
+        "y": 458,
+        "x": 497
+      },
+      "selfHealth": 60,
+      "cooldownTotal": 35,
+      "cooldownActive": 10,
+      "index": 8,
+      "outfitId": 0,
+      "enableTimeSpell": true,
+      "enabled": true,
+      "activeByOutfit": false,
+      "isTimeSpell": false,
+      "onScreen": "Kawarimi",
+      "spellCast": "kawarimi no jutsu"
+    }
+  ],
+  "keySpells": [
+
+  ],
+  "comboSpells": [
+
+  ]
+}

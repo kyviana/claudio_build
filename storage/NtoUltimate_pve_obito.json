@@ -1,0 +1,83 @@
+{
+  "enabled": true,
+  "spells": [
+    {
+      "spell": "katon dragon furie",
+      "level": 80,
+      "enabled": false,
+      "cooldownUntil": 0
+    },
+    {
+      "spell": "katon dragon no jutsu",
+      "level": 100,
+      "enabled": false,
+      "cooldownUntil": 0
+    },
+    {
+      "spell": "katon dragon furie no jutsu",
+      "level": 130,
+      "enabled": false,
+      "cooldownUntil": 0
+    },
+    {
+      "spell": "sharingan katohenke",
+      "level": 130,
+      "enabled": false,
+      "cooldownUntil": 0
+    },
+    {
+      "spell": "doton dragon furie",
+      "level": 150,
+      "enabled": false,
+      "cooldownUntil": 0
+    },
+    {
+      "spell": "doton mosayko no jutsu",
+      "level": 200,
+      "enabled": false,
+      "cooldownUntil": 0
+    },
+    {
+      "spell": "kamui",
+      "level": 250,
+      "enabled": false,
+      "cooldownUntil": 0
+    },
+    {
+      "spell": "senka no en",
+      "level": 300,
+      "enabled": false,
+      "cooldownUntil": 0
+    },
+    {
+      "spell": "katon daibakuha",
+      "level": 350,
+      "enabled": true,
+      "cooldownUntil": 0
+    },
+    {
+      "spell": "katon katohenke no jutsu",
+      "level": 350,
+      "enabled": true,
+      "cooldownUntil": 0
+    },
+    {
+      "spell": "katon karyu endan",
+      "level": 360,
+      "enabled": true,
+      "cooldownUntil": 0
+    },
+    {
+      "spell": "katon bakufu ranbu",
+      "level": 450,
+      "enabled": true,
+      "cooldownUntil": 0
+    },
+    {
+      "spell": "gedou shinsei",
+      "level": 500,
+      "enabled": true,
+      "cooldownUntil": 0
+    }
+  ]
+}

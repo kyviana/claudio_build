@@ -1,0 +1,287 @@
+{
+  "fugaa4": {
+    "on": false,
+    "max": 40,
+    "text": "fuga",
+    "min": 0,
+    "title": "HP%"
+  },
+  "extras": {
+    "debug": false,
+    "killUnder": 30
+  },
+  "battleTracking": [
+    0,
+    268437699,
+    [
+
+    ]
+  ],
+  "Scriptss": [
+
+  ],
+  "autojumper": "coloque a tecla para ativar",
+  "timers": {
+    "time": 1
+  },
+  "fugaa5": {
+    "on": false,
+    "max": 40,
+    "text": "fuga",
+    "min": 0,
+    "title": "HP%"
+  },
+  "summonName": "Nome do summon",
+  "autoAntiParalyzeText": "concentrate chakra feet",
+  "buff2": "kekkei genkai",
+  "FiltroNpcs": false,
+  "autoHealthItemPanel2": {
+    "item": 266,
+    "min": 0,
+    "max": 60
+  },
+  "targetbot": [
+
+  ],
+  "listt": [
+
+  ],
+  "FiltroSkull": false,
+  "autoHasteText": "concentrate chakra feet",
+  "heal": {
+    "on": false,
+    "max": 99,
+    "text": "big regeneration",
+    "min": 0,
+    "title": "HP%"
+  },
+  "fugaa2": {
+    "on": false,
+    "max": 30,
+    "text": "fuga",
+    "min": 0,
+    "title": "HP%"
+  },
+  "FiltroParty": false,
+  "iconScripts": {
+    "showInfos": false,
+    "keyMacro": false,
+    "comboMacro": false,
+    "fugaMacro": false
+  },
+  "autoEatingPanel2": {
+    "items": [
+      3725,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "autoEatingPanel1": {
+    "items": [
+      3725,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "fugaa3": {
+    "on": false,
+    "max": 40,
+    "text": "fuga",
+    "min": 0,
+    "title": "HP%"
+  },
+  "fugaa": {
+    "on": false,
+    "max": 20,
+    "text": "fuga",
+    "min": 0,
+    "title": "HP%"
+  },
+  "buff3": "buff 3",
+  "buff": "suiton saijin",
+  "FollowPlayerName": "Nome do player",
+  "summonSpell": "Jutsu de invocacao",
+  "autoManaItemPanel1": {
+    "item": 268,
+    "min": 0,
+    "max": 60
+  },
+  "FiltroPlayers": false,
+  "_configs": {
+    "cavebot_configs": {
+      "enabled": false,
+      "selected": "Covil_Hebi_1"
+    },
+    "targetbot_configs": {
+      "enabled": false,
+      "selected": "1Task_Up"
+    }
+  },
+  "FiltroMobs": false,
+  "jumps": {
+    "savePositions": true
+  },
+  "autoHealthItemPanel1": {
+    "item": 266,
+    "min": 0,
+    "max": 60
+  },
+  "_enemy": [
+
+  ],
+  "autoManaItemPanel2": {
+    "item": 268,
+    "min": 0,
+    "max": 60
+  },
+  "_macros": {
+    "": false,
+    "Pot Perfect 60": false,
+    "Potion DeathSkill": false,
+    "Jump Marcacao": false,
+    "Auto-Pill": false,
+    "Pot Heal 50": false,
+    "Pot Heal 90": false,
+    "Follow Atk": false,
+    "Pot Heal 75": false,
+    "Pot Hallo 95": false,
+    "PotMana Perfect 40": false,
+    "PotMana 30": false,
+    "Bug Map (0)": false,
+    "Summon": false,
+    "Buff": false,
+    "Auto-Escadas": false
+  },
+  "isUsing": false,
+  "_icons": {
+    "75": {
+      "x": 0.11,
+      "enabled": false,
+      "y": 0.85
+    },
+    "autopill": {
+      "x": 0.01,
+      "enabled": false,
+      "y": 0.45
+    },
+    "Summon": {
+      "x": 0.21,
+      "enabled": false,
+      "y": 0.65
+    },
+    "90": {
+      "x": 0.21,
+      "enabled": false,
+      "y": 0.05
+    },
+    "Auto-Escadas": {
+      "x": 0.11,
+      "enabled": false,
+      "y": 0.05
+    },
+    "30": {
+      "x": 0.21,
+      "enabled": false,
+      "y": 0.25
+    },
+    "tI": {
+      "x": 0.01,
+      "y": 0.85
+    },
+    "PotDeath": {
+      "x": 0.01,
+      "enabled": false,
+      "y": 0.25
+    },
+    "jumpIcon": {
+      "x": 0.01,
+      "enabled": false,
+      "y": 0.05
+    },
+    "cI": {
+      "x": 0.01,
+      "y": 0.65
+    },
+    "60": {
+      "x": 0.11,
+      "enabled": false,
+      "y": 0.65
+    },
+    "Bug Map (0)": {
+      "x": 0.11,
+      "enabled": false,
+      "y": 0.45
+    },
+    "95": {
+      "x": 0.21,
+      "enabled": false,
+      "y": 0.45
+    },
+    "Buff": {
+      "x": 0.21,
+      "enabled": false,
+      "y": 0.85
+    },
+    "Follow": {
+      "x": 0.11,
+      "enabled": false,
+      "y": 0.25
+    }
+  },
+  "alarms": {
+    "enabled": false,
+    "creatureDetected": false,
+    "playerpk": false,
+    "privateMessage": false
+  },
+  "timeKitPill": {
+    "t": 0
+  },
+  "ui": [
+
+  ],
+  "widgetPos": {
+    "pkTimeWidget": [
+
+    ],
+    "deathHud": {
+      "x": 50,
+      "y": 80
+    },
+    "timespellKitPill": [
+
+    ]
+  },
+  "heal2": {
+    "on": false,
+    "max": 99,
+    "text": "regeneration",
+    "min": 0,
+    "title": "HP%"
+  },
+  "bijuuTimer": {
+    "cd": 0,
+    "buff": 0,
+    "active": false
+  },
+  "exiva/senseAdvanced": {
+    "Spell": "Sense",
+    "LastSenseKey": "V",
+    "LastTargetKey": "T"
+  },
+  "maxSummons": 1,
+  "manatrainer": {
+    "on": false,
+    "max": 90,
+    "text": "chakradown",
+    "min": 0,
+    "title": "mana%"
+  },
+  "combat": [
+
+  ]
+}

@@ -1,0 +1,5 @@
+-----------------------------
+-- Claudio Bot
+-- NTO Ultimate
+-----------------------------
+-- Mensagem Canal removida

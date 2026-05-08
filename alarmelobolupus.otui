@@ -1,0 +1,63 @@
+AlarmsWindow < MainWindow
+  !text: tr('Alarme')
+  size: 280 180
+  @onEscape: self:hide()
+
+  Label
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: parent.top
+    text-align: center
+    color: white
+    text: Alarme by: LoboLupus
+
+  HorizontalSeparator
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: prev.bottom
+    margin-top: 5
+
+  BotSwitch
+    id: playerpk
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: prev.bottom
+    margin-top: 8
+    text-align: center
+    text: Jogador PK na tela
+    !tooltip: tr('Tocar alarme quando um jogador PK aparecer na tela.')
+
+  BotSwitch
+    id: creatureDetected
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: prev.bottom
+    margin-top: 8
+    text-align: center
+    text: Criatura na tela
+    !tooltip: tr('Tocar alarme quando qualquer criatura aparecer na tela.')
+
+  BotSwitch
+    id: privateMessage
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: prev.bottom
+    margin-top: 8
+    text-align: center
+    text: Mensagem privada
+    !tooltip: tr('Tocar alarme quando voce receber PM.')
+
+  HorizontalSeparator
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: closeButton.top
+    margin-bottom: 8
+
+  Button
+    id: closeButton
+    !text: tr('Fechar')
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    size: 50 22
+    margin-right: 8
+    margin-bottom: 6

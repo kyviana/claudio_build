@@ -1,0 +1,68 @@
+{
+  "comboSpells": [
+
+  ],
+  "keySpells": [
+
+  ],
+  "fugaSpells": [
+    {
+      "spellCast": "chidori raimei",
+      "orangeSpell": "chidori raimei",
+      "onScreen": "Raimei",
+      "selfHealth": 60,
+      "cooldownTotal": 8,
+      "cooldownActive": 0,
+      "totalCooldown": 1777772958,
+      "activeCooldown": 1777772950,
+      "outfitId": 0,
+      "enableTimeSpell": false,
+      "isTimeSpell": false,
+      "widgetPos": {
+        "x": 455,
+        "y": 430
+      },
+      "enabled": false,
+      "activeByOutfit": false,
+      "index": 1
+    },
+    {
+      "spellCast": "izanagi",
+      "orangeSpell": "izanagi",
+      "onScreen": "Izanagi",
+      "selfHealth": 20,
+      "isTimeSpell": false,
+      "cooldownActive": 10,
+      "activeByOutfit": false,
+      "outfitId": 0,
+      "enableTimeSpell": true,
+      "widgetPos": {
+        "x": 454,
+        "y": 451
+      },
+      "cooldownTotal": 60,
+      "enabled": true,
+      "index": 2
+    },
+    {
+      "spellCast": "mangekyou susanoo",
+      "orangeSpell": "mangekyou susanoo",
+      "onScreen": "Susanoo",
+      "selfHealth": 35,
+      "cooldownTotal": 65,
+      "cooldownActive": 20,
+      "totalCooldown": 1777773023,
+      "activeCooldown": 1777772978,
+      "outfitId": 0,
+      "enableTimeSpell": true,
+      "isTimeSpell": false,
+      "widgetPos": {
+        "x": 448,
+        "y": 412
+      },
+      "enabled": true,
+      "activeByOutfit": false,
+      "index": 3
+    }
+  ]
+}

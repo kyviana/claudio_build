@@ -1,0 +1,57 @@
+{
+  "looting": {
+    "items": [
+
+    ],
+    "maxDanger": 10,
+    "minCapacity": 100,
+    "containers": [
+
+    ],
+    "everyItem": false
+  },
+  "targeting": [
+    {
+      "danger": 1,
+      "keepDistance": false,
+      "lureCount": 1,
+      "lureCavebot": false,
+      "avoidAttacks": false,
+      "keepDistanceRange": 1,
+      "lure": false,
+      "priority": 1,
+      "maxDistance": 10,
+      "chase": true,
+      "name": "Nukenin",
+      "regex": "^nukenin$"
+    },
+    {
+      "danger": 1,
+      "keepDistance": false,
+      "lureCount": 1,
+      "lureCavebot": false,
+      "avoidAttacks": false,
+      "keepDistanceRange": 1,
+      "lure": false,
+      "priority": 1,
+      "maxDistance": 10,
+      "chase": true,
+      "name": "Renegade",
+      "regex": "^renegade$"
+    },
+    {
+      "danger": 1,
+      "keepDistance": false,
+      "lureCount": 1,
+      "lureCavebot": false,
+      "avoidAttacks": false,
+      "keepDistanceRange": 1,
+      "lure": false,
+      "name": "Shinobi of Sound",
+      "maxDistance": 10,
+      "chase": true,
+      "priority": 1,
+      "regex": "^shinobi of sound$"
+    }
+  ]
+}

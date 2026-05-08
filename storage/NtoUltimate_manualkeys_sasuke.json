@@ -1,0 +1,61 @@
+{
+  "enabled": true,
+  "keys": [
+    {
+      "blockOnChat": true,
+      "mode": "say",
+      "input": "X",
+      "enabled": true,
+      "sayText": "kawarimi no jutsu"
+    },
+    {
+      "blockOnChat": true,
+      "mode": "say",
+      "input": "Mouse5",
+      "enabled": true,
+      "sayText": "izanagi"
+    },
+    {
+      "blockOnChat": true,
+      "mode": "say",
+      "input": "Mouse4",
+      "enabled": true,
+      "sayText": "susanoo yasaka"
+    },
+    {
+      "blockOnChat": true,
+      "mode": "say",
+      "input": "4",
+      "enabled": true,
+      "sayText": "kuchyose manda no jutsu"
+    },
+    {
+      "blockOnChat": true,
+      "mode": "say",
+      "input": "2",
+      "enabled": true,
+      "sayText": "chidori raimei"
+    },
+    {
+      "blockOnChat": true,
+      "mode": "say",
+      "input": "F",
+      "enabled": true,
+      "sayText": "kai"
+    },
+    {
+      "blockOnChat": true,
+      "mode": "say",
+      "input": "3",
+      "enabled": true,
+      "sayText": "mangekyou susanoo"
+    },
+    {
+      "blockOnChat": true,
+      "mode": "say",
+      "input": "1",
+      "enabled": true,
+      "sayText": "sharingan illusion"
+    }
+  ]
+}

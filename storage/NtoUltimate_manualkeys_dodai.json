@@ -1,0 +1,19 @@
+{
+  "keys": [
+    {
+      "mode": "say",
+      "input": "Mouse5",
+      "sayText": "bunshin no jutsu",
+      "blockOnChat": true,
+      "enabled": true
+    },
+    {
+      "mode": "say",
+      "input": "X",
+      "blockOnChat": true,
+      "sayText": "kawarimi no jutsu",
+      "enabled": true
+    }
+  ],
+  "enabled": true
+}

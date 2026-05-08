@@ -1,0 +1,53 @@
+{
+  "looting": {
+    "containers": [
+
+    ],
+    "maxDanger": 10,
+    "minCapacity": 100,
+    "items": [
+      {
+        "count": 1,
+        "id": 3039
+      }
+    ],
+    "everyItem": false
+  },
+  "targeting": [
+    {
+      "chase": true,
+      "attackSpellDelay": 2500,
+      "useRuneAttack": false,
+      "attackRune": 0,
+      "useGroupAttack": false,
+      "groupAttackSpell": "",
+      "minManaGroup": 1500,
+      "groupAttackRadius": 1,
+      "priority": 1,
+      "groupAttackTargets": 2,
+      "groupAttackIgnorePlayers": false,
+      "dontLoot": false,
+      "groupAttackDelay": 5000,
+      "useGroupAttackRune": false,
+      "groupAttackRune": 0,
+      "groupRuneAttackRadius": 1,
+      "groupRuneAttackTargets": 2,
+      "groupRuneAttackDelay": 5000,
+      "useSpellAttack": false,
+      "runeAttackDelay": 2000,
+      "lure": false,
+      "lureCavebot": false,
+      "lureCount": 1,
+      "name": "*",
+      "regex": "^.*$",
+      "danger": 1,
+      "maxDistance": 10,
+      "attackSpell": "",
+      "groupAttackIgnoreParty": false,
+      "minMana": 200,
+      "keepDistanceRange": 1,
+      "keepDistance": false,
+      "avoidAttacks": false
+    }
+  ]
+}

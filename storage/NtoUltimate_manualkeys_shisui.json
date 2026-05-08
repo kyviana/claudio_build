@@ -1,0 +1,76 @@
+{
+  "enabled": true,
+  "keys": [
+    {
+      "enabled": true,
+      "mode": "say",
+      "sayText": "kawarimi no jutsu",
+      "blockOnChat": true,
+      "input": "X"
+    },
+    {
+      "enabled": true,
+      "mode": "say",
+      "sayText": "kotoamatsukami",
+      "blockOnChat": true,
+      "input": "1"
+    },
+    {
+      "enabled": true,
+      "mode": "say",
+      "sayText": "shunshin no shisui",
+      "blockOnChat": true,
+      "input": "2"
+    },
+    {
+      "enabled": true,
+      "mode": "say",
+      "sayText": "sanzengarasu no jutsu",
+      "blockOnChat": true,
+      "input": "3"
+    },
+    {
+      "enabled": true,
+      "mode": "say",
+      "sayText": "shunfu taito",
+      "blockOnChat": true,
+      "input": "4"
+    },
+    {
+      "enabled": true,
+      "mode": "say",
+      "sayText": "mangekyou susanoo",
+      "blockOnChat": true,
+      "input": "5"
+    },
+    {
+      "enabled": true,
+      "mode": "say",
+      "sayText": "izanagi",
+      "blockOnChat": true,
+      "input": "Mouse5"
+    },
+    {
+      "enabled": true,
+      "mode": "say",
+      "sayText": "magen shinkarasu",
+      "blockOnChat": true,
+      "input": "Mouse4"
+    },
+    {
+      "enabled": true,
+      "mode": "say",
+      "sayText": "kai",
+      "blockOnChat": true,
+      "input": "F"
+    },
+    {
+      "enabled": true,
+      "requireTarget": false,
+      "blockOnChat": true,
+      "sayText": "susanoo",
+      "mode": "say",
+      "input": "MouseMid"
+    }
+  ]
+}

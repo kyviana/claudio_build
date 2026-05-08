@@ -1,0 +1,287 @@
+{
+  "fugaa": {
+    "min": 0,
+    "max": 20,
+    "on": false,
+    "text": "fuga",
+    "title": "HP%"
+  },
+  "ui": [
+
+  ],
+  "Scriptss": [
+
+  ],
+  "autojumper": "coloque a tecla para ativar",
+  "heal": {
+    "min": 0,
+    "max": 99,
+    "on": false,
+    "text": "big regeneration",
+    "title": "HP%"
+  },
+  "alarms": {
+    "playerpk": false,
+    "creatureDetected": false,
+    "enabled": false,
+    "privateMessage": false
+  },
+  "autoHealthItemPanel1": {
+    "min": 0,
+    "max": 60,
+    "item": 266
+  },
+  "combat": [
+
+  ],
+  "widgetPos": {
+    "deathHud": {
+      "y": 80,
+      "x": 50
+    },
+    "timespellKitPill": [
+
+    ],
+    "pkTimeWidget": [
+
+    ]
+  },
+  "_enemy": [
+
+  ],
+  "autoManaItemPanel2": {
+    "min": 0,
+    "max": 60,
+    "item": 268
+  },
+  "summonName": "Nome do summon",
+  "exiva/senseAdvanced": {
+    "LastSenseKey": "V",
+    "Spell": "Sense",
+    "LastTargetKey": "T"
+  },
+  "autoAntiParalyzeText": "concentrate chakra feet",
+  "buff2": "kekkei genkai",
+  "summonSpell": "Jutsu de invocacao",
+  "maxSummons": 1,
+  "FollowPlayerName": "Nome do player",
+  "bijuuTimer": {
+    "active": false,
+    "buff": 0,
+    "cd": 0
+  },
+  "buff3": "buff 3",
+  "_icons": {
+    "Summon": {
+      "enabled": false,
+      "y": 0.65,
+      "x": 0.21
+    },
+    "Buff": {
+      "enabled": false,
+      "y": 0.85,
+      "x": 0.21
+    },
+    "95": {
+      "enabled": false,
+      "y": 0.45,
+      "x": 0.21
+    },
+    "Auto-Escadas": {
+      "enabled": false,
+      "y": 0.05,
+      "x": 0.11
+    },
+    "cI": {
+      "y": 0.65,
+      "x": 0.01
+    },
+    "30": {
+      "enabled": false,
+      "y": 0.25,
+      "x": 0.21
+    },
+    "PotDeath": {
+      "enabled": false,
+      "y": 0.25,
+      "x": 0.01
+    },
+    "90": {
+      "enabled": false,
+      "y": 0.05,
+      "x": 0.21
+    },
+    "Bug Map (0)": {
+      "enabled": false,
+      "y": 0.45,
+      "x": 0.11
+    },
+    "jumpIcon": {
+      "enabled": false,
+      "y": 0.05,
+      "x": 0.01
+    },
+    "75": {
+      "enabled": false,
+      "y": 0.85,
+      "x": 0.11
+    },
+    "Follow": {
+      "enabled": false,
+      "y": 0.25,
+      "x": 0.11
+    },
+    "60": {
+      "enabled": false,
+      "y": 0.65,
+      "x": 0.11
+    },
+    "autopill": {
+      "enabled": false,
+      "y": 0.45,
+      "x": 0.01
+    },
+    "tI": {
+      "y": 0.85,
+      "x": 0.01
+    }
+  },
+  "fugaa4": {
+    "min": 0,
+    "max": 40,
+    "on": false,
+    "text": "fuga",
+    "title": "HP%"
+  },
+  "FiltroPlayers": false,
+  "jumps": {
+    "savePositions": true
+  },
+  "autoEatingPanel2": {
+    "items": [
+      3725,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "autoEatingPanel1": {
+    "items": [
+      3725,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "heal2": {
+    "min": 0,
+    "max": 99,
+    "on": false,
+    "text": "regeneration",
+    "title": "HP%"
+  },
+  "fugaa5": {
+    "min": 0,
+    "max": 40,
+    "on": false,
+    "text": "fuga",
+    "title": "HP%"
+  },
+  "FiltroNpcs": false,
+  "autoHasteText": "concentrate chakra feet",
+  "autoHealthItemPanel2": {
+    "min": 0,
+    "max": 60,
+    "item": 266
+  },
+  "FiltroMobs": false,
+  "battleTracking": [
+    0,
+    268437699,
+    [
+
+    ]
+  ],
+  "timers": {
+    "time": 1
+  },
+  "autoManaItemPanel1": {
+    "min": 0,
+    "max": 60,
+    "item": 268
+  },
+  "_macros": {
+    "": false,
+    "Pot Perfect 60": false,
+    "Potion DeathSkill": false,
+    "Jump Marcacao": false,
+    "Auto-Escadas": false,
+    "Pot Heal 50": false,
+    "Pot Heal 90": false,
+    "Follow Atk": false,
+    "Buff": false,
+    "Bug Map (0)": false,
+    "Summon": false,
+    "Auto-Pill": false,
+    "PotMana Perfect 40": false,
+    "PotMana 30": false,
+    "Pot Heal 75": false,
+    "Pot Hallo 95": false
+  },
+  "FiltroSkull": false,
+  "timeKitPill": {
+    "t": 0
+  },
+  "manatrainer": {
+    "min": 0,
+    "max": 90,
+    "on": false,
+    "text": "chakradown",
+    "title": "mana%"
+  },
+  "fugaa3": {
+    "min": 0,
+    "max": 40,
+    "on": false,
+    "text": "fuga",
+    "title": "HP%"
+  },
+  "_configs": {
+    "targetbot_configs": {
+      "enabled": false,
+      "selected": "1Task_Up"
+    },
+    "cavebot_configs": {
+      "enabled": false,
+      "selected": "Covil_Hebi_1"
+    }
+  },
+  "listt": [
+
+  ],
+  "buff": "suiton saijin",
+  "fugaa2": {
+    "min": 0,
+    "max": 30,
+    "on": false,
+    "text": "fuga",
+    "title": "HP%"
+  },
+  "FiltroParty": false,
+  "targetbot": [
+
+  ],
+  "isUsing": false,
+  "extras": {
+    "debug": false,
+    "killUnder": 30
+  },
+  "iconScripts": {
+    "fugaMacro": false,
+    "showInfos": false,
+    "keyMacro": false,
+    "comboMacro": false
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "enabled": true,
+  "keys": [
+    {
+      "enabled": true,
+      "input": "X",
+      "sayText": "kawarimi no jutsu",
+      "mode": "say",
+      "blockOnChat": true
+    },
+    {
+      "enabled": true,
+      "input": "F",
+      "sayText": "kai",
+      "mode": "say",
+      "blockOnChat": true
+    },
+    {
+      "enabled": true,
+      "input": "1",
+      "sayText": "kokuangyo no jutsu",
+      "mode": "say",
+      "blockOnChat": true
+    },
+    {
+      "enabled": true,
+      "input": "Mouse5",
+      "sayText": "suiton fuin suigadan",
+      "mode": "say",
+      "blockOnChat": true
+    },
+    {
+      "enabled": true,
+      "input": "3",
+      "sayText": "suiton suirou no jutsu",
+      "mode": "say",
+      "blockOnChat": true
+    },
+    {
+      "enabled": true,
+      "input": "4",
+      "sayText": "taju kagebunshin no jutsu",
+      "mode": "say",
+      "blockOnChat": true
+    },
+    {
+      "enabled": true,
+      "input": "F2",
+      "sayText": "mode bijuu",
+      "mode": "say",
+      "blockOnChat": true
+    },
+    {
+      "enabled": true,
+      "input": "2",
+      "mode": "say",
+      "sayText": "hiraishingiri",
+      "requireTarget": true,
+      "blockOnChat": true
+    }
+  ]
+}

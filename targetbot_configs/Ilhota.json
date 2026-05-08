@@ -1,0 +1,153 @@
+{
+  "looting": {
+    "items": [
+      {
+        "count": 1,
+        "id": 15163
+      },
+      {
+        "count": 1,
+        "id": 15164
+      },
+      {
+        "count": 1,
+        "id": 15165
+      },
+      {
+        "count": 1,
+        "id": 15166
+      },
+      {
+        "count": 1,
+        "id": 15167
+      },
+      {
+        "count": 1,
+        "id": 15168
+      },
+      {
+        "count": 1,
+        "id": 15169
+      },
+      {
+        "count": 1,
+        "id": 15170
+      },
+      {
+        "count": 1,
+        "id": 15171
+      },
+      {
+        "count": 1,
+        "id": 15172
+      },
+      {
+        "count": 1,
+        "id": 15173
+      },
+      {
+        "count": 1,
+        "id": 15174
+      },
+      {
+        "count": 1,
+        "id": 15175
+      },
+      {
+        "count": 1,
+        "id": 15176
+      },
+      {
+        "count": 1,
+        "id": 15177
+      },
+      {
+        "count": 1,
+        "id": 15178
+      },
+      {
+        "count": 1,
+        "id": 15179
+      },
+      {
+        "count": 1,
+        "id": 15180
+      },
+      {
+        "count": 1,
+        "id": 15181
+      },
+      {
+        "count": 1,
+        "id": 15182
+      }
+    ],
+    "maxDanger": 10,
+    "minCapacity": 100,
+    "containers": [
+      {
+        "count": 1,
+        "id": 10825
+      },
+      {
+        "count": 1,
+        "id": 15187
+      },
+      {
+        "count": 1,
+        "id": 11607
+      }
+    ],
+    "everyItem": false
+  },
+  "targeting": [
+    {
+      "name": "Doragon",
+      "danger": 1,
+      "maxDistance": 10,
+      "anchor": false,
+      "dontLoot": false,
+      "lureMin": 0,
+      "keepDistance": false,
+      "lureDelay": 1000,
+      "chase": false,
+      "lure": false,
+      "lureCavebot": false,
+      "dynamicLureDelay": false,
+      "lureMax": 1,
+      "anchorRange": 1,
+      "keepDistanceRange": 1,
+      "faceMonster": false,
+      "diamondArrows": false,
+      "regex": "^doragon$",
+      "dynamicLure": false,
+      "avoidAttacks": false,
+      "priority": 1,
+      "lureCount": 0
+    },
+    {
+      "name": "Chisana",
+      "danger": 1,
+      "maxDistance": 10,
+      "anchor": false,
+      "dontLoot": false,
+      "lureMin": 1,
+      "keepDistance": false,
+      "lureDelay": 250,
+      "chase": true,
+      "lure": false,
+      "lureCavebot": false,
+      "dynamicLureDelay": false,
+      "lureCount": 1,
+      "anchorRange": 3,
+      "keepDistanceRange": 1,
+      "faceMonster": false,
+      "diamondArrows": false,
+      "regex": "^chisana$",
+      "dynamicLure": false,
+      "avoidAttacks": false,
+      "priority": 1,
+      "lureMax": 3
+    }
+  ]
+}

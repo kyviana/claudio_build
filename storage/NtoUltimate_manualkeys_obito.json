@@ -1,0 +1,96 @@
+{
+  "keys": [
+    {
+      "blockOnChat": true,
+      "sayText": "concentrate chakra feet",
+      "mode": "say",
+      "input": "",
+      "enabled": false
+    },
+    {
+      "blockOnChat": true,
+      "sayText": "kamui protect",
+      "mode": "say",
+      "input": "",
+      "enabled": false
+    },
+    {
+      "blockOnChat": true,
+      "sayText": "doton prision",
+      "mode": "say",
+      "input": "",
+      "enabled": false
+    },
+    {
+      "blockOnChat": true,
+      "sayText": "kamui me",
+      "mode": "say",
+      "input": "",
+      "enabled": false
+    },
+    {
+      "blockOnChat": true,
+      "sayText": "keiyaku fuin",
+      "mode": "say",
+      "input": "",
+      "enabled": false
+    },
+    {
+      "blockOnChat": true,
+      "sayText": "kawarimi no jutsu",
+      "mode": "say",
+      "enabled": true,
+      "input": "X",
+      "requireTarget": false
+    },
+    {
+      "blockOnChat": true,
+      "sayText": "kai",
+      "mode": "say",
+      "enabled": true,
+      "input": "F",
+      "requireTarget": false
+    },
+    {
+      "blockOnChat": true,
+      "sayText": "izanagi",
+      "mode": "say",
+      "enabled": true,
+      "input": "Mouse5",
+      "requireTarget": false
+    },
+    {
+      "blockOnChat": true,
+      "sayText": "kamui no jutsu",
+      "mode": "say",
+      "enabled": true,
+      "input": "3",
+      "requireTarget": false
+    },
+    {
+      "blockOnChat": true,
+      "sayText": "kamui muzan",
+      "mode": "say",
+      "enabled": true,
+      "input": "Mouse4",
+      "requireTarget": false
+    },
+    {
+      "blockOnChat": true,
+      "sayText": "kuchyose gedou mazou",
+      "mode": "say",
+      "enabled": true,
+      "input": "2",
+      "requireTarget": false
+    },
+    {
+      "blockOnChat": true,
+      "sayText": "dai kamui",
+      "mode": "say",
+      "enabled": true,
+      "input": "1",
+      "requireTarget": false
+    }
+  ],
+  "enabled": true
+}

@@ -1,0 +1,27 @@
+{
+  "enabled": false,
+  "spells": {
+    "kawarimi": {
+      "activeCd": 7143543,
+      "totalCd": 7143573,
+      "y": 361,
+      "onScreen": "Kawa",
+      "totalTime": 35,
+      "activeTime": 5,
+      "x": 486,
+      "enabled": true,
+      "spell": "kawarimi"
+    },
+    "kawarimi no jutsu": {
+      "activeCd": 0,
+      "totalCd": 0,
+      "y": 379,
+      "onScreen": "Kawa",
+      "totalTime": 35,
+      "activeTime": 5,
+      "x": 486,
+      "enabled": true,
+      "spell": "kawarimi no jutsu"
+    }
+  }
+}

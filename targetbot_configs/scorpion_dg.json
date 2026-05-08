@@ -1,0 +1,39 @@
+{
+  "looting": {
+    "containers": [
+
+    ],
+    "maxDanger": 10,
+    "minCapacity": 100,
+    "items": [
+
+    ],
+    "everyItem": false
+  },
+  "targeting": [
+    {
+      "diamondArrows": false,
+      "lureMin": 1,
+      "dynamicLure": false,
+      "danger": 1,
+      "maxDistance": 10,
+      "lure": false,
+      "lureCavebot": false,
+      "lureCount": 1,
+      "avoidAttacks": false,
+      "chase": false,
+      "anchor": false,
+      "keepDistanceRange": 5,
+      "regex": "^scorpion$",
+      "priority": 1,
+      "dontLoot": false,
+      "lureMax": 3,
+      "name": "Scorpion",
+      "faceMonster": false,
+      "lureDelay": 250,
+      "anchorRange": 3,
+      "keepDistance": true,
+      "dynamicLureDelay": false
+    }
+  ]
+}

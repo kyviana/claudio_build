@@ -1,0 +1,29 @@
+{
+  "comboSpells": [
+
+  ],
+  "fugaSpells": [
+    {
+      "selfHealth": 60,
+      "totalCooldown": 1777176861,
+      "spellCast": "kawarimi no jutsu",
+      "enableTimeSpell": true,
+      "activeCooldown": 1777176831,
+      "onScreen": "Kawarimi",
+      "enabled": true,
+      "widgetPos": {
+        "x": 482,
+        "y": 372
+      },
+      "index": 1,
+      "outfitId": 0,
+      "cooldownActive": 5,
+      "cooldownTotal": 35,
+      "orangeSpell": "kawarimi",
+      "isTimeSpell": false
+    }
+  ],
+  "keySpells": [
+
+  ]
+}

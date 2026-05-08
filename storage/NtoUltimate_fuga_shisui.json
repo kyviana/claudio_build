@@ -1,0 +1,135 @@
+{
+  "enabled": true,
+  "enemy": true,
+  "spells": [
+
+  ],
+  "guild": true,
+  "target": true,
+  "fugaSpells": [
+    {
+      "enabled": false,
+      "spellCast": "kotoamatsukami",
+      "orangeSpell": "kotoamatsukami",
+      "onScreen": "Mundo",
+      "selfHealth": 50,
+      "cooldownTotal": 35,
+      "cooldownActive": 5,
+      "totalCooldown": 1777767413,
+      "activeCooldown": 1777767383,
+      "enableTimeSpell": true,
+      "widgetPos": {
+        "x": 401,
+        "y": 467
+      },
+      "index": 1
+    },
+    {
+      "enabled": true,
+      "spellCast": "sanzengarasu no jutsu",
+      "orangeSpell": "sanzengarasu no jutsu",
+      "onScreen": "Sanzengarasu",
+      "widgetPos": {
+        "x": 396,
+        "y": 424
+      },
+      "index": 2,
+      "activeByOutfit": false,
+      "totalCooldown": 1778195003,
+      "activeCooldown": 1778194963,
+      "outfitId": 0,
+      "enableTimeSpell": true,
+      "cooldownActive": 5,
+      "cooldownTotal": 45,
+      "selfHealth": 50,
+      "isTimeSpell": false
+    },
+    {
+      "enabled": true,
+      "_totalCooldownSaved": 1778194839,
+      "spellCast": "magen shinkarasu",
+      "orangeSpell": "magen shinkarasu",
+      "isTimeSpell": false,
+      "widgetPos": {
+        "x": 390,
+        "y": 404
+      },
+      "index": 3,
+      "activeByOutfit": true,
+      "totalCooldown": 1778194839,
+      "activeCooldown": 1778194799,
+      "outfitId": 864,
+      "enableTimeSpell": true,
+      "cooldownActive": 5,
+      "cooldownTotal": 45,
+      "selfHealth": 50,
+      "onScreen": "Magen"
+    },
+    {
+      "enabled": true,
+      "spellCast": "mangekyou susanoo",
+      "orangeSpell": "mangekyou susanoo",
+      "onScreen": "Susanoo",
+      "widgetPos": {
+        "x": 398,
+        "y": 359
+      },
+      "index": 4,
+      "activeByOutfit": false,
+      "totalCooldown": 1778195022,
+      "activeCooldown": 1778194977,
+      "outfitId": 0,
+      "enableTimeSpell": true,
+      "cooldownActive": 20,
+      "cooldownTotal": 65,
+      "selfHealth": 60,
+      "isTimeSpell": false
+    },
+    {
+      "enabled": true,
+      "spellCast": "kawarimi no jutsu",
+      "orangeSpell": "kawarimi",
+      "onScreen": "Kawarimi",
+      "widgetPos": {
+        "x": 387,
+        "y": 382
+      },
+      "index": 5,
+      "activeByOutfit": false,
+      "totalCooldown": 1778194811,
+      "activeCooldown": 1778194786,
+      "outfitId": 0,
+      "enableTimeSpell": true,
+      "cooldownActive": 10,
+      "cooldownTotal": 35,
+      "selfHealth": 60,
+      "isTimeSpell": false
+    },
+    {
+      "enabled": true,
+      "spellCast": "izanagi",
+      "orangeSpell": "izanagi",
+      "onScreen": "Izanagi",
+      "widgetPos": {
+        "x": 392,
+        "y": 442
+      },
+      "index": 6,
+      "activeByOutfit": false,
+      "totalCooldown": 1777792043,
+      "activeCooldown": 1777791993,
+      "outfitId": 0,
+      "enableTimeSpell": true,
+      "cooldownActive": 10,
+      "cooldownTotal": 60,
+      "selfHealth": 10,
+      "isTimeSpell": false
+    }
+  ],
+  "keySpells": [
+
+  ],
+  "comboSpells": [
+
+  ]
+}

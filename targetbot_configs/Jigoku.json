@@ -1,0 +1,39 @@
+{
+  "looting": {
+    "containers": [
+
+    ],
+    "maxDanger": 10,
+    "items": [
+
+    ],
+    "everyItem": false,
+    "minCapacity": 100
+  },
+  "targeting": [
+    {
+      "anchorRange": 1,
+      "keepDistanceRange": 4,
+      "anchor": false,
+      "faceMonster": false,
+      "dontLoot": false,
+      "regex": "^jigoku$",
+      "danger": 10,
+      "maxDistance": 10,
+      "name": "Jigoku",
+      "keepDistance": true,
+      "avoidAttacks": false,
+      "chase": false,
+      "dynamicLure": false,
+      "lureDelay": 100,
+      "diamondArrows": false,
+      "lure": false,
+      "lureCavebot": false,
+      "dynamicLureDelay": false,
+      "lureMax": 1,
+      "lureCount": 0,
+      "priority": 10,
+      "lureMin": 0
+    }
+  ]
+}

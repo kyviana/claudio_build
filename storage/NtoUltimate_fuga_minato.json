@@ -1,0 +1,122 @@
+{
+  "keySpells": [
+
+  ],
+  "fugaSpells": [
+    {
+      "onScreen": "fuin kai",
+      "selfHealth": 100,
+      "widgetPos": {
+        "x": 0,
+        "y": 0
+      },
+      "cooldownActive": 0,
+      "enabled": false,
+      "activeCooldown": 0,
+      "index": 1,
+      "enableTimeSpell": false,
+      "cooldownTotal": 0,
+      "totalCooldown": 0,
+      "outfitId": 0,
+      "spellCast": "fuin kai",
+      "orangeSpell": ""
+    },
+    {
+      "onScreen": "fuin kaisho",
+      "selfHealth": 100,
+      "widgetPos": {
+        "x": 0,
+        "y": 0
+      },
+      "cooldownActive": 0,
+      "enabled": false,
+      "activeCooldown": 0,
+      "index": 2,
+      "enableTimeSpell": false,
+      "cooldownTotal": 0,
+      "totalCooldown": 0,
+      "outfitId": 0,
+      "spellCast": "fuin kaisho",
+      "orangeSpell": ""
+    },
+    {
+      "onScreen": "shiki fuujin",
+      "selfHealth": 100,
+      "widgetPos": {
+        "x": 0,
+        "y": 0
+      },
+      "cooldownActive": 0,
+      "enabled": false,
+      "activeCooldown": 0,
+      "index": 3,
+      "enableTimeSpell": false,
+      "cooldownTotal": 0,
+      "totalCooldown": 0,
+      "outfitId": 0,
+      "spellCast": "shiki fuujin",
+      "orangeSpell": ""
+    },
+    {
+      "onScreen": "Dorai",
+      "selfHealth": 60,
+      "widgetPos": {
+        "x": 478,
+        "y": 437
+      },
+      "cooldownActive": 0,
+      "totalCooldown": 1777863724,
+      "activeCooldown": 1777863667,
+      "index": 4,
+      "enableTimeSpell": true,
+      "cooldownTotal": 57,
+      "outfitId": 0,
+      "isTimeSpell": false,
+      "enabled": true,
+      "activeByOutfit": false,
+      "spellCast": "fuin hiraishin dorai",
+      "orangeSpell": "fuin hiraishin dorai"
+    },
+    {
+      "onScreen": "Kawarimi",
+      "selfHealth": 50,
+      "widgetPos": {
+        "x": 473,
+        "y": 456
+      },
+      "cooldownActive": 10,
+      "totalCooldown": 1777863710,
+      "activeCooldown": 1777863685,
+      "index": 5,
+      "enableTimeSpell": true,
+      "cooldownTotal": 35,
+      "outfitId": 0,
+      "isTimeSpell": false,
+      "enabled": true,
+      "activeByOutfit": false,
+      "spellCast": "kawarimi no jutsu",
+      "orangeSpell": "kawarimi"
+    },
+    {
+      "onScreen": "Bijuu",
+      "selfHealth": 50,
+      "widgetPos": {
+        "x": 472,
+        "y": 476
+      },
+      "cooldownActive": 20,
+      "enabled": true,
+      "index": 6,
+      "enableTimeSpell": true,
+      "cooldownTotal": 150,
+      "isTimeSpell": false,
+      "outfitId": 0,
+      "activeByOutfit": false,
+      "spellCast": "mode bijuu",
+      "orangeSpell": "mode bijuu"
+    }
+  ],
+  "comboSpells": [
+
+  ]
+}

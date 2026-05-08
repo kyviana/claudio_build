@@ -1,0 +1,119 @@
+{
+  "keys": [
+    {
+      "sayText": "concentrate chakra feet",
+      "enabled": false,
+      "input": "",
+      "mode": "say",
+      "blockOnChat": true
+    },
+    {
+      "sayText": "jikuukan kekkai",
+      "enabled": false,
+      "input": "",
+      "mode": "say",
+      "blockOnChat": true
+    },
+    {
+      "sayText": "kage bunshin no jutsu",
+      "enabled": false,
+      "input": "",
+      "mode": "say",
+      "blockOnChat": true
+    },
+    {
+      "sayText": "gamatatsu kuchyose",
+      "enabled": false,
+      "input": "",
+      "mode": "say",
+      "blockOnChat": true
+    },
+    {
+      "sayText": "kuchyose gamatatsu no jutsu",
+      "enabled": false,
+      "input": "",
+      "mode": "say",
+      "blockOnChat": true
+    },
+    {
+      "sayText": "kuchyose gamakichi no jutsu",
+      "enabled": false,
+      "input": "",
+      "mode": "say",
+      "blockOnChat": true
+    },
+    {
+      "sayText": "fuin hiraishin dorai",
+      "enabled": false,
+      "input": "",
+      "mode": "say",
+      "blockOnChat": true
+    },
+    {
+      "sayText": "shiki fuujin",
+      "enabled": true,
+      "input": "Mouse5",
+      "mode": "say",
+      "blockOnChat": true
+    },
+    {
+      "sayText": "fuin kaisho",
+      "enabled": true,
+      "input": "Mouse4",
+      "mode": "say",
+      "blockOnChat": true
+    },
+    {
+      "sayText": "kai",
+      "enabled": true,
+      "input": "F",
+      "mode": "say",
+      "blockOnChat": true
+    },
+    {
+      "sayText": "kawarimi no jutsu",
+      "enabled": true,
+      "input": "X",
+      "mode": "say",
+      "blockOnChat": true
+    },
+    {
+      "sayText": "fuin kai",
+      "enabled": true,
+      "input": "3",
+      "mode": "say",
+      "blockOnChat": true
+    },
+    {
+      "sayText": "ninpou no jutsu",
+      "enabled": true,
+      "input": "1",
+      "mode": "say",
+      "blockOnChat": true
+    },
+    {
+      "sayText": "kuchyose gamabunta no jutsu",
+      "enabled": true,
+      "input": "4",
+      "mode": "say",
+      "blockOnChat": true
+    },
+    {
+      "requireTarget": false,
+      "sayText": "taju kagebunshin no jutsu",
+      "enabled": true,
+      "input": "5",
+      "mode": "say",
+      "blockOnChat": true
+    },
+    {
+      "requireTarget": false,
+      "input": "F1",
+      "enabled": true,
+      "sayText": "mode bijuu",
+      "mode": "say",
+      "blockOnChat": true
+    }
+  ],
+  "enabled": true
+}

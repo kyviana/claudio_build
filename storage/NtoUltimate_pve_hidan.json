@@ -1,0 +1,53 @@
+{
+  "spells": [
+    {
+      "level": 125,
+      "spell": "kamakiri tensakai",
+      "cooldownUntil": 0,
+      "enabled": false
+    },
+    {
+      "level": 160,
+      "spell": "kaiten renbu",
+      "cooldownUntil": 0,
+      "enabled": false
+    },
+    {
+      "level": 200,
+      "spell": "kamakiri hikiyose",
+      "cooldownUntil": 0,
+      "enabled": false
+    },
+    {
+      "level": 250,
+      "spell": "midare kamakiri",
+      "cooldownUntil": 0,
+      "enabled": true
+    },
+    {
+      "level": 300,
+      "spell": "shiki kuuin",
+      "cooldownUntil": 0,
+      "enabled": true
+    },
+    {
+      "level": 350,
+      "spell": "shiki hikiyose",
+      "cooldownUntil": 0,
+      "enabled": true
+    },
+    {
+      "level": 425,
+      "spell": "shinigami no shukketsu",
+      "cooldownUntil": 0,
+      "enabled": true
+    },
+    {
+      "level": 450,
+      "spell": "kushizashi no kei",
+      "cooldownUntil": 0,
+      "enabled": true
+    }
+  ],
+  "enabled": false
+}

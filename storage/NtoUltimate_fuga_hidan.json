@@ -1,0 +1,106 @@
+{
+  "comboSpells": [
+
+  ],
+  "keySpells": [
+
+  ],
+  "fugaSpells": [
+    {
+      "spellCast": "shi no hikiyose",
+      "index": 1,
+      "onScreen": "Puxao",
+      "activeByOutfit": false,
+      "cooldownTotal": 25,
+      "cooldownActive": 0,
+      "isTimeSpell": true,
+      "widgetPos": {
+        "x": 459,
+        "y": 451
+      },
+      "outfitId": 0,
+      "enableTimeSpell": true,
+      "enabled": true,
+      "orangeSpell": "shi no hikiyose",
+      "selfHealth": 1
+    },
+    {
+      "isTimeSpell": false,
+      "widgetPos": {
+        "x": 460,
+        "y": 487
+      },
+      "spellCast": "juijutsu gisei",
+      "index": 2,
+      "onScreen": "Block",
+      "selfHealth": 20,
+      "cooldownTotal": 45,
+      "cooldownActive": 10,
+      "totalCooldown": 1777772543,
+      "activeCooldown": 1777772508,
+      "outfitId": 0,
+      "enableTimeSpell": true,
+      "enabled": true,
+      "activeByOutfit": false,
+      "orangeSpell": "juijutsu gisei"
+    },
+    {
+      "spellCast": "shinigami no tsuiseki",
+      "index": 3,
+      "onScreen": "Dash",
+      "activeByOutfit": false,
+      "cooldownTotal": 3,
+      "cooldownActive": 0,
+      "isTimeSpell": true,
+      "widgetPos": {
+        "x": 459,
+        "y": 433
+      },
+      "outfitId": 0,
+      "enableTimeSpell": true,
+      "enabled": true,
+      "orangeSpell": "shinigami no tsuiseki",
+      "selfHealth": 1
+    },
+    {
+      "spellCast": "jujutsu shiji no jutsu",
+      "index": 4,
+      "isTimeSpell": false,
+      "orangeSpell": "jujutsu shiji no jutsu",
+      "onScreen": "Heal 60% Block",
+      "selfHealth": 60,
+      "cooldownTotal": 45,
+      "cooldownActive": 10,
+      "totalCooldown": 1777772558,
+      "widgetPos": {
+        "x": 459,
+        "y": 412
+      },
+      "outfitId": 0,
+      "enableTimeSpell": true,
+      "activeByOutfit": false,
+      "activeCooldown": 1777772523,
+      "enabled": true
+    },
+    {
+      "spellCast": "jujutsu shiji hyouketsu",
+      "index": 5,
+      "isTimeSpell": false,
+      "orangeSpell": "jujutsu shiji hyouketsu",
+      "onScreen": "Reflect Tank Marca",
+      "selfHealth": 40,
+      "cooldownTotal": 55,
+      "cooldownActive": 15,
+      "totalCooldown": 1777770885,
+      "widgetPos": {
+        "x": 459,
+        "y": 470
+      },
+      "outfitId": 0,
+      "enableTimeSpell": true,
+      "activeByOutfit": false,
+      "activeCooldown": 1777770845,
+      "enabled": true
+    }
+  ]
+}

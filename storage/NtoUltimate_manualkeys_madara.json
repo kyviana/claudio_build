@@ -1,0 +1,119 @@
+{
+  "keys": [
+    {
+      "enabled": false,
+      "mode": "say",
+      "sayText": "susanoo",
+      "input": "",
+      "blockOnChat": true
+    },
+    {
+      "enabled": false,
+      "mode": "say",
+      "sayText": "kage bunshin no jutsu",
+      "input": "",
+      "blockOnChat": true
+    },
+    {
+      "enabled": false,
+      "mode": "say",
+      "sayText": "mokuton prision",
+      "input": "",
+      "blockOnChat": true
+    },
+    {
+      "enabled": false,
+      "mode": "say",
+      "sayText": "senpou mokuton prision",
+      "input": "",
+      "blockOnChat": true
+    },
+    {
+      "enabled": false,
+      "mode": "say",
+      "sayText": "dai shinra tensei",
+      "input": "",
+      "blockOnChat": true
+    },
+    {
+      "enabled": false,
+      "mode": "say",
+      "sayText": "dai banshou tein",
+      "input": "",
+      "blockOnChat": true
+    },
+    {
+      "enabled": false,
+      "mode": "say",
+      "sayText": "senpo mokuton hijutsu koutan",
+      "input": "",
+      "blockOnChat": true
+    },
+    {
+      "enabled": false,
+      "mode": "say",
+      "sayText": "rinbo hengoku",
+      "input": "",
+      "blockOnChat": true
+    },
+    {
+      "enabled": true,
+      "mode": "say",
+      "sayText": "kawarimi no jutsu",
+      "input": "X",
+      "blockOnChat": true
+    },
+    {
+      "enabled": true,
+      "mode": "say",
+      "sayText": "kai",
+      "input": "F",
+      "blockOnChat": true
+    },
+    {
+      "enabled": true,
+      "mode": "say",
+      "sayText": "izanagi",
+      "input": "Mouse5",
+      "blockOnChat": true
+    },
+    {
+      "enabled": true,
+      "mode": "say",
+      "sayText": "katon haijingakure no jutsu",
+      "input": "Mouse4",
+      "blockOnChat": true
+    },
+    {
+      "enabled": true,
+      "mode": "say",
+      "sayText": "mangekyou susanoo",
+      "input": "3",
+      "blockOnChat": true
+    },
+    {
+      "enabled": true,
+      "mode": "say",
+      "input": "-",
+      "sayText": "concentrate chakra feet",
+      "blockOnChat": true
+    },
+    {
+      "enabled": true,
+      "input": "4",
+      "mode": "say",
+      "sayText": "taju kagebunshin no jutsu",
+      "requireTarget": false,
+      "blockOnChat": true
+    },
+    {
+      "enabled": true,
+      "input": "1",
+      "mode": "say",
+      "sayText": "kuchiyose kyuubi no jutsu",
+      "requireTarget": false,
+      "blockOnChat": true
+    }
+  ],
+  "enabled": true
+}

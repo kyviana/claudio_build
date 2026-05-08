@@ -1,0 +1,126 @@
+{
+  "burstEnabled": false,
+  "comboEnabled": false,
+  "comboSpells": [
+    {
+      "widgetPos": {
+        "y": 469,
+        "x": 675
+      },
+      "enableTimeSpell": true,
+      "index": 1,
+      "enabled": true,
+      "distance": 7,
+      "cooldownSpells": 3116170,
+      "orangeSpell": "suiton tenkyu",
+      "spellCast": "suiton tenkyu",
+      "onScreen": "Tenkyu",
+      "cooldown": 5003
+    },
+    {
+      "widgetPos": {
+        "y": 451,
+        "x": 668
+      },
+      "enableTimeSpell": true,
+      "index": 2,
+      "enabled": true,
+      "distance": 7,
+      "cooldownSpells": 3115708,
+      "orangeSpell": "suiton suiryudan no jutsu",
+      "spellCast": "suiton suiryudan no jutsu",
+      "onScreen": "Suiryudan",
+      "cooldown": 5058
+    },
+    {
+      "widgetPos": {
+        "y": 431,
+        "x": 669
+      },
+      "enableTimeSpell": true,
+      "index": 3,
+      "enabled": true,
+      "distance": 6,
+      "cooldownSpells": 3049742,
+      "orangeSpell": "suiton suijinheki no jutsu",
+      "spellCast": "suiton suijinheki no jutsu",
+      "onScreen": "Suijinheki",
+      "cooldown": 1095
+    },
+    {
+      "widgetPos": {
+        "y": 412,
+        "x": 667
+      },
+      "enableTimeSpell": true,
+      "index": 4,
+      "enabled": true,
+      "distance": 6,
+      "cooldownSpells": 3110391,
+      "orangeSpell": "daibakufu no jutsu",
+      "spellCast": "daibakufu no jutsu",
+      "onScreen": "Daibakufu",
+      "cooldown": 2539
+    },
+    {
+      "widgetPos": {
+        "y": 488,
+        "x": 663
+      },
+      "enableTimeSpell": true,
+      "index": 5,
+      "enabled": true,
+      "distance": 7,
+      "cooldownSpells": 3113678,
+      "orangeSpell": "suiton goshokuzame",
+      "spellCast": "suiton goshokuzame",
+      "onScreen": "Goshokuzame",
+      "cooldown": 2002
+    },
+    {
+      "widgetPos": {
+        "y": 507,
+        "x": 666
+      },
+      "enableTimeSpell": true,
+      "index": 6,
+      "enabled": true,
+      "distance": 7,
+      "cooldownSpells": 3114194,
+      "orangeSpell": "suiton teppodama",
+      "spellCast": "suiton teppodama",
+      "onScreen": "Teppo",
+      "cooldown": 2009
+    },
+    {
+      "widgetPos": {
+        "y": 548,
+        "x": 661
+      },
+      "enableTimeSpell": true,
+      "index": 7,
+      "enabled": true,
+      "distance": 1,
+      "cooldownSpells": 3111548,
+      "orangeSpell": "suiton suishoha",
+      "spellCast": "suiton suishoha",
+      "onScreen": "Suishoha",
+      "cooldown": 3096
+    },
+    {
+      "widgetPos": {
+        "y": 528,
+        "x": 663
+      },
+      "enableTimeSpell": true,
+      "index": 8,
+      "enabled": true,
+      "distance": 7,
+      "cooldownSpells": 3140332,
+      "orangeSpell": "suiton bakusui shouha",
+      "spellCast": "suiton bakusui shouha",
+      "onScreen": "Bakusui",
+      "cooldown": 30073
+    }
+  ]
+}

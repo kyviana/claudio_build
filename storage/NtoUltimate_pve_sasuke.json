@@ -1,0 +1,119 @@
+{
+  "enabled": true,
+  "spells": [
+    {
+      "level": 475,
+      "spell": "enton yasaka no magatama",
+      "cooldownUntil": 0,
+      "enabled": true
+    },
+    {
+      "level": 25,
+      "spell": "katon gokakyu no jutsu",
+      "cooldownUntil": 0,
+      "enabled": false
+    },
+    {
+      "level": 35,
+      "spell": "katon ryuka no jutsu",
+      "cooldownUntil": 0,
+      "enabled": false
+    },
+    {
+      "level": 40,
+      "spell": "katon no jutsu",
+      "cooldownUntil": 0,
+      "enabled": false
+    },
+    {
+      "level": 40,
+      "spell": "chidori",
+      "cooldownUntil": 0,
+      "enabled": false
+    },
+    {
+      "level": 75,
+      "spell": "kuchyose dark snake no jutsu",
+      "cooldownUntil": 0,
+      "enabled": false
+    },
+    {
+      "level": 80,
+      "spell": "corrupt chidori",
+      "cooldownUntil": 0,
+      "enabled": false
+    },
+    {
+      "level": 100,
+      "spell": "chidorigatana",
+      "cooldownUntil": 0,
+      "enabled": false
+    },
+    {
+      "level": 100,
+      "spell": "susanoo",
+      "cooldownUntil": 0,
+      "enabled": false
+    },
+    {
+      "level": 125,
+      "spell": "chidori nagashi",
+      "cooldownUntil": 0,
+      "enabled": false
+    },
+    {
+      "level": 130,
+      "spell": "kuchyose jya no jutsu",
+      "cooldownUntil": 0,
+      "enabled": false
+    },
+    {
+      "level": 150,
+      "spell": "kuchyose manda no jutsu",
+      "cooldownUntil": 0,
+      "enabled": false
+    },
+    {
+      "level": 200,
+      "spell": "chidori raimei",
+      "cooldownUntil": 0,
+      "enabled": false
+    },
+    {
+      "level": 225,
+      "spell": "kirin",
+      "cooldownUntil": 0,
+      "enabled": false
+    },
+    {
+      "level": 250,
+      "spell": "amaterasu",
+      "cooldownUntil": 0,
+      "enabled": false
+    },
+    {
+      "level": 300,
+      "spell": "susanoo bakugoyo",
+      "cooldownUntil": 0,
+      "enabled": true
+    },
+    {
+      "level": 350,
+      "spell": "susanoo kagutsuchi",
+      "cooldownUntil": 0,
+      "enabled": true
+    },
+    {
+      "level": 400,
+      "spell": "tenohira chibaku tensei",
+      "cooldownUntil": 0,
+      "enabled": true
+    },
+    {
+      "level": 450,
+      "spell": "kuroki chidori",
+      "cooldownUntil": 0,
+      "enabled": true
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "spells": [
+    {
+      "level": 30,
+      "spell": "youton shoku",
+      "cooldownUntil": 0,
+      "enabled": false
+    },
+    {
+      "level": 70,
+      "spell": "youton noroi",
+      "cooldownUntil": 0,
+      "enabled": true
+    },
+    {
+      "level": 75,
+      "spell": "doton utsu",
+      "cooldownUntil": 0,
+      "enabled": true
+    },
+    {
+      "level": 150,
+      "spell": "doton dragon furie",
+      "cooldownUntil": 0,
+      "enabled": true
+    },
+    {
+      "level": 200,
+      "spell": "youton akai",
+      "cooldownUntil": 0,
+      "enabled": true
+    },
+    {
+      "level": 225,
+      "spell": "ground barrier",
+      "cooldownUntil": 0,
+      "enabled": true
+    },
+    {
+      "level": 240,
+      "spell": "suiton suirou no jutsu",
+      "cooldownUntil": 0,
+      "enabled": true
+    },
+    {
+      "level": 250,
+      "spell": "youton gakuhou",
+      "cooldownUntil": 0,
+      "enabled": true
+    },
+    {
+      "level": 300,
+      "spell": "youton funka",
+      "cooldownUntil": 0,
+      "enabled": true
+    },
+    {
+      "level": 350,
+      "spell": "youton shouka",
+      "cooldownUntil": 0,
+      "enabled": true
+    },
+    {
+      "level": 400,
+      "spell": "youton taiga",
+      "cooldownUntil": 0,
+      "enabled": true
+    },
+    {
+      "level": 425,
+      "spell": "youton prision",
+      "cooldownUntil": 0,
+      "enabled": true
+    },
+    {
+      "level": 450,
+      "spell": "youton doryudan",
+      "cooldownUntil": 0,
+      "enabled": true
+    },
+    {
+      "level": 475,
+      "spell": "youton doryuheki",
+      "cooldownUntil": 0,
+      "enabled": true
+    },
+    {
+      "level": 500,
+      "spell": "youton chiri no jutsu",
+      "cooldownUntil": 0,
+      "enabled": true
+    },
+    {
+      "level": 500,
+      "spell": "dai youton doryuheki",
+      "cooldownUntil": 0,
+      "enabled": true
+    },
+    {
+      "level": 525,
+      "spell": "youton yokai",
+      "cooldownUntil": 0,
+      "enabled": true
+    }
+  ],
+  "enabled": true
+}
