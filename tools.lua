@@ -1036,6 +1036,108 @@ if rootWidget then
     UI.Separator(hpPanel3)
 
     PTabBar:addTab("Buff", hpPanel4)
+
+    local hpPanel5 = g_ui.createWidget("hpPanel")
+    PTabBar:addTab("Summon", hpPanel5)
+
+    -- Config da vocacao — lê do cadastro_vocacoes.json
+    local _summonCfg = (CHARS[charClass] and CHARS[charClass].summon) or { spell = "", name = "", qtd = 1, usePlayerName = false }
+    local _cadPath = "/bot/" .. modules.game_bot.contentsPanel.config:getCurrentOption().text .. "/storage/cadastro_vocacoes.json"
+    if g_resources.fileExists(_cadPath) then
+        local ok, data = pcall(function() return json.decode(g_resources.readFileContents(_cadPath)) end)
+        if ok and data and data.vocacoes and data.vocacoes[charClass] and data.vocacoes[charClass].summon then
+            _summonCfg = data.vocacoes[charClass].summon
+        end
+    end
+
+    cor = UI.Label("Jutsu:", hpPanel5) cor:setColor("white")
+    addTextEdit("summonSpell", _summonCfg.spell or "", function(_, text)
+        _summonCfg.spell = text
+    end, hpPanel5)
+
+    cor = UI.Label("Nome da invocacao:", hpPanel5) cor:setColor("white")
+    addTextEdit("summonName", _summonCfg.name or "", function(_, text)
+        _summonCfg.name = text
+    end, hpPanel5)
+
+    local _usePlayerName = _summonCfg.usePlayerName or false
+
+    local _chkRow = setupUI([[
+Panel
+  height: 20
+]], hpPanel5)
+    local _chkBox = setupUI([[
+CheckBox
+  anchors.left: parent.left
+  anchors.verticalCenter: parent.verticalCenter
+  margin-left: 4
+  width: 14
+  height: 14
+]], _chkRow)
+    setupUI([[
+Label
+  anchors.left: parent.left
+  anchors.verticalCenter: parent.verticalCenter
+  margin-left: 22
+  color: #AAAAAA
+  text: Usa nick do personagem
+]], _chkRow)
+
+    _chkBox:setChecked(_usePlayerName)
+    _chkBox.onClick = function()
+        _usePlayerName = not _usePlayerName
+        _summonCfg.usePlayerName = _usePlayerName
+        _chkBox:setChecked(_usePlayerName)
+    end
+
+    cor = UI.Label("Quantidade:", hpPanel5) cor:setColor("white")
+    addTextEdit("summonQtd", tostring(_summonCfg.qtd or 1), function(_, text)
+        local val = tonumber(text)
+        if val then _summonCfg.qtd = val end
+    end, hpPanel5)
+
+    local _cadastroPath = "/bot/" .. modules.game_bot.contentsPanel.config:getCurrentOption().text .. "/storage/cadastro_vocacoes.json"
+
+    UI.Button("Salvar na vocacao", function()
+        _summonCfg.usePlayerName = _usePlayerName
+        if CHARS[charClass] then CHARS[charClass].summon = _summonCfg end
+        -- Salva no cadastro_vocacoes.json
+        if g_resources.fileExists(_cadastroPath) then
+            local ok, data = pcall(function() return json.decode(g_resources.readFileContents(_cadastroPath)) end)
+            if ok and data and data.vocacoes then
+                if not data.vocacoes[charClass] then data.vocacoes[charClass] = {} end
+                data.vocacoes[charClass].summon = _summonCfg
+                g_resources.writeFileContents(_cadastroPath, json.encode(data, 2))
+                warn("[Summon] Salvo no cadastro_vocacoes.json para: " .. charClass)
+            end
+        end
+    end, hpPanel5)
+
+    summons = macro(1000, "Summon", function()
+        if summons.isOff() then return end
+        if not _summonCfg.spell or _summonCfg.spell == "" then return end
+
+        local petName = _summonCfg.usePlayerName and player:getName() or (_summonCfg.name or "")
+        if petName == "" then return end
+
+        local count = 0
+        local pPos  = player:getPosition()
+
+        for _, spec in ipairs(getSpectators()) do
+            if spec:isCreature() and spec ~= player then
+                if spec:getName():lower() == petName:lower() then
+                    local sp = spec:getPosition()
+                    if math.abs(pPos.z - sp.z) > 3 or spec:getHealthPercent() < 30 then
+                        say("kai") return
+                    end
+                    count = count + 1
+                end
+            end
+        end
+        if count < (_summonCfg.qtd or 1) then
+            say(_summonCfg.spell)
+        end
+    end, hpPanel5)
     cor = UI.Label("Buffs:", hpPanel4)
     cor:setColor("red")
     UI.Separator(hpPanel4)
@@ -1070,13 +1172,20 @@ if rootWidget then
     -- Solta buff1 uma vez pra capturar o timestamp do selo
     macro(500, function()
         local ml = player:getMagicLevel()
-        if ml < _lastML - 20 then
+        if ml < _lastML - 20 and not isInPz() then
             local b1 = storage.buff or ""
             if b1 ~= "" then
                 schedule(200, function() say(b1) end)
             end
         end
         _lastML = ml
+        -- na PZ reseta tudo pra sair ja buffado
+        if isInPz() then
+            _buff1ExpiresAt = 0
+            _buff2ExpiresAt = 0
+            _buffCD = 0
+            _sealedUntil = 0
+        end
     end)
 
     -- Detector de selos via onTextMessage mode=43

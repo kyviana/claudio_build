@@ -20,6 +20,7 @@ CHARS = {
             ["suiton teppodama"]           = 6,
             ["suiton suijinheki no jutsu"] = 7,
         },
+        summon = { spell = "taju kagebunshin no jutsu", name = "Ilyes Fitoussi", qtd = 5 },
         actionbar = {
             ["1.1"] = { hotkey = "F", sayText = "kai",                        autoSay = true, type = 1 },
             ["1.2"] = { hotkey = "X", sayText = "kawarimi no jutsu",          autoSay = true, type = 1 },
@@ -75,6 +76,7 @@ CHARS = {
               requiresActive = { "kawarimi no jutsu" },
               blockedBy = { "izanagi", "magen shinkarasu" } },
         },
+        summon = { spell = "", name = "", qtd = 1 },
         actionbar = {
             --["1.1"] = { hotkey = "1", sayText = "izanagi",           autoSay = true, type = 1 },
             --["1.2"] = { hotkey = "W", sayText = "katon daibakuha",   autoSay = true, type = 1 },
@@ -115,6 +117,7 @@ if g_resources.fileExists(_cadastroPath) then
                     burstOrder = {},
                     fugaOrder  = {},
                     actionbar  = {},
+                    summon     = voc.summon or { spell = "", name = "", qtd = 1 },
                     jutsus     = voc.jutsus or {},
                 }
             else
