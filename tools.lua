@@ -1127,7 +1127,7 @@ Label
             if spec:isCreature() and spec ~= player then
                 if spec:getName():lower() == petName:lower() then
                     local sp = spec:getPosition()
-                    if math.abs(pPos.z - sp.z) > 3 or spec:getHealthPercent() < 30 then
+                    if math.abs(pPos.z - sp.z) > 3 then
                         say("kai") return
                     end
                     count = count + 1

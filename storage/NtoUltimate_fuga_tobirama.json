@@ -1,108 +1,108 @@
 {
-  "comboSpells": [
-
-  ],
   "fugaSpells": [
     {
-      "enabled": true,
+      "cooldownTotal": 50,
+      "cooldownActive": 7,
+      "totalCooldown": 1778376312,
+      "activeCooldown": 1778376269,
       "widgetPos": {
-        "x": 466,
-        "y": 437
+        "y": 437,
+        "x": 466
       },
+      "enabled": true,
+      "outfitId": 0,
+      "index": 1,
+      "enableTimeSpell": true,
+      "isTimeSpell": false,
       "spellCast": "kokuangyo no jutsu",
       "orangeSpell": "kokuangyo no jutsu",
       "onScreen": "Mundo",
-      "selfHealth": 1,
-      "cooldownTotal": 50,
-      "cooldownActive": 7,
-      "totalCooldown": 1777431147,
-      "activeCooldown": 1777431104,
-      "outfitId": 0,
-      "enableTimeSpell": true,
-      "isTimeSpell": false,
-      "index": 1
+      "selfHealth": 1
     },
     {
-      "enabled": true,
-      "widgetPos": {
-        "x": 468,
-        "y": 454
-      },
-      "spellCast": "suiton fuin suigadan",
-      "orangeSpell": "suiton fuin suigadan",
-      "onScreen": "Bola",
-      "selfHealth": 1,
       "cooldownTotal": 20,
       "cooldownActive": 5,
       "totalCooldown": 1777948759,
       "activeCooldown": 1777948744,
+      "widgetPos": {
+        "y": 454,
+        "x": 468
+      },
+      "enabled": true,
       "outfitId": 0,
+      "index": 2,
       "enableTimeSpell": true,
       "isTimeSpell": false,
-      "index": 2
+      "spellCast": "suiton fuin suigadan",
+      "orangeSpell": "suiton fuin suigadan",
+      "onScreen": "Bola",
+      "selfHealth": 1
     },
     {
-      "enabled": true,
+      "cooldownTotal": 35,
+      "cooldownActive": 5,
+      "totalCooldown": 1778376390,
+      "activeCooldown": 1778376360,
       "widgetPos": {
-        "x": 467,
-        "y": 472
+        "y": 472,
+        "x": 467
       },
+      "enabled": true,
+      "activeByOutfit": false,
+      "outfitId": 0,
+      "index": 3,
+      "enableTimeSpell": true,
+      "isTimeSpell": false,
       "spellCast": "kawarimi no jutsu",
       "orangeSpell": "kawarimi",
       "onScreen": "Kawarimi",
-      "selfHealth": 40,
-      "cooldownTotal": 35,
-      "cooldownActive": 5,
-      "totalCooldown": 1778110795,
-      "activeCooldown": 1778110765,
-      "outfitId": 0,
-      "enableTimeSpell": true,
-      "activeByOutfit": false,
-      "isTimeSpell": false,
-      "index": 3
+      "selfHealth": 40
     },
     {
-      "enabled": true,
-      "widgetPos": {
-        "x": 474,
-        "y": 399
-      },
-      "spellCast": "mode bijuu",
-      "orangeSpell": "mode bijuu",
-      "onScreen": "Bijuu",
-      "selfHealth": 24,
       "cooldownTotal": 150,
       "cooldownActive": 20,
       "totalCooldown": 1777948723,
       "activeCooldown": 1777948593,
-      "outfitId": 0,
-      "enableTimeSpell": true,
+      "widgetPos": {
+        "y": 399,
+        "x": 474
+      },
+      "enabled": true,
       "activeByOutfit": false,
+      "outfitId": 0,
+      "index": 4,
+      "enableTimeSpell": true,
       "isTimeSpell": false,
-      "index": 4
+      "spellCast": "mode bijuu",
+      "orangeSpell": "mode bijuu",
+      "onScreen": "Bijuu",
+      "selfHealth": 24
     },
     {
-      "enabled": true,
+      "cooldownTotal": 4,
+      "cooldownActive": 0,
+      "totalCooldown": 1778376127,
+      "activeCooldown": 1778376123,
       "widgetPos": {
-        "x": 464,
-        "y": 492
+        "y": 492,
+        "x": 464
       },
+      "enabled": true,
+      "outfitId": 0,
+      "activeByOutfit": false,
+      "index": 5,
+      "enableTimeSpell": true,
+      "isTimeSpell": false,
       "spellCast": "hiraishingiri",
       "orangeSpell": "hiraishingiri",
       "onScreen": "Stack",
-      "selfHealth": 50,
-      "cooldownTotal": 4,
-      "cooldownActive": 0,
-      "totalCooldown": 1778115654,
-      "activeCooldown": 1778115650,
-      "outfitId": 0,
-      "enableTimeSpell": true,
-      "activeByOutfit": false,
-      "index": 5,
-      "isTimeSpell": false
+      "selfHealth": 50
     }
   ],
   "keySpells": [
+
+  ],
+  "comboSpells": [
 
   ]
 }

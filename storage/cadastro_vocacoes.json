@@ -128,9 +128,9 @@
 
       ],
       "summon": {
-        "name": "",
-        "spell": "taju kagebunshin no jutsu",
         "usePlayerName": true,
+        "spell": "taju kagebunshin no jutsu",
+        "name": "",
         "qtd": 5
       },
       "names": [
@@ -141,9 +141,9 @@
       "buff": "kamui protect",
       "buff3": "",
       "summon": {
-        "usePlayerName": false,
-        "spell": "kuchyose gedou mazou",
         "name": "Gedou Mazou",
+        "spell": "kuchyose gedou mazou",
+        "usePlayerName": false,
         "qtd": 1
       },
       "jutsus": [
@@ -316,18 +316,18 @@
           "catTimer": true
         }
       ],
+      "regen": "big regeneration",
       "names": [
         "Obito Do Fluxo",
         "Kato Pero"
       ],
-      "regen": "big regeneration",
       "buff2": "kekkei genkai"
     },
     "madara": {
       "summon": {
-        "name": "",
-        "spell": "taju kagebunshin no jutsu",
         "usePlayerName": true,
+        "spell": "taju kagebunshin no jutsu",
+        "name": "",
         "qtd": 5
       },
       "regen": "big regeneration",
@@ -582,10 +582,10 @@
           "catTimer": true
         }
       ],
+      "buff3": "",
       "names": [
         "Hashirama Do Fluxo"
       ],
-      "buff3": "",
       "buff2": "kekkei genkai"
     },
     "kurenai": {
