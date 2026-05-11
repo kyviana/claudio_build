@@ -1,1075 +1,1220 @@
 {
   "vocacoes": {
-    "hidan": {
-      "names": [
-        "Insane Akira"
-      ],
-      "buff3": "",
-      "jutsus": [
-        {
-          "spell": "kamakiri tensakai",
-          "level": 125,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "kaiten renbu",
-          "level": 160,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "kamakiri hikiyose",
-          "level": 200,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "midare kamakiri",
-          "level": 250,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "shiki kuuin",
-          "level": 300,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "shiki hikiyose",
-          "level": 350,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "jujutsu shiji no jutsu",
-          "level": 400,
-          "tipo": "dano",
-          "catKeys": true,
-          "catDano": false,
-          "catTimer": true
-        },
-        {
-          "spell": "jujutsu shiji hyouketsu",
-          "level": 400,
-          "tipo": "dano",
-          "catKeys": true,
-          "catDano": false,
-          "catTimer": true
-        },
-        {
-          "spell": "shinigami no tsuiseki",
-          "level": 425,
-          "tipo": "dano",
-          "catKeys": true,
-          "catDano": false,
-          "catTimer": true
-        },
-        {
-          "spell": "shinigami no shukketsu",
-          "level": 425,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "dai shiji hyouketsu",
-          "level": 450,
-          "tipo": "dano",
-          "catKeys": true,
-          "catDano": false,
-          "catTimer": false
-        },
-        {
-          "spell": "shi no hikiyose",
-          "level": 450,
-          "tipo": "dano",
-          "catKeys": true,
-          "catDano": false,
-          "catTimer": true
-        },
-        {
-          "spell": "kushizashi no kei",
-          "level": 450,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "juijutsu gisei",
-          "level": 475,
-          "tipo": "dano",
-          "catKeys": true,
-          "catDano": false,
-          "catTimer": true
-        }
-      ],
-      "buff": "shiki",
-      "regen": "big regeneration",
-      "buff2": "kekkei genkai"
-    },
     "tobirama": {
-      "jutsus": [
-
-      ],
-      "summon": {
-        "usePlayerName": true,
-        "spell": "taju kagebunshin no jutsu",
-        "name": "",
-        "qtd": 5
-      },
       "names": [
         "Tobirama Do Fluxo"
-      ]
-    },
-    "obito": {
-      "buff": "kamui protect",
-      "buff3": "",
-      "summon": {
-        "name": "Gedou Mazou",
-        "spell": "kuchyose gedou mazou",
-        "usePlayerName": false,
-        "qtd": 1
-      },
-      "jutsus": [
-        {
-          "spell": "katon dragon furie",
-          "level": 80,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "katon dragon no jutsu",
-          "level": 100,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "katon dragon furie no jutsu",
-          "level": 130,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "sharingan katohenke",
-          "level": 130,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "doton dragon furie",
-          "level": 150,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "doton prision",
-          "level": 170,
-          "tipo": "dano",
-          "catKeys": true,
-          "catDano": false,
-          "catTimer": true
-        },
-        {
-          "spell": "doton mosayko no jutsu",
-          "level": 200,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "kamui me",
-          "level": 240,
-          "tipo": "dano",
-          "catKeys": true,
-          "catDano": false,
-          "catTimer": true
-        },
-        {
-          "spell": "kamui",
-          "level": 250,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "keiyaku fuin",
-          "level": 285,
-          "tipo": "dano",
-          "catKeys": true,
-          "catDano": false,
-          "catTimer": true
-        },
-        {
-          "spell": "kamui no jutsu",
-          "level": 300,
-          "tipo": "dano",
-          "catKeys": true,
-          "catDano": false,
-          "catTimer": true
-        },
-        {
-          "spell": "senka no en",
-          "level": 300,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "katon daibakuha",
-          "level": 350,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "katon katohenke no jutsu",
-          "level": 350,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "katon karyu endan",
-          "level": 360,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "izanagi",
-          "level": 400,
-          "tipo": "dano",
-          "catKeys": true,
-          "catDano": false,
-          "catTimer": true
-        },
-        {
-          "spell": "kuchyose gedou mazou",
-          "level": 400,
-          "tipo": "dano",
-          "catKeys": true,
-          "catDano": false,
-          "catTimer": false
-        },
-        {
-          "spell": "katon bakufu ranbu",
-          "level": 450,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "kamui muzan",
-          "level": 450,
-          "tipo": "dano",
-          "catKeys": true,
-          "catDano": false,
-          "catTimer": true
-        },
-        {
-          "spell": "gedou shinsei",
-          "level": 500,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "dai kamui",
-          "level": 500,
-          "tipo": "dano",
-          "catKeys": true,
-          "catDano": false,
-          "catTimer": true
-        }
       ],
-      "regen": "big regeneration",
-      "names": [
-        "Obito Do Fluxo",
-        "Kato Pero"
-      ],
-      "buff2": "kekkei genkai"
-    },
-    "madara": {
       "summon": {
         "usePlayerName": true,
         "spell": "taju kagebunshin no jutsu",
-        "name": "",
-        "qtd": 5
+        "qtd": 5,
+        "name": ""
       },
-      "regen": "big regeneration",
-      "buff": "susanoo",
-      "jutsus": [
-        {
-          "spell": "kage bunshin no jutsu",
-          "level": 20,
-          "tipo": "dano",
-          "catKeys": true,
-          "catDano": false,
-          "catTimer": false
-        },
-        {
-          "spell": "katon gokakyu no jutsu",
-          "level": 25,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "taju kagebunshin no jutsu",
-          "level": 25,
-          "tipo": "dano",
-          "catKeys": true,
-          "catDano": false,
-          "catTimer": false
-        },
-        {
-          "spell": "suiton suikiri",
-          "level": 30,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "katon ryuka no jutsu",
-          "level": 35,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "katon no jutsu",
-          "level": 40,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "sharingan explosion",
-          "level": 50,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "katon dragon furie",
-          "level": 80,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "katon dragon no jutsu",
-          "level": 100,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "sharingan katohenke",
-          "level": 130,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "doton dragon furie",
-          "level": 150,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "mokuton prision",
-          "level": 175,
-          "tipo": "dano",
-          "catKeys": true,
-          "catDano": false,
-          "catTimer": true
-        },
-        {
-          "spell": "senpou mokuton prision",
-          "level": 175,
-          "tipo": "dano",
-          "catKeys": true,
-          "catDano": false,
-          "catTimer": true
-        },
-        {
-          "spell": "suiton suijinheki no jutsu",
-          "level": 210,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "dai shinra tensei",
-          "level": 275,
-          "tipo": "dano",
-          "catKeys": true,
-          "catDano": false,
-          "catTimer": false
-        },
-        {
-          "spell": "dai banshou tein",
-          "level": 300,
-          "tipo": "dano",
-          "catKeys": true,
-          "catDano": false,
-          "catTimer": false
-        },
-        {
-          "spell": "katon endan",
-          "level": 300,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "katon kairyudan no jutsu",
-          "level": 300,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "katon booru kaki",
-          "level": 300,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "mokuton mosayko no jutsu",
-          "level": 325,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "meteor no jutsu",
-          "level": 350,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "tengai shinsei",
-          "level": 400,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "izanagi",
-          "level": 400,
-          "tipo": "dano",
-          "catKeys": true,
-          "catDano": false,
-          "catTimer": true
-        },
-        {
-          "spell": "kuchiyose kyuubi no jutsu",
-          "level": 425,
-          "tipo": "dano",
-          "catKeys": true,
-          "catDano": false,
-          "catTimer": true
-        },
-        {
-          "spell": "susano attack",
-          "level": 450,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "senpo mokuton hijutsu koutan",
-          "level": 450,
-          "tipo": "dano",
-          "catKeys": true,
-          "catDano": false,
-          "catTimer": false
-        },
-        {
-          "spell": "mangekyou susanoo",
-          "level": 450,
-          "tipo": "dano",
-          "catKeys": true,
-          "catDano": false,
-          "catTimer": true
-        },
-        {
-          "spell": "shin tengai shinsei",
-          "level": 475,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "rinbo hengoku",
-          "level": 500,
-          "tipo": "dano",
-          "catKeys": true,
-          "catDano": false,
-          "catTimer": true
-        },
-        {
-          "spell": "tengai yasaka no magatama",
-          "level": 500,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "katon haijingakure no jutsu",
-          "level": 525,
-          "tipo": "dano",
-          "catKeys": true,
-          "catDano": false,
-          "catTimer": true
-        }
-      ],
-      "buff3": "",
-      "names": [
-        "Hashirama Do Fluxo"
-      ],
-      "buff2": "kekkei genkai"
-    },
-    "kurenai": {
-      "buff": "chakura kanchi",
-      "buff3": "",
-      "jutsus": [
-        {
-          "spell": "kouyoumu",
-          "level": 160,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "jubaku no jutsu",
-          "level": 200,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "botanyuki",
-          "level": 250,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "magen hiei no jutsu",
-          "level": 275,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "kaki buyou",
-          "level": 300,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "magen hanagasumi",
-          "level": 350,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "sansai no jutsu",
-          "level": 400,
-          "tipo": "dano",
-          "catKeys": true,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "undo cho kosoku",
-          "level": 425,
-          "tipo": "dano",
-          "catKeys": true,
-          "catDano": false,
-          "catTimer": true
-        },
-        {
-          "spell": "anshousui",
-          "level": 450,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "magen shinkirou",
-          "level": 475,
-          "tipo": "dano",
-          "catKeys": true,
-          "catDano": false,
-          "catTimer": true
-        },
-        {
-          "spell": "magen jubaku satsu",
-          "level": 500,
-          "tipo": "dano",
-          "catKeys": false,
-          "catDano": true,
-          "catTimer": false
-        },
-        {
-          "spell": "genjutsu no hanabira",
-          "level": 515,
-          "tipo": "dano",
-          "catKeys": true,
-          "catDano": false,
-          "catTimer": true
-        },
-        {
-          "spell": "dai magen shinkirou",
-          "level": 520,
-          "tipo": "dano",
-          "catKeys": true,
-          "catDano": false,
-          "catTimer": true
-        },
-        {
-          "spell": "gentei jutsu",
-          "level": 525,
-          "tipo": "dano",
-          "catKeys": true,
-          "catDano": false,
-          "catTimer": true
-        }
-      ],
-      "names": [
-        "Jubileena"
-      ],
-      "regen": "big regeneration",
-      "buff2": "kekkei genkai"
-    },
-    "sasuke": {
       "jutsus": [
 
-      ],
-      "names": [
-        "Megumi Fushiguro",
-        "Blackshine",
-        "Replacement Moro"
-      ]
-    },
-    "shisui": {
-      "jutsus": [
-
-      ],
-      "names": [
-        "Queirozzz"
       ]
     },
     "yagura": {
+      "buff2": "kekkei genkai",
+      "buff": "bijuuka",
       "names": [
         "Nonchalant"
       ],
+      "regen": "big regeneration",
       "buff3": "",
       "jutsus": [
         {
           "spell": "suiryudan no jutsu",
-          "level": 100,
-          "tipo": "dano",
           "catKeys": false,
           "catDano": true,
-          "catTimer": false
+          "level": 100,
+          "catTimer": false,
+          "tipo": "dano"
         },
         {
           "spell": "suiton suigadan",
-          "level": 125,
-          "tipo": "dano",
           "catKeys": false,
           "catDano": true,
-          "catTimer": false
+          "level": 125,
+          "catTimer": false,
+          "tipo": "dano"
         },
         {
           "spell": "bijuu dama",
-          "level": 175,
-          "tipo": "dano",
           "catKeys": false,
           "catDano": true,
-          "catTimer": false
+          "level": 175,
+          "catTimer": false,
+          "tipo": "dano"
         },
         {
           "spell": "suiton dragon no jutsu",
-          "level": 180,
-          "tipo": "dano",
           "catKeys": false,
           "catDano": true,
-          "catTimer": false
+          "level": 180,
+          "catTimer": false,
+          "tipo": "dano"
         },
         {
           "spell": "suiton suikodan no jutsu",
-          "level": 190,
-          "tipo": "dano",
           "catKeys": false,
           "catDano": true,
-          "catTimer": false
+          "level": 190,
+          "catTimer": false,
+          "tipo": "dano"
         },
         {
           "spell": "suiton suijinheki no jutsu",
-          "level": 210,
-          "tipo": "dano",
           "catKeys": false,
           "catDano": true,
-          "catTimer": false
+          "level": 210,
+          "catTimer": false,
+          "tipo": "dano"
         },
         {
           "spell": "suiton suirou no jutsu",
-          "level": 240,
-          "tipo": "dano",
           "catKeys": false,
           "catDano": true,
-          "catTimer": false
+          "level": 240,
+          "catTimer": false,
+          "tipo": "dano"
         },
         {
           "spell": "suiton suisahan",
-          "level": 270,
-          "tipo": "dano",
           "catKeys": false,
           "catDano": true,
-          "catTimer": false
+          "level": 270,
+          "catTimer": false,
+          "tipo": "dano"
         },
         {
           "spell": "suiton suishoha no jutsu",
-          "level": 300,
-          "tipo": "dano",
           "catKeys": true,
           "catDano": false,
-          "catTimer": false
+          "level": 300,
+          "catTimer": false,
+          "tipo": "dano"
         },
         {
           "spell": "suiton goshokuzame",
-          "level": 325,
-          "tipo": "dano",
           "catKeys": false,
           "catDano": true,
-          "catTimer": false
+          "level": 325,
+          "catTimer": false,
+          "tipo": "dano"
         },
         {
           "spell": "suiton suisha",
-          "level": 350,
-          "tipo": "dano",
           "catKeys": false,
           "catDano": true,
-          "catTimer": false
+          "level": 350,
+          "catTimer": false,
+          "tipo": "dano"
         },
         {
           "spell": "sentou taifui",
-          "level": 375,
-          "tipo": "dano",
           "catKeys": false,
           "catDano": true,
-          "catTimer": false
+          "level": 375,
+          "catTimer": false,
+          "tipo": "dano"
         },
         {
           "spell": "suiton suichu hogeki",
-          "level": 400,
-          "tipo": "dano",
           "catKeys": false,
           "catDano": true,
-          "catTimer": false
+          "level": 400,
+          "catTimer": false,
+          "tipo": "dano"
         },
         {
           "spell": "shunsui",
-          "level": 400,
-          "tipo": "dano",
           "catKeys": true,
           "catDano": false,
-          "catTimer": true
+          "level": 400,
+          "catTimer": true,
+          "tipo": "dano"
         },
         {
           "spell": "sango renshou",
-          "level": 425,
-          "tipo": "dano",
           "catKeys": true,
           "catDano": true,
-          "catTimer": true
+          "level": 425,
+          "catTimer": true,
+          "tipo": "dano"
         },
         {
           "spell": "suiton suijin no jutsu",
-          "level": 450,
-          "tipo": "dano",
           "catKeys": true,
           "catDano": false,
-          "catTimer": true
+          "level": 450,
+          "catTimer": true,
+          "tipo": "dano"
         },
         {
           "spell": "fuuton taifuuikka",
-          "level": 475,
-          "tipo": "dano",
           "catKeys": false,
           "catDano": true,
-          "catTimer": false
+          "level": 475,
+          "catTimer": false,
+          "tipo": "dano"
         },
         {
           "spell": "suiton mizukagami no jutsu",
-          "level": 500,
-          "tipo": "dano",
           "catKeys": true,
           "catDano": false,
-          "catTimer": true
+          "level": 500,
+          "catTimer": true,
+          "tipo": "dano"
         },
         {
           "spell": "suiton kaisui houdan",
-          "level": 500,
-          "tipo": "dano",
           "catKeys": false,
           "catDano": true,
-          "catTimer": false
+          "level": 500,
+          "catTimer": false,
+          "tipo": "dano"
         },
         {
           "spell": "sanbi modo",
-          "level": 525,
-          "tipo": "dano",
           "catKeys": true,
           "catDano": false,
-          "catTimer": true
+          "level": 525,
+          "catTimer": true,
+          "tipo": "dano"
         }
-      ],
-      "buff": "bijuuka",
-      "regen": "big regeneration",
-      "buff2": "kekkei genkai"
+      ]
     },
-    "minato": {
+    "obito": {
+      "buff2": "kekkei genkai",
+      "buff": "kamui protect",
+      "summon": {
+        "name": "Gedou Mazou",
+        "spell": "kuchyose gedou mazou",
+        "qtd": 1,
+        "usePlayerName": false
+      },
       "names": [
-        "Minato do fluxo"
+        "Obito Do Fluxo",
+        "Kato Pero"
       ],
+      "regen": "big regeneration",
+      "buff3": "",
+      "jutsus": [
+        {
+          "spell": "katon dragon furie",
+          "catKeys": false,
+          "catDano": true,
+          "level": 80,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "katon dragon no jutsu",
+          "catKeys": false,
+          "catDano": true,
+          "level": 100,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "katon dragon furie no jutsu",
+          "catKeys": false,
+          "catDano": true,
+          "level": 130,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "sharingan katohenke",
+          "catKeys": false,
+          "catDano": true,
+          "level": 130,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "doton dragon furie",
+          "catKeys": false,
+          "catDano": true,
+          "level": 150,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "doton prision",
+          "catKeys": true,
+          "catDano": false,
+          "level": 170,
+          "catTimer": true,
+          "tipo": "dano"
+        },
+        {
+          "spell": "doton mosayko no jutsu",
+          "catKeys": false,
+          "catDano": true,
+          "level": 200,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "kamui me",
+          "catKeys": true,
+          "catDano": false,
+          "level": 240,
+          "catTimer": true,
+          "tipo": "dano"
+        },
+        {
+          "spell": "kamui",
+          "catKeys": false,
+          "catDano": true,
+          "level": 250,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "keiyaku fuin",
+          "catKeys": true,
+          "catDano": false,
+          "level": 285,
+          "catTimer": true,
+          "tipo": "dano"
+        },
+        {
+          "spell": "kamui no jutsu",
+          "catKeys": true,
+          "catDano": false,
+          "level": 300,
+          "catTimer": true,
+          "tipo": "dano"
+        },
+        {
+          "spell": "senka no en",
+          "catKeys": false,
+          "catDano": true,
+          "level": 300,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "katon daibakuha",
+          "catKeys": false,
+          "catDano": true,
+          "level": 350,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "katon katohenke no jutsu",
+          "catKeys": false,
+          "catDano": true,
+          "level": 350,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "katon karyu endan",
+          "catKeys": false,
+          "catDano": true,
+          "level": 360,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "izanagi",
+          "catKeys": true,
+          "catDano": false,
+          "level": 400,
+          "catTimer": true,
+          "tipo": "dano"
+        },
+        {
+          "spell": "kuchyose gedou mazou",
+          "catKeys": true,
+          "catDano": false,
+          "level": 400,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "katon bakufu ranbu",
+          "catKeys": false,
+          "catDano": true,
+          "level": 450,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "kamui muzan",
+          "catKeys": true,
+          "catDano": false,
+          "level": 450,
+          "catTimer": true,
+          "tipo": "dano"
+        },
+        {
+          "spell": "gedou shinsei",
+          "catKeys": false,
+          "catDano": true,
+          "level": 500,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "dai kamui",
+          "catKeys": true,
+          "catDano": false,
+          "level": 500,
+          "catTimer": true,
+          "tipo": "dano"
+        }
+      ]
+    },
+    "madara": {
+      "buff2": "kekkei genkai",
+      "buff": "susanoo",
+      "summon": {
+        "usePlayerName": true,
+        "spell": "taju kagebunshin no jutsu",
+        "qtd": 5,
+        "name": ""
+      },
+      "names": [
+        "Hashirama Do Fluxo"
+      ],
+      "regen": "big regeneration",
       "buff3": "",
       "jutsus": [
         {
           "spell": "kage bunshin no jutsu",
-          "level": 20,
-          "tipo": "dano",
           "catKeys": true,
           "catDano": false,
-          "catTimer": false
+          "level": 20,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "katon gokakyu no jutsu",
+          "catKeys": false,
+          "catDano": true,
+          "level": 25,
+          "catTimer": false,
+          "tipo": "dano"
         },
         {
           "spell": "taju kagebunshin no jutsu",
-          "level": 25,
-          "tipo": "dano",
           "catKeys": true,
           "catDano": false,
-          "catTimer": false
+          "level": 25,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "suiton suikiri",
+          "catKeys": false,
+          "catDano": true,
+          "level": 30,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "katon ryuka no jutsu",
+          "catKeys": false,
+          "catDano": true,
+          "level": 35,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "katon no jutsu",
+          "catKeys": false,
+          "catDano": true,
+          "level": 40,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "sharingan explosion",
+          "catKeys": false,
+          "catDano": true,
+          "level": 50,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "katon dragon furie",
+          "catKeys": false,
+          "catDano": true,
+          "level": 80,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "katon dragon no jutsu",
+          "catKeys": false,
+          "catDano": true,
+          "level": 100,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "sharingan katohenke",
+          "catKeys": false,
+          "catDano": true,
+          "level": 130,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "doton dragon furie",
+          "catKeys": false,
+          "catDano": true,
+          "level": 150,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "mokuton prision",
+          "catKeys": true,
+          "catDano": false,
+          "level": 175,
+          "catTimer": true,
+          "tipo": "dano"
+        },
+        {
+          "spell": "senpou mokuton prision",
+          "catKeys": true,
+          "catDano": false,
+          "level": 175,
+          "catTimer": true,
+          "tipo": "dano"
+        },
+        {
+          "spell": "suiton suijinheki no jutsu",
+          "catKeys": false,
+          "catDano": true,
+          "level": 210,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "dai shinra tensei",
+          "catKeys": true,
+          "catDano": false,
+          "level": 275,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "dai banshou tein",
+          "catKeys": true,
+          "catDano": false,
+          "level": 300,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "katon endan",
+          "catKeys": false,
+          "catDano": true,
+          "level": 300,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "katon kairyudan no jutsu",
+          "catKeys": false,
+          "catDano": true,
+          "level": 300,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "katon booru kaki",
+          "catKeys": false,
+          "catDano": true,
+          "level": 300,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "mokuton mosayko no jutsu",
+          "catKeys": false,
+          "catDano": true,
+          "level": 325,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "meteor no jutsu",
+          "catKeys": false,
+          "catDano": true,
+          "level": 350,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "tengai shinsei",
+          "catKeys": false,
+          "catDano": true,
+          "level": 400,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "izanagi",
+          "catKeys": true,
+          "catDano": false,
+          "level": 400,
+          "catTimer": true,
+          "tipo": "dano"
+        },
+        {
+          "spell": "kuchiyose kyuubi no jutsu",
+          "catKeys": true,
+          "catDano": false,
+          "level": 425,
+          "catTimer": true,
+          "tipo": "dano"
+        },
+        {
+          "spell": "susano attack",
+          "catKeys": false,
+          "catDano": true,
+          "level": 450,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "senpo mokuton hijutsu koutan",
+          "catKeys": true,
+          "catDano": false,
+          "level": 450,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "mangekyou susanoo",
+          "catKeys": true,
+          "catDano": false,
+          "level": 450,
+          "catTimer": true,
+          "tipo": "dano"
+        },
+        {
+          "spell": "shin tengai shinsei",
+          "catKeys": false,
+          "catDano": true,
+          "level": 475,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "rinbo hengoku",
+          "catKeys": true,
+          "catDano": false,
+          "level": 500,
+          "catTimer": true,
+          "tipo": "dano"
+        },
+        {
+          "spell": "tengai yasaka no magatama",
+          "catKeys": false,
+          "catDano": true,
+          "level": 500,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "katon haijingakure no jutsu",
+          "catKeys": true,
+          "catDano": false,
+          "level": 525,
+          "catTimer": true,
+          "tipo": "dano"
+        }
+      ]
+    },
+    "kurenai": {
+      "buff2": "kekkei genkai",
+      "buff": "chakura kanchi",
+      "names": [
+        "Jubileena"
+      ],
+      "regen": "big regeneration",
+      "buff3": "",
+      "jutsus": [
+        {
+          "spell": "kouyoumu",
+          "catKeys": false,
+          "catDano": true,
+          "level": 160,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "jubaku no jutsu",
+          "catKeys": false,
+          "catDano": true,
+          "level": 200,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "botanyuki",
+          "catKeys": false,
+          "catDano": true,
+          "level": 250,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "magen hiei no jutsu",
+          "catKeys": false,
+          "catDano": true,
+          "level": 275,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "kaki buyou",
+          "catKeys": false,
+          "catDano": true,
+          "level": 300,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "magen hanagasumi",
+          "catKeys": false,
+          "catDano": true,
+          "level": 350,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "sansai no jutsu",
+          "catKeys": true,
+          "catDano": true,
+          "level": 400,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "undo cho kosoku",
+          "catKeys": true,
+          "catDano": false,
+          "level": 425,
+          "catTimer": true,
+          "tipo": "dano"
+        },
+        {
+          "spell": "anshousui",
+          "catKeys": false,
+          "catDano": true,
+          "level": 450,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "magen shinkirou",
+          "catKeys": true,
+          "catDano": false,
+          "level": 475,
+          "catTimer": true,
+          "tipo": "dano"
+        },
+        {
+          "spell": "magen jubaku satsu",
+          "catKeys": false,
+          "catDano": true,
+          "level": 500,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "genjutsu no hanabira",
+          "catKeys": true,
+          "catDano": false,
+          "level": 515,
+          "catTimer": true,
+          "tipo": "dano"
+        },
+        {
+          "spell": "dai magen shinkirou",
+          "catKeys": true,
+          "catDano": false,
+          "level": 520,
+          "catTimer": true,
+          "tipo": "dano"
+        },
+        {
+          "spell": "gentei jutsu",
+          "catKeys": true,
+          "catDano": false,
+          "level": 525,
+          "catTimer": true,
+          "tipo": "dano"
+        }
+      ]
+    },
+    "sasuke": {
+      "names": [
+        "Megumi Fushiguro",
+        "Blackshine",
+        "Replacement Moro"
+      ],
+      "jutsus": [
+
+      ]
+    },
+    "shisui": {
+      "names": [
+        "Queirozzz"
+      ],
+      "jutsus": [
+
+      ]
+    },
+    "hidan": {
+      "buff2": "kekkei genkai",
+      "buff": "shiki",
+      "names": [
+        "Insane Akira"
+      ],
+      "regen": "big regeneration",
+      "buff3": "",
+      "jutsus": [
+        {
+          "spell": "kamakiri tensakai",
+          "catKeys": false,
+          "catDano": true,
+          "level": 125,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "kaiten renbu",
+          "catKeys": false,
+          "catDano": true,
+          "level": 160,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "kamakiri hikiyose",
+          "catKeys": false,
+          "catDano": true,
+          "level": 200,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "midare kamakiri",
+          "catKeys": false,
+          "catDano": true,
+          "level": 250,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "shiki kuuin",
+          "catKeys": false,
+          "catDano": true,
+          "level": 300,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "shiki hikiyose",
+          "catKeys": false,
+          "catDano": true,
+          "level": 350,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "jujutsu shiji no jutsu",
+          "catKeys": true,
+          "catDano": false,
+          "level": 400,
+          "catTimer": true,
+          "tipo": "dano"
+        },
+        {
+          "spell": "jujutsu shiji hyouketsu",
+          "catKeys": true,
+          "catDano": false,
+          "level": 400,
+          "catTimer": true,
+          "tipo": "dano"
+        },
+        {
+          "spell": "shinigami no tsuiseki",
+          "catKeys": true,
+          "catDano": false,
+          "level": 425,
+          "catTimer": true,
+          "tipo": "dano"
+        },
+        {
+          "spell": "shinigami no shukketsu",
+          "catKeys": false,
+          "catDano": true,
+          "level": 425,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "dai shiji hyouketsu",
+          "catKeys": true,
+          "catDano": false,
+          "level": 450,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "shi no hikiyose",
+          "catKeys": true,
+          "catDano": false,
+          "level": 450,
+          "catTimer": true,
+          "tipo": "dano"
+        },
+        {
+          "spell": "kushizashi no kei",
+          "catKeys": false,
+          "catDano": true,
+          "level": 450,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "juijutsu gisei",
+          "catKeys": true,
+          "catDano": false,
+          "level": 475,
+          "catTimer": true,
+          "tipo": "dano"
+        }
+      ]
+    },
+    "tsunade": {
+      "buff2": "kekkei genkai",
+      "buff": "sozo saisei",
+      "summon": {
+        "spell": "kuchyose katsuyu",
+        "usePlayerName": false,
+        "qtd": 1,
+        "name": "Katsuyu"
+      },
+      "names": [
+        "Winry"
+      ],
+      "regen": "big regeneration",
+      "buff3": "",
+      "jutsus": [
+        {
+          "spell": "saikan chuushutsu no jutsu",
+          "catKeys": true,
+          "catDano": false,
+          "level": 55,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "saikan no jutsu",
+          "catKeys": true,
+          "catDano": false,
+          "level": 60,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "ground punch",
+          "catKeys": false,
+          "catDano": true,
+          "level": 100,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "tsutenkyaku",
+          "catKeys": false,
+          "catDano": true,
+          "level": 130,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "chiyute no jutsu",
+          "catKeys": true,
+          "catDano": false,
+          "level": 175,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "kuchyose katsuyu",
+          "catKeys": false,
+          "catDano": true,
+          "level": 175,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "taihou kyaku no jutsu",
+          "catKeys": false,
+          "catDano": true,
+          "level": 200,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "ground barrier",
+          "catKeys": true,
+          "catDano": false,
+          "level": 225,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "chuusuusei biribiri",
+          "catKeys": false,
+          "catDano": true,
+          "level": 300,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "yantou chakra mesu",
+          "catKeys": false,
+          "catDano": true,
+          "level": 350,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "jiware",
+          "catKeys": false,
+          "catDano": true,
+          "level": 400,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "ranshinsho",
+          "catKeys": true,
+          "catDano": true,
+          "level": 400,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "dai chiyute no jutsu",
+          "catKeys": true,
+          "catDano": false,
+          "level": 450,
+          "catTimer": true,
+          "tipo": "dano"
+        },
+        {
+          "spell": "dai tsutenkyaku",
+          "catKeys": false,
+          "catDano": true,
+          "level": 450,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "byakugou no in",
+          "catKeys": true,
+          "catDano": false,
+          "level": 500,
+          "catTimer": true,
+          "tipo": "dano"
+        },
+        {
+          "spell": "byakugo no jutsu",
+          "catKeys": true,
+          "catDano": false,
+          "level": 525,
+          "catTimer": true,
+          "tipo": "dano"
+        }
+      ]
+    },
+    "minato": {
+      "buff2": "kekkei genkai",
+      "buff": "jikuukan kekkai",
+      "names": [
+        "Minato do fluxo"
+      ],
+      "regen": "big regeneration",
+      "buff3": "",
+      "jutsus": [
+        {
+          "spell": "kage bunshin no jutsu",
+          "catKeys": true,
+          "catDano": false,
+          "level": 20,
+          "catTimer": false,
+          "tipo": "dano"
+        },
+        {
+          "spell": "taju kagebunshin no jutsu",
+          "catKeys": true,
+          "catDano": false,
+          "level": 25,
+          "catTimer": false,
+          "tipo": "dano"
         },
         {
           "spell": "rasengan",
-          "level": 30,
-          "tipo": "dano",
           "catKeys": false,
           "catDano": true,
-          "catTimer": false
+          "level": 30,
+          "catTimer": false,
+          "tipo": "dano"
         },
         {
           "spell": "gamatatsu kuchyose",
-          "level": 30,
-          "tipo": "dano",
           "catKeys": true,
           "catDano": false,
-          "catTimer": false
+          "level": 30,
+          "catTimer": false,
+          "tipo": "dano"
         },
         {
           "spell": "kuchyose gamatatsu no jutsu",
-          "level": 75,
-          "tipo": "dano",
           "catKeys": true,
           "catDano": false,
-          "catTimer": false
+          "level": 75,
+          "catTimer": false,
+          "tipo": "dano"
         },
         {
           "spell": "kuchyose gamakichi no jutsu",
-          "level": 80,
-          "tipo": "dano",
           "catKeys": true,
           "catDano": false,
-          "catTimer": false
+          "level": 80,
+          "catTimer": false,
+          "tipo": "dano"
         },
         {
           "spell": "oodama rasengan",
-          "level": 100,
-          "tipo": "dano",
           "catKeys": false,
           "catDano": true,
-          "catTimer": false
+          "level": 100,
+          "catTimer": false,
+          "tipo": "dano"
         },
         {
           "spell": "kuchyose gamabunta no jutsu",
-          "level": 125,
-          "tipo": "dano",
           "catKeys": true,
           "catDano": false,
-          "catTimer": false
+          "level": 125,
+          "catTimer": false,
+          "tipo": "dano"
         },
         {
           "spell": "ninpou no jutsu",
-          "level": 150,
-          "tipo": "dano",
           "catKeys": true,
           "catDano": false,
-          "catTimer": false
+          "level": 150,
+          "catTimer": false,
+          "tipo": "dano"
         },
         {
           "spell": "rasenrengan",
-          "level": 165,
-          "tipo": "dano",
           "catKeys": false,
           "catDano": true,
-          "catTimer": false
+          "level": 165,
+          "catTimer": false,
+          "tipo": "dano"
         },
         {
           "spell": "fuuton rasenshuriken",
-          "level": 250,
-          "tipo": "dano",
           "catKeys": false,
           "catDano": true,
-          "catTimer": false
+          "level": 250,
+          "catTimer": false,
+          "tipo": "dano"
         },
         {
           "spell": "fuin kai",
-          "level": 300,
-          "tipo": "dano",
           "catKeys": true,
           "catDano": false,
-          "catTimer": true
+          "level": 300,
+          "catTimer": true,
+          "tipo": "dano"
         },
         {
           "spell": "taikyoku rasengan",
-          "level": 300,
-          "tipo": "dano",
           "catKeys": false,
           "catDano": true,
-          "catTimer": false
+          "level": 300,
+          "catTimer": false,
+          "tipo": "dano"
         },
         {
           "spell": "fuin kaisho",
-          "level": 325,
-          "tipo": "dano",
           "catKeys": true,
           "catDano": false,
-          "catTimer": true
+          "level": 325,
+          "catTimer": true,
+          "tipo": "dano"
         },
         {
           "spell": "flash rasengan",
-          "level": 375,
-          "tipo": "dano",
           "catKeys": false,
           "catDano": true,
-          "catTimer": false
+          "level": 375,
+          "catTimer": false,
+          "tipo": "dano"
         },
         {
           "spell": "shiki fuujin",
-          "level": 400,
-          "tipo": "dano",
           "catKeys": true,
           "catDano": false,
-          "catTimer": true
+          "level": 400,
+          "catTimer": true,
+          "tipo": "dano"
         },
         {
           "spell": "fuin hiraishin dorai",
-          "level": 425,
-          "tipo": "dano",
           "catKeys": true,
           "catDano": false,
-          "catTimer": true
+          "level": 425,
+          "catTimer": true,
+          "tipo": "dano"
         },
         {
           "spell": "hiraishin ninodan",
-          "level": 450,
-          "tipo": "dano",
           "catKeys": false,
           "catDano": true,
-          "catTimer": false
+          "level": 450,
+          "catTimer": false,
+          "tipo": "dano"
         },
         {
           "spell": "dai taikyoku rasengan",
-          "level": 475,
-          "tipo": "dano",
           "catKeys": false,
           "catDano": true,
-          "catTimer": false
+          "level": 475,
+          "catTimer": false,
+          "tipo": "dano"
         },
         {
           "spell": "taikyoku hiraishin rasengan",
-          "level": 500,
-          "tipo": "dano",
           "catKeys": false,
           "catDano": true,
-          "catTimer": false
+          "level": 500,
+          "catTimer": false,
+          "tipo": "dano"
         }
-      ],
-      "buff": "jikuukan kekkai",
-      "regen": "big regeneration",
-      "buff2": "kekkei genkai"
+      ]
     }
   }
 }

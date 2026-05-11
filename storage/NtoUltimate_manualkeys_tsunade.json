@@ -1,0 +1,91 @@
+{
+  "enabled": true,
+  "keys": [
+    {
+      "input": "",
+      "enabled": false,
+      "sayText": "concentrate chakra feet",
+      "blockOnChat": true,
+      "mode": "say"
+    },
+    {
+      "input": "",
+      "enabled": false,
+      "sayText": "sozo saisei",
+      "blockOnChat": true,
+      "mode": "say"
+    },
+    {
+      "input": "",
+      "enabled": false,
+      "sayText": "saikan chuushutsu no jutsu",
+      "blockOnChat": true,
+      "mode": "say"
+    },
+    {
+      "input": "",
+      "enabled": false,
+      "sayText": "saikan no jutsu",
+      "blockOnChat": true,
+      "mode": "say"
+    },
+    {
+      "input": "",
+      "enabled": false,
+      "sayText": "chiyute no jutsu",
+      "blockOnChat": true,
+      "mode": "say"
+    },
+    {
+      "input": "",
+      "enabled": false,
+      "sayText": "ground barrier",
+      "blockOnChat": true,
+      "mode": "say"
+    },
+    {
+      "input": "",
+      "enabled": false,
+      "sayText": "ranshinsho",
+      "blockOnChat": true,
+      "mode": "say"
+    },
+    {
+      "input": "",
+      "enabled": false,
+      "sayText": "dai chiyute no jutsu",
+      "blockOnChat": true,
+      "mode": "say"
+    },
+    {
+      "input": "",
+      "enabled": false,
+      "sayText": "byakugou no in",
+      "blockOnChat": true,
+      "mode": "say"
+    },
+    {
+      "input": "",
+      "enabled": false,
+      "sayText": "byakugo no jutsu",
+      "blockOnChat": true,
+      "mode": "say"
+    },
+    {
+      "mode": "say",
+      "requireTarget": false,
+      "sayText": "kai",
+      "input": "F",
+      "blockOnChat": true,
+      "enabled": true
+    },
+    {
+      "mode": "say",
+      "requireTarget": false,
+      "sayText": "kawarimi no jutsu",
+      "input": "X",
+      "blockOnChat": true,
+      "enabled": true
+    }
+  ]
+}
