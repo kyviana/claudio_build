@@ -1,40 +1,58 @@
 {
   "fugaSpells": [
     {
-      "orangeSpell": "",
-      "totalCooldown": 0,
+      "cooldownActive": 0,
+      "widgetPos": {
+        "x": 0,
+        "y": 0
+      },
       "spellCast": "dai chiyute no jutsu",
-      "index": 1,
+      "orangeSpell": "",
       "onScreen": "dai chiyute no jutsu",
       "selfHealth": 100,
       "cooldownTotal": 0,
       "enabled": false,
+      "totalCooldown": 0,
+      "activeCooldown": 0,
+      "outfitId": 0,
+      "enableTimeSpell": false,
+      "index": 1
+    },
+    {
+      "cooldownActive": 0,
       "widgetPos": {
         "x": 0,
         "y": 0
       },
-      "activeCooldown": 0,
-      "outfitId": 0,
-      "enableTimeSpell": false,
-      "cooldownActive": 0
-    },
-    {
-      "orangeSpell": "",
-      "totalCooldown": 0,
       "spellCast": "byakugou no in",
-      "index": 2,
+      "orangeSpell": "",
       "onScreen": "byakugou no in",
       "selfHealth": 100,
       "cooldownTotal": 0,
       "enabled": false,
-      "widgetPos": {
-        "x": 0,
-        "y": 0
-      },
+      "totalCooldown": 0,
       "activeCooldown": 0,
       "outfitId": 0,
       "enableTimeSpell": false,
-      "cooldownActive": 0
+      "index": 2
+    },
+    {
+      "activeByOutfit": false,
+      "enabled": true,
+      "spellCast": "kawarimi no jutsu",
+      "index": 3,
+      "onScreen": "Kawarimi",
+      "selfHealth": 50,
+      "cooldownTotal": 35,
+      "cooldownActive": 10,
+      "widgetPos": {
+        "x": 480,
+        "y": 373
+      },
+      "outfitId": 0,
+      "isTimeSpell": false,
+      "enableTimeSpell": true,
+      "orangeSpell": "kawarimi"
     }
   ],
   "comboSpells": [
