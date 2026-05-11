@@ -1,9 +1,6 @@
------------------------------
--- Claudio Bot - Main Tab
--- NTO Ultimate
------------------------------
+-- 0_main_ui.lua — UI principal (label, botões Painel/Changelog)
+-- Claudio Bot | NTO Ultimate
 
--- Label com nome e classe
 local charName = player:getName()
 
 local uiLabel = setupUI([[

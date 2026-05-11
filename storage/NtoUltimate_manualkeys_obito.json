@@ -1,96 +1,96 @@
 {
+  "enabled": true,
   "keys": [
     {
-      "blockOnChat": true,
       "sayText": "concentrate chakra feet",
       "mode": "say",
+      "enabled": false,
       "input": "",
-      "enabled": false
+      "blockOnChat": true
     },
     {
-      "blockOnChat": true,
       "sayText": "kamui protect",
       "mode": "say",
+      "enabled": false,
       "input": "",
-      "enabled": false
+      "blockOnChat": true
     },
     {
-      "blockOnChat": true,
       "sayText": "doton prision",
       "mode": "say",
+      "enabled": false,
       "input": "",
-      "enabled": false
+      "blockOnChat": true
     },
     {
-      "blockOnChat": true,
       "sayText": "kamui me",
       "mode": "say",
+      "enabled": false,
       "input": "",
-      "enabled": false
+      "blockOnChat": true
     },
     {
-      "blockOnChat": true,
       "sayText": "keiyaku fuin",
       "mode": "say",
+      "enabled": false,
       "input": "",
-      "enabled": false
+      "blockOnChat": true
     },
     {
-      "blockOnChat": true,
       "sayText": "kawarimi no jutsu",
       "mode": "say",
       "enabled": true,
       "input": "X",
+      "blockOnChat": true,
       "requireTarget": false
     },
     {
-      "blockOnChat": true,
       "sayText": "kai",
       "mode": "say",
       "enabled": true,
       "input": "F",
+      "blockOnChat": true,
       "requireTarget": false
     },
     {
-      "blockOnChat": true,
       "sayText": "izanagi",
       "mode": "say",
       "enabled": true,
       "input": "Mouse5",
+      "blockOnChat": true,
       "requireTarget": false
     },
     {
-      "blockOnChat": true,
       "sayText": "kamui no jutsu",
       "mode": "say",
       "enabled": true,
       "input": "3",
+      "blockOnChat": true,
       "requireTarget": false
     },
     {
-      "blockOnChat": true,
       "sayText": "kamui muzan",
       "mode": "say",
       "enabled": true,
       "input": "Mouse4",
+      "blockOnChat": true,
       "requireTarget": false
     },
     {
-      "blockOnChat": true,
       "sayText": "kuchyose gedou mazou",
       "mode": "say",
       "enabled": true,
       "input": "2",
+      "blockOnChat": true,
       "requireTarget": false
     },
     {
-      "blockOnChat": true,
       "sayText": "dai kamui",
       "mode": "say",
       "enabled": true,
       "input": "1",
+      "blockOnChat": true,
       "requireTarget": false
     }
-  ],
-  "enabled": true
+  ]
 }

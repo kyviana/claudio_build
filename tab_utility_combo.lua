@@ -1,8 +1,5 @@
---------------------------------------------------------------------
--- Combo System v2.0
--- Multi-personagem com deteccao automatica
--- Adaptado por Claude
---------------------------------------------------------------------
+-- tab_utility_combo.lua — Aba Utility (Combo System + Combo PVE)
+-- Claudio Bot | NTO Ultimate
 
 setDefaultTab("Utility")
 
@@ -741,6 +738,388 @@ macro(500, "Reset Dano [F10]", function()
     damageTracker.totals = {}
     damageTracker.lastSpell = ""
     warn("Dados de dano resetados.")
+end)
+
+UI.Separator()
+
+-- ==============================
+-- COMBO PVE
+-- ==============================
+
+
+local MAIN_DIR_PVE = "/bot/" .. modules.game_bot.contentsPanel.config:getCurrentOption().text .. "/storage/"
+local PVE_FILE = MAIN_DIR_PVE .. g_game.getWorldName() .. "_pve_" .. (charClass or "unknown") .. ".json"
+
+if not g_resources.directoryExists(MAIN_DIR_PVE) then g_resources.makeDir(MAIN_DIR_PVE) end
+
+local storagePVE = { spells = {}, enabled = false }
+if g_resources.fileExists(PVE_FILE) then
+    local ok, result = pcall(function()
+        return json.decode(g_resources.readFileContents(PVE_FILE))
+    end)
+    if ok and result then storagePVE = result end
+end
+
+local function savePVE()
+    g_resources.writeFileContents(PVE_FILE, json.encode(storagePVE, 2))
+end
+
+-- Janela de setup PVE
+local pveWindow = setupUI([[
+MainWindow
+  text: Combo PVE Setup
+  size: 500 420
+
+  TabBar
+    id: pveTabBar
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 8
+    margin-left: 8
+    margin-right: 8
+    height: 20
+
+  Panel
+    id: pveTabContent
+    anchors.top: pveTabBar.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: closeBtn.top
+    margin-top: 5
+    margin-bottom: 5
+
+  Button
+    id: closeBtn
+    text: Fechar
+    font: cipsoftFont
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    size: 60 21
+    margin-bottom: 8
+    margin-right: 8
+]], g_ui.getRootWidget())
+pveWindow:hide()
+
+local pveTabBar = pveWindow.pveTabBar
+pveTabBar:setContentWidget(pveWindow.pveTabContent)
+
+-- ABA 1: ADICIONAR JUTSUS
+local addPanel = g_ui.createWidget("sPanel")
+pveTabBar:addTab("Adicionar", addPanel)
+
+local addLabelPVE = UI.Label("Copie todo o !jutsu com Ctrl + A e cola abaixo:", addPanel)
+addLabelPVE:setColor("#AAAAAA")
+
+local addEdit = setupUI([[
+Panel
+  height: 200
+  margin-left: 5
+  margin-right: 5
+  TextEdit
+    id: textarea
+    anchors.fill: parent
+    text-wrap: true
+    shift-navigation: true
+    multiline: true
+]], addPanel)
+
+local function getAddText() return addEdit.textarea:getText() end
+local function clearAddText() addEdit.textarea:clearText() end
+
+UI.Button("Inserir", function()
+    local text = getAddText():trim()
+    if text == "" then return warn("Preencha o campo antes de inserir.") end
+
+    local globalSpells = {
+        "skip", "kai", "light", "throw kunai", "regeneration",
+        "throw shuriken", "concentrate chakra feet", "jump up",
+        "powerdown", "jump down", "chakra down", "sense",
+        "bunshin no jutsu", "chakra rest", "big regeneration",
+        "kawarimi no jutsu", "kekkei genkai", "atract no jutsu",
+    }
+    local function isGlobal(spell)
+        spell = spell:lower():trim()
+        for _, g in ipairs(globalSpells) do
+            if spell == g then return true end
+        end
+        return false
+    end
+
+    local inserted, skipped, ignored = 0, 0, 0
+    local isJutsuFormat = text:find("Jutsus para Level") ~= nil
+
+    if isJutsuFormat then
+        local currentLevel = nil
+        for line in text:gmatch("[^\n]+") do
+            line = line:trim()
+            local lvl = line:match("Jutsus para Level (%d+)")
+            if lvl then
+                currentLevel = tonumber(lvl)
+            elseif currentLevel and line ~= "" then
+                local spell = line:match("^%s*(.-)%s*%-%s*:%s*%d")
+                if spell and spell ~= "" then
+                    spell = spell:lower():trim()
+                    if isGlobal(spell) then
+                        ignored = ignored + 1
+                    else
+                        local exists = false
+                        for _, s in ipairs(storagePVE.spells) do
+                            if s.spell == spell then exists = true break end
+                        end
+                        if not exists then
+                            table.insert(storagePVE.spells, { spell=spell, level=currentLevel, enabled=true, cooldownUntil=0 })
+                            inserted = inserted + 1
+                        else
+                            skipped = skipped + 1
+                        end
+                    end
+                end
+            end
+        end
+    else
+        for line in text:gmatch("[^\n]+") do
+            line = line:trim():lower()
+            if line ~= "" then
+                local level = tonumber(line:match("(%d+)%s*$"))
+                local spell = line:match("^(.-)%s*%d+%s*$")
+                if level and spell and spell ~= "" then
+                    spell = spell:trim()
+                    if isGlobal(spell) then
+                        ignored = ignored + 1
+                    else
+                        local exists = false
+                        for _, s in ipairs(storagePVE.spells) do
+                            if s.spell == spell then exists = true break end
+                        end
+                        if not exists then
+                            table.insert(storagePVE.spells, { spell=spell, level=level, enabled=true, cooldownUntil=0 })
+                            inserted = inserted + 1
+                        else
+                            skipped = skipped + 1
+                        end
+                    end
+                end
+            end
+        end
+    end
+
+    savePVE()
+    clearAddText()
+    refreshComboListPVE()
+    warn("Inseridos: " .. inserted .. " | Ja existiam: " .. skipped .. " | Ignorados (globais): " .. ignored)
+end, addPanel)
+
+UI.Separator(addPanel)
+
+UI.Button("Importar da Vocacao (" .. (charClass or "?") .. ")", function()
+    local cadastroFile = "/bot/" .. modules.game_bot.contentsPanel.config:getCurrentOption().text .. "/storage/cadastro_vocacoes.json"
+    local vocData = nil
+    if g_resources.fileExists(cadastroFile) then
+        local ok, data = pcall(function()
+            return json.decode(g_resources.readFileContents(cadastroFile))
+        end)
+        if ok and data and data.vocacoes and charClass then
+            vocData = data.vocacoes[charClass]
+        end
+    end
+
+    if not vocData or not vocData.jutsus or #vocData.jutsus == 0 then
+        warn("[ComboPVE] Nenhum jutsu cadastrado para vocacao: " .. (charClass or "?"))
+        return
+    end
+
+    local inserted, skipped = 0, 0
+    for _, jutsu in ipairs(vocData.jutsus) do
+        if jutsu.catDano then
+            local exists = false
+            for _, s in ipairs(storagePVE.spells) do
+                if s.spell == jutsu.spell then exists = true break end
+            end
+            if not exists then
+                table.insert(storagePVE.spells, { spell=jutsu.spell, level=jutsu.level or 1, enabled=true, cooldownUntil=0 })
+                inserted = inserted + 1
+            else
+                skipped = skipped + 1
+            end
+        end
+    end
+
+    savePVE()
+    refreshComboListPVE()
+    warn("[ComboPVE] Importados: " .. inserted .. " | Ja existiam: " .. skipped)
+end, addPanel)
+
+UI.Separator(addPanel)
+
+local spellEntryPVE = [[
+UIWidget
+  background-color: alpha
+  focusable: true
+  height: 18
+  CheckBox
+    id: enabled
+    anchors.left: parent.left
+    anchors.verticalCenter: parent.verticalCenter
+    width: 14
+    height: 14
+    margin-left: 3
+  Label
+    id: spellLabel
+    anchors.left: enabled.right
+    anchors.right: removeBtn.left
+    anchors.verticalCenter: parent.verticalCenter
+    margin-left: 4
+  Button
+    id: removeBtn
+    text: x
+    anchors.right: parent.right
+    anchors.verticalCenter: parent.verticalCenter
+    margin-right: 4
+    width: 14
+    height: 14
+    font: cipsoftFont
+  $focus:
+    background-color: #00000055
+]]
+
+-- ABA 2: COMBO ATUAL
+local comboPanel = g_ui.createWidget("sPanel")
+pveTabBar:addTab("Combo Atual", comboPanel)
+
+local comboInfo = UI.Label("Jutsus disponiveis para seu level atual:", comboPanel)
+comboInfo:setColor("#AAAAAA")
+
+local comboListPanel = setupUI([[
+Panel
+  height: 220
+  margin-left: 5
+  margin-right: 5
+  TextList
+    id: comboList
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.bottom: parent.bottom
+    anchors.right: comboScroll.left
+    vertical-scrollbar: comboScroll
+  VerticalScrollBar
+    id: comboScroll
+    anchors.top: parent.top
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+    step: 14
+    pixels-scroll: true
+]], comboPanel)
+local comboList = comboListPanel.comboList
+
+function refreshComboListPVE()
+    for _, child in pairs(comboList:getChildren()) do child:destroy() end
+    local playerLevel = player:getLevel()
+
+    local available = {}
+    for _, entry in ipairs(storagePVE.spells) do
+        if playerLevel >= entry.level then
+            table.insert(available, entry)
+        end
+    end
+
+    table.sort(available, function(a, b) return a.level > b.level end)
+    for i, entry in ipairs(available) do
+        entry.enabled = (i <= 5)
+    end
+    savePVE()
+
+    table.sort(available, function(a, b) return a.level < b.level end)
+
+    local count = 0
+    for _, entry in ipairs(available) do
+        local row = setupUI(spellEntryPVE, comboList)
+        row.spellLabel:setText(entry.spell .. "  [lv " .. entry.level .. "]")
+        row.enabled:setChecked(entry.enabled)
+        row.enabled.onClick = function()
+            entry.enabled = not entry.enabled
+            row.enabled:setChecked(entry.enabled)
+            savePVE()
+        end
+        row.removeBtn.onClick = function()
+            for i, s in ipairs(storagePVE.spells) do
+                if s.spell == entry.spell then table.remove(storagePVE.spells, i) break end
+            end
+            savePVE()
+            refreshComboListPVE()
+        end
+        count = count + 1
+    end
+
+    if count == 0 then
+        local empty = g_ui.createWidget("Label", comboList)
+        empty:setText("Nenhum jutsu disponivel para o level " .. playerLevel)
+        empty:setColor("#888888")
+        empty:setHeight(18)
+    end
+end
+
+UI.Button("Recarregar Lista", function()
+    refreshComboListPVE()
+end, comboPanel)
+
+-- Painel principal na aba Utility
+local pvePanel = setupUI([[
+Panel
+  height: 25
+  BotSwitch
+    id: pveSwitch
+    anchors.top: parent.top
+    anchors.left: parent.left
+    text-align: center
+    width: 130
+    text: Combo PVE
+  Button
+    id: pveSetup
+    anchors.top: parent.top
+    anchors.left: prev.right
+    anchors.right: parent.right
+    margin-left: 3
+    height: 25
+    text: Setup
+]], parent)
+
+pvePanel.pveSwitch:setOn(storagePVE.enabled)
+pvePanel.pveSwitch.onClick = function(widget)
+    storagePVE.enabled = not storagePVE.enabled
+    widget:setOn(storagePVE.enabled)
+    savePVE()
+    if styleSwitch then styleSwitch(widget) end
+end
+if styleSwitch then styleSwitch(pvePanel.pveSwitch) end
+
+pvePanel.pveSetup.onClick = function()
+    if not pveWindow:isVisible() then
+        refreshComboListPVE()
+        pveWindow:show()
+        pveWindow:raise()
+        pveWindow:focus()
+    else
+        pveWindow:hide()
+    end
+end
+
+pveWindow.closeBtn.onClick = function() pveWindow:hide() end
+
+macro(50, function()
+    if not pvePanel.pveSwitch:isOn() then return end
+    if SGO and now < SGO then return end
+    if not g_game.isAttacking() then return end
+    local target = g_game.getAttackingCreature()
+    if not target then return end
+    if target:isPlayer() then return end
+
+    local playerLevel = player:getLevel()
+    for _, entry in ipairs(storagePVE.spells) do
+        if entry.enabled and playerLevel >= entry.level then
+            say(entry.spell)
+        end
+    end
 end)
 
 UI.Separator()

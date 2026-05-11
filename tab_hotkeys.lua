@@ -1,7 +1,6 @@
------------------------------
--- Claudio Bot - Hotkeys Tab
--- NTO Ultimate
------------------------------
+-- tab_hotkeys.lua — Aba Hotkeys
+-- Claudio Bot | NTO Ultimate
+
 setDefaultTab("Hotkeys")
 
 -- ==============================
@@ -27,12 +26,159 @@ Panel
 UI.Separator()
 
 -- ==============================
+-- SISTEMA DE HOTKEYS CONFIGURAVEL
+-- ==============================
+
+-- Catalogo: todas as hotkeys disponíveis no bot
+-- Qualquer vocação pode habilitar qualquer hotkey pela janela
+-- exceto as marcadas com shisui_only, que só aparecem para shisui
+local HK_CATALOG = {}
+local _hkCatalogFull = {
+    { key = "kunai_id",     label = "Kunai Item (seletor)" },
+    { key = "bugmap_kunai", label = "Bug Map Kunai (dash)" },
+    { key = "stack_mundo",  label = "Stack + Mundo [F1]",
+      spells = { tobirama="hiraishingiri" } },
+    { key = "stack_mob",    label = "Stack Mob [WASD+2]",
+      spells = { tobirama="hiraishingiri", minato="flash rasengan", madara="katon goukakyuu no jutsu" } },
+    { key = "turn_reta",    label = "Turn + Reta [` ]",
+      spells = { tobirama="suiton suikodan no jutsu", shisui="katon kairyudan no jutsu" } },
+    { key = "autofuga",     label = "Autofuga", shisui_only = true },
+}
+for _, hk in ipairs(_hkCatalogFull) do
+    if not hk.shisui_only or charClass == "shisui" then
+        table.insert(HK_CATALOG, hk)
+    end
+end
+
+-- Carrega config salva ou inicializa vazia (nenhuma habilitada por padrao em vocacoes novas)
+local HK_STORAGE_KEY = "hotkeys_cfg_" .. (charClass or "unknown")
+if not storage[HK_STORAGE_KEY] then
+    storage[HK_STORAGE_KEY] = {}
+end
+
+-- Helper: checa se hotkey está habilitada para vocacao atual
+local function hkEnabled(key)
+    return storage[HK_STORAGE_KEY][key] == true
+end
+
+-- Helper: spell configurada (usa storage se editado, senão default do catalogo)
+local function hkSpell(key)
+    local spellKey = "hkspell_" .. key
+    if storage[spellKey] and storage[spellKey] ~= "" then
+        return storage[spellKey]
+    end
+    for _, hk in ipairs(HK_CATALOG) do
+        if hk.key == key and hk.spells then
+            return hk.spells[charClass] or ""
+        end
+    end
+    return ""
+end
+
+-- Janela de configuracao — mostra TODAS as hotkeys, independente da vocacao
+local _hkWin = nil
+do
+    local winH = 60 + #HK_CATALOG * 26 + 40
+    local uiStr = [[
+MainWindow
+  id: hkConfigWin
+  text: Hotkeys - ]] .. (charClass or "?") .. [[
+
+  size: 240 ]] .. winH .. [[
+
+  visible: false
+  Label
+    id: hkTitle
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    height: 22
+    text-align: center
+    color: #00ff99
+    font: verdana-11px-rounded
+    text: Selecione as hotkeys ativas:
+]]
+
+    for i, hk in ipairs(HK_CATALOG) do
+        local topAnchor = i == 1 and "hkTitle.bottom" or ("hkCheck" .. (i-1) .. ".bottom")
+        local isOn = storage[HK_STORAGE_KEY][hk.key] and "true" or "false"
+        uiStr = uiStr .. [[
+  CheckBox
+    id: hkCheck]] .. i .. [[
+
+    anchors.top: ]] .. topAnchor .. [[
+
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-left: 8
+    margin-top: 4
+    height: 22
+    text: ]] .. hk.label .. [[
+
+    checked: ]] .. isOn .. [[
+
+]]
+    end
+
+    local lastId = "hkCheck" .. #HK_CATALOG
+    uiStr = uiStr .. [[
+  Button
+    id: hkSaveBtn
+    anchors.top: ]] .. lastId .. [[.bottom
+    anchors.left: parent.left
+    margin-top: 8
+    margin-left: 6
+    width: 150
+    height: 22
+    text: Salvar e Recarregar
+  Button
+    id: hkCloseBtn
+    anchors.top: ]] .. lastId .. [[.bottom
+    anchors.right: parent.right
+    margin-top: 8
+    margin-right: 6
+    width: 60
+    height: 22
+    text: Fechar
+]]
+
+    _hkWin = setupUI(uiStr, g_ui.getRootWidget())
+
+    _hkWin:getChildById("hkSaveBtn").onClick = function()
+        local newCfg = {}
+        for i, hk in ipairs(HK_CATALOG) do
+            local cb = _hkWin:getChildById("hkCheck" .. i)
+            newCfg[hk.key] = cb and cb:isChecked() or false
+        end
+        storage[HK_STORAGE_KEY] = newCfg
+        _hkWin:hide()
+        reload()
+    end
+
+    _hkWin:getChildById("hkCloseBtn").onClick = function()
+        _hkWin:hide()
+    end
+end
+
+-- Botao no painel do bot — só abre a janela
+UI.Button("Configurar Hotkeys", function()
+    if _hkWin then
+        _hkWin:show()
+        _hkWin:raise()
+        _hkWin:focus()
+    end
+end)
+
+UI.Separator()
+
+-- ==============================
 -- HOTKEYS ESPECIFICAS POR VOCACAO
 -- ==============================
 
-if charClass == "tobirama" then
+if hkEnabled("kunai_id") or hkEnabled("bugmap_kunai") or hkEnabled("stack_mundo") then
 
     -- ID Kunai
+    if hkEnabled("kunai_id") then
     local kunaiPanel = setupUI([[
 Panel
   height: 22
@@ -54,8 +200,10 @@ Panel
     kunaiPanel.kunaiItem.onItemChange = function(widget)
         storage.kunaiId = tostring(widget:getItemId())
     end
+    end -- kunai_id
 
     -- Bug Map Kunai
+    if hkEnabled("bugmap_kunai") then
     local bugMap = {}
     bugMap.directions = {
         ["W"] = {x = 0,  y = -5, direction = 0},
@@ -82,10 +230,12 @@ Panel
             end
         end
     end, parent)
+    end -- bugmap_kunai
 
     UI.Separator()
 
     -- Stack + Mundo (F1)
+    if hkEnabled("stack_mundo") then
     local hiraCD = 0
     onTalk(function(name, level, mode, text)
         if name ~= player:getName() then return end
@@ -121,24 +271,16 @@ Panel
     end)
 
     UI.Separator()
+    end -- stack_mundo
 
-end -- tobirama
+end -- bloco kunai/bugmap/stack_mundo
 
 -- ==============================
 -- STACK NO MOB (WASD)
 -- Vocacoes: tobirama, minato, madara (configure abaixo)
 -- ==============================
-local STACK_MOB_CLASSES = { tobirama = true, minato = true, madara = true }
-
-if STACK_MOB_CLASSES[charClass] then
-    -- Configuracoes por vocacao
-    local STACK_SPELLS = {
-        tobirama = "hiraishingiri",
-        minato   = "flash rasengan",
-        madara   = "katon goukakyuu no jutsu",
-        shisui   = "shunshin no shisui",
-    }
-    local stackSpell = STACK_SPELLS[charClass] or ""
+if hkEnabled("stack_mob") then
+    local stackSpell = hkSpell("stack_mob")
     local stackKey   = "2"
 
     UI.Separator()
@@ -157,6 +299,7 @@ Panel
     local stackSpellEdit = UI.TextEdit(stackSpell, parent)
     stackSpellEdit.onTextChange = function(_, text)
         stackSpell = text:trim()
+        storage["hkspell_stack_mob"] = stackSpell
     end
 
     -- Stack: pega mob mais distante na direcao pressionada
@@ -213,14 +356,8 @@ end
 -- TURN + RETA
 -- Vocacoes: tobirama, minato (configure abaixo)
 -- ==============================
-local TURN_RETA_CLASSES = { tobirama = true, shisui = true }
-
-if TURN_RETA_CLASSES[charClass] then
-    local RETA_SPELLS = {
-        tobirama = "suiton suikodan no jutsu",
-        shisui   = "katon kairyudan no jutsu",
-    }
-    local retaSpell = RETA_SPELLS[charClass] or ""
+if hkEnabled("turn_reta") then
+    local retaSpell = hkSpell("turn_reta")
     local maxDist   = { x = 7, y = 7 }
     local minDist   = 1
     local _retaPressed = false
@@ -241,6 +378,7 @@ Panel
     local retaSpellEdit = UI.TextEdit(retaSpell, parent)
     retaSpellEdit.onTextChange = function(_, text)
         retaSpell = text:trim()
+        storage["hkspell_turn_reta"] = retaSpell
     end
 
     -- Detecta tecla ` (backtick) que nao funciona com isKeyPressed por string
@@ -314,7 +452,7 @@ end
 -- AUTOFUGA SHISUI
 -- ==============================
 
-if charClass == "shisui" then
+if hkEnabled("autofuga") then
 
     -- Garante que fugaConfig e uma array ordenada (ipairs respeita indices numericos)
     local fugaConfig = {}
@@ -519,424 +657,6 @@ Panel
 
 
 end -- shisui
-
--- ==============================
--- COMBO PVE
--- Switch + icone na tela + janela de setup
--- ==============================
-
-local MAIN_DIR = "/bot/" .. modules.game_bot.contentsPanel.config:getCurrentOption().text .. "/storage/"
-local PVE_FILE = MAIN_DIR .. g_game.getWorldName() .. "_pve_" .. (charClass or "unknown") .. ".json"
-
-if not g_resources.directoryExists(MAIN_DIR) then g_resources.makeDir(MAIN_DIR) end
-
-local storagePVE = { spells = {}, enabled = false }
-if g_resources.fileExists(PVE_FILE) then
-    local ok, result = pcall(function()
-        return json.decode(g_resources.readFileContents(PVE_FILE))
-    end)
-    if ok and result then storagePVE = result end
-end
-
-local function savePVE()
-    g_resources.writeFileContents(PVE_FILE, json.encode(storagePVE, 2))
-end
-
--- Macro CD tracker PVE
-
--- Janela de setup PVE
-local pveWindow = setupUI([[
-MainWindow
-  text: Combo PVE Setup
-  size: 500 420
-
-  TabBar
-    id: pveTabBar
-    anchors.top: parent.top
-    anchors.left: parent.left
-    anchors.right: parent.right
-    margin-top: 8
-    margin-left: 8
-    margin-right: 8
-    height: 20
-
-  Panel
-    id: pveTabContent
-    anchors.top: pveTabBar.bottom
-    anchors.left: parent.left
-    anchors.right: parent.right
-    anchors.bottom: closeBtn.top
-    margin-top: 5
-    margin-bottom: 5
-
-  Button
-    id: closeBtn
-    text: Fechar
-    font: cipsoftFont
-    anchors.right: parent.right
-    anchors.bottom: parent.bottom
-    size: 60 21
-    margin-bottom: 8
-    margin-right: 8
-]], g_ui.getRootWidget())
-pveWindow:hide()
-
-local pveTabBar = pveWindow.pveTabBar
-pveTabBar:setContentWidget(pveWindow.pveTabContent)
-
--- ABA 1: ADICIONAR JUTSUS
-local addPanel = g_ui.createWidget("sPanel")
-pveTabBar:addTab("Adicionar", addPanel)
-
-local addLabel = UI.Label("Copie todo o !jutsu com Ctrl + A e cola abaixo:", addPanel)
-addLabel:setColor("#AAAAAA")
-
-local addEdit = setupUI([[
-Panel
-  height: 200
-  margin-left: 5
-  margin-right: 5
-  TextEdit
-    id: textarea
-    anchors.fill: parent
-    text-wrap: true
-    shift-navigation: true
-    multiline: true
-]], addPanel)
-
-local function getAddText() return addEdit.textarea:getText() end
-local function clearAddText() addEdit.textarea:clearText() end
-
-UI.Button("Inserir", function()
-    local text = getAddText():trim()
-    if text == "" then return warn("Preencha o campo antes de inserir.") end
-
-    -- Jutsus globais a ignorar
-    local globalSpells = {
-        "skip", "kai", "light", "throw kunai", "regeneration",
-        "throw shuriken", "concentrate chakra feet", "jump up",
-        "powerdown", "jump down", "chakra down", "sense",
-        "bunshin no jutsu", "chakra rest", "big regeneration",
-        "kawarimi no jutsu", "kekkei genkai", "atract no jutsu",
-    }
-    local function isGlobal(spell)
-        spell = spell:lower():trim()
-        for _, g in ipairs(globalSpells) do
-            if spell == g then return true end
-        end
-        return false
-    end
-
-    local inserted, skipped, ignored = 0, 0, 0
-
-    -- Detecta formato: !jutsu (Jutsus para Level X / nome - : custo)
-    -- ou formato simples: nome level
-    local isJutsuFormat = text:find("Jutsus para Level") ~= nil
-
-    if isJutsuFormat then
-        local currentLevel = nil
-        for line in text:gmatch("[^\n]+") do
-            line = line:trim()
-            -- Detecta linha de level
-            local lvl = line:match("Jutsus para Level (%d+)")
-            if lvl then
-                currentLevel = tonumber(lvl)
-            elseif currentLevel and line ~= "" then
-                -- Extrai nome do jutsu (antes do " - :")
-                local spell = line:match("^%s*(.-)%s*%-%s*:%s*%d")
-                if spell and spell ~= "" then
-                    spell = spell:lower():trim()
-                    if isGlobal(spell) then
-                        ignored = ignored + 1
-                    else
-                        local exists = false
-                        for _, s in ipairs(storagePVE.spells) do
-                            if s.spell == spell then exists = true break end
-                        end
-                        if not exists then
-                            table.insert(storagePVE.spells, {
-                                spell = spell,
-                                level = currentLevel,
-                                enabled = true,
-                                cooldownUntil = 0
-                            })
-                            inserted = inserted + 1
-                        else
-                            skipped = skipped + 1
-                        end
-                    end
-                end
-            end
-        end
-    else
-        -- Formato simples: jutsu level (uma por linha)
-        for line in text:gmatch("[^\n]+") do
-            line = line:trim():lower()
-            if line ~= "" then
-                local level = tonumber(line:match("(%d+)%s*$"))
-                local spell = line:match("^(.-)%s*%d+%s*$")
-                if level and spell and spell ~= "" then
-                    spell = spell:trim()
-                    if isGlobal(spell) then
-                        ignored = ignored + 1
-                    else
-                        local exists = false
-                        for _, s in ipairs(storagePVE.spells) do
-                            if s.spell == spell then exists = true break end
-                        end
-                        if not exists then
-                            table.insert(storagePVE.spells, {
-                                spell = spell,
-                                level = level,
-                                enabled = true,
-                                cooldownUntil = 0
-                            })
-                            inserted = inserted + 1
-                        else
-                            skipped = skipped + 1
-                        end
-                    end
-                end
-            end
-        end
-    end
-
-    savePVE()
-    clearAddText()
-    refreshAddList()
-    warn("Inseridos: " .. inserted .. " | Ja existiam: " .. skipped .. " | Ignorados (globais): " .. ignored)
-end, addPanel)
-
-UI.Separator(addPanel)
-
--- Botao importar jutsus de dano do cadastro da vocacao atual
-UI.Button("Importar da Vocacao (" .. (charClass or "?") .. ")", function()
-    -- Le o cadastro diretamente do arquivo JSON
-    local cadastroFile = "/bot/" .. modules.game_bot.contentsPanel.config:getCurrentOption().text .. "/storage/cadastro_vocacoes.json"
-    local vocData = nil
-    if g_resources.fileExists(cadastroFile) then
-        local ok, data = pcall(function()
-            return json.decode(g_resources.readFileContents(cadastroFile))
-        end)
-        if ok and data and data.vocacoes and charClass then
-            vocData = data.vocacoes[charClass]
-        end
-    end
-
-    if not vocData or not vocData.jutsus or #vocData.jutsus == 0 then
-        warn("[ComboPVE] Nenhum jutsu cadastrado para vocacao: " .. (charClass or "?"))
-        return
-    end
-
-    local inserted, skipped = 0, 0
-    for _, jutsu in ipairs(vocData.jutsus) do
-        if jutsu.catDano then
-            local exists = false
-            for _, s in ipairs(storagePVE.spells) do
-                if s.spell == jutsu.spell then exists = true break end
-            end
-            if not exists then
-                table.insert(storagePVE.spells, {
-                    spell         = jutsu.spell,
-                    level         = jutsu.level or 1,
-                    enabled       = true,
-                    cooldownUntil = 0,
-                })
-                inserted = inserted + 1
-            else
-                skipped = skipped + 1
-            end
-        end
-    end
-
-    savePVE()
-    refreshComboList()
-    warn("[ComboPVE] Importados: " .. inserted .. " | Ja existiam: " .. skipped)
-end, addPanel)
-
-UI.Separator(addPanel)
-
-local spellEntry = [[
-UIWidget
-  background-color: alpha
-  focusable: true
-  height: 18
-  CheckBox
-    id: enabled
-    anchors.left: parent.left
-    anchors.verticalCenter: parent.verticalCenter
-    width: 14
-    height: 14
-    margin-left: 3
-  Label
-    id: spellLabel
-    anchors.left: enabled.right
-    anchors.right: removeBtn.left
-    anchors.verticalCenter: parent.verticalCenter
-    margin-left: 4
-  Button
-    id: removeBtn
-    text: x
-    anchors.right: parent.right
-    anchors.verticalCenter: parent.verticalCenter
-    margin-right: 4
-    width: 14
-    height: 14
-    font: cipsoftFont
-  $focus:
-    background-color: #00000055
-]]
-
-local function refreshAddList() end -- lista somente na aba Combo Atual
-
--- ABA 2: COMBO ATUAL
-local comboPanel = g_ui.createWidget("sPanel")
-pveTabBar:addTab("Combo Atual", comboPanel)
-
-local comboInfo = UI.Label("Jutsus disponiveis para seu level atual:", comboPanel)
-comboInfo:setColor("#AAAAAA")
-
-local comboListPanel = setupUI([[
-Panel
-  height: 220
-  margin-left: 5
-  margin-right: 5
-  TextList
-    id: comboList
-    anchors.top: parent.top
-    anchors.left: parent.left
-    anchors.bottom: parent.bottom
-    anchors.right: comboScroll.left
-    vertical-scrollbar: comboScroll
-  VerticalScrollBar
-    id: comboScroll
-    anchors.top: parent.top
-    anchors.bottom: parent.bottom
-    anchors.right: parent.right
-    step: 14
-    pixels-scroll: true
-]], comboPanel)
-local comboList = comboListPanel.comboList
-
-local function refreshComboList()
-    for _, child in pairs(comboList:getChildren()) do child:destroy() end
-    local playerLevel = player:getLevel()
-
-    -- Filtra disponiveis pelo level atual
-    local available = {}
-    for _, entry in ipairs(storagePVE.spells) do
-        if playerLevel >= entry.level then
-            table.insert(available, entry)
-        end
-    end
-
-    -- Auto-seleciona os 5 de maior level, desmarca o resto
-    table.sort(available, function(a, b) return a.level > b.level end)
-    for i, entry in ipairs(available) do
-        entry.enabled = (i <= 5)
-    end
-    savePVE()
-
-    -- Ordena por level crescente pra exibir
-    table.sort(available, function(a, b) return a.level < b.level end)
-
-    local count = 0
-    for _, entry in ipairs(available) do
-        local row = setupUI(spellEntry, comboList)
-        row.spellLabel:setText(entry.spell .. "  [lv " .. entry.level .. "]")
-        row.enabled:setChecked(entry.enabled)
-        row.enabled.onClick = function()
-            entry.enabled = not entry.enabled
-            row.enabled:setChecked(entry.enabled)
-            savePVE()
-        end
-        row.removeBtn.onClick = function()
-            for i, s in ipairs(storagePVE.spells) do
-                if s.spell == entry.spell then
-                    table.remove(storagePVE.spells, i)
-                    break
-                end
-            end
-            savePVE()
-            refreshComboList()
-        end
-        count = count + 1
-    end
-
-    if count == 0 then
-        local empty = g_ui.createWidget("Label", comboList)
-        empty:setText("Nenhum jutsu disponivel para o level " .. playerLevel)
-        empty:setColor("#888888")
-        empty:setHeight(18)
-    end
-end
-
-UI.Button("Recarregar Lista", function()
-    refreshComboList()
-end, comboPanel)
-
--- Painel principal na aba Hotkeys
-local pvePanel = setupUI([[
-Panel
-  height: 25
-  BotSwitch
-    id: pveSwitch
-    anchors.top: parent.top
-    anchors.left: parent.left
-    text-align: center
-    width: 130
-    text: Combo PVE
-  Button
-    id: pveSetup
-    anchors.top: parent.top
-    anchors.left: prev.right
-    anchors.right: parent.right
-    margin-left: 3
-    height: 25
-    text: Setup
-]], parent)
-
-pvePanel.pveSwitch:setOn(storagePVE.enabled)
-pvePanel.pveSwitch.onClick = function(widget)
-    storagePVE.enabled = not storagePVE.enabled
-    widget:setOn(storagePVE.enabled)
-    savePVE()
-    if styleSwitch then styleSwitch(widget) end
-end
-if styleSwitch then styleSwitch(pvePanel.pveSwitch) end
-
-pvePanel.pveSetup.onClick = function()
-    if not pveWindow:isVisible() then
-        refreshAddList()
-        refreshComboList()
-        pveWindow:show()
-        pveWindow:raise()
-        pveWindow:focus()
-    else
-        pveWindow:hide()
-    end
-end
-
-pveWindow.closeBtn.onClick = function() pveWindow:hide() end
-
--- Macro Combo PVE (dispara todos os jutsus marcados de uma vez)
-macro(50, function()
-    if not pvePanel.pveSwitch:isOn() then return end
-    if SGO and now < SGO then return end
-    if not g_game.isAttacking() then return end
-    local target = g_game.getAttackingCreature()
-    if not target then return end
-    if target:isPlayer() then return end
-
-    local playerLevel = player:getLevel()
-    for _, entry in ipairs(storagePVE.spells) do
-        if entry.enabled and playerLevel >= entry.level then
-            say(entry.spell)
-        end
-    end
-end)
-
-refreshAddList()
 
 UI.Separator()
 
@@ -1221,6 +941,7 @@ Label
     end)
 
     buffs = macro(200, "Buff", function()
+        if buffs:isOff() then return end
         if SGO and now < SGO then return end
         if isInPz() then return end
         if hasPartyBuff() then return end
@@ -1362,3 +1083,25 @@ UIWidget
 end
 
 PainelsWindow.closeButton.onClick = function(widget) PainelsWindow:hide() end
+
+-- ==============================
+-- HOTKEYS/MACROS/SCRIPTS 2
+-- ==============================
+
+UI.Button("Hotkeys/Macros/Scripts 2", function(newText)
+  UI.MultilineEditorWindow(storage.ingame_hotkeys2 or "", {title="Hotkeys editor 2", description="Adicione suas scripts aqui!\nBy: @LoboLupus"}, function(text)
+    storage.ingame_hotkeys2 = text
+    reload()
+  end)
+end)
+
+for _, scripts in pairs({storage.ingame_hotkeys2}) do
+  if type(scripts) == "string" and scripts:len() > 3 then
+    local status, result = pcall(function()
+      assert(load(scripts, "ingame_editor"))()
+    end)
+    if not status then 
+      error("Ingame edior error:\n" .. result)
+    end
+  end
+end

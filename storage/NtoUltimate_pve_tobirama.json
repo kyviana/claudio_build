@@ -1,129 +1,129 @@
 {
   "spells": [
     {
-      "cooldownUntil": 0,
+      "enabled": false,
+      "spell": "suiton suikiri",
       "level": 30,
-      "enabled": false,
-      "spell": "suiton suikiri"
+      "cooldownUntil": 0
     },
     {
-      "cooldownUntil": 0,
+      "enabled": false,
+      "spell": "suiton mizu",
       "level": 50,
-      "enabled": false,
-      "spell": "suiton mizu"
+      "cooldownUntil": 0
     },
     {
-      "cooldownUntil": 0,
+      "enabled": false,
+      "spell": "suiton mizudan",
       "level": 70,
-      "enabled": false,
-      "spell": "suiton mizudan"
+      "cooldownUntil": 0
     },
     {
-      "cooldownUntil": 0,
+      "enabled": false,
+      "spell": "suiton suiryudan",
       "level": 85,
-      "enabled": false,
-      "spell": "suiton suiryudan"
+      "cooldownUntil": 0
     },
     {
-      "cooldownUntil": 0,
+      "enabled": false,
+      "spell": "suiryudan no jutsu",
       "level": 100,
-      "enabled": false,
-      "spell": "suiryudan no jutsu"
+      "cooldownUntil": 0
     },
     {
-      "cooldownUntil": 0,
+      "enabled": false,
+      "spell": "suiton saijin",
       "level": 100,
-      "enabled": false,
-      "spell": "suiton saijin"
+      "cooldownUntil": 0
     },
     {
-      "cooldownUntil": 0,
+      "enabled": false,
+      "spell": "suiton suigadan",
       "level": 125,
-      "enabled": false,
-      "spell": "suiton suigadan"
+      "cooldownUntil": 0
     },
     {
-      "cooldownUntil": 0,
+      "enabled": false,
+      "spell": "suiton suichutotsu",
       "level": 150,
-      "enabled": false,
-      "spell": "suiton suichutotsu"
+      "cooldownUntil": 0
     },
     {
-      "cooldownUntil": 0,
+      "enabled": false,
+      "spell": "suiton dragon no jutsu",
       "level": 180,
-      "enabled": false,
-      "spell": "suiton dragon no jutsu"
+      "cooldownUntil": 0
     },
     {
-      "cooldownUntil": 0,
+      "enabled": false,
+      "spell": "suiton suikodan no jutsu",
       "level": 190,
-      "enabled": false,
-      "spell": "suiton suikodan no jutsu"
+      "cooldownUntil": 0
     },
     {
-      "cooldownUntil": 0,
+      "enabled": false,
+      "spell": "suiton suijinheki no jutsu",
       "level": 210,
-      "enabled": false,
-      "spell": "suiton suijinheki no jutsu"
+      "cooldownUntil": 0
     },
     {
-      "cooldownUntil": 0,
+      "enabled": false,
+      "spell": "suiton suirou no jutsu",
       "level": 240,
-      "enabled": false,
-      "spell": "suiton suirou no jutsu"
+      "cooldownUntil": 0
     },
     {
-      "cooldownUntil": 0,
+      "enabled": false,
+      "spell": "edo tensei kai",
       "level": 260,
-      "enabled": false,
-      "spell": "edo tensei kai"
+      "cooldownUntil": 0
     },
     {
-      "cooldownUntil": 0,
+      "enabled": false,
+      "spell": "suiton goshokuzame",
       "level": 325,
-      "enabled": false,
-      "spell": "suiton goshokuzame"
+      "cooldownUntil": 0
     },
     {
-      "cooldownUntil": 0,
+      "enabled": false,
+      "spell": "suiton teppodama",
       "level": 350,
-      "enabled": false,
-      "spell": "suiton teppodama"
+      "cooldownUntil": 0
     },
     {
-      "cooldownUntil": 0,
+      "enabled": true,
+      "spell": "suiton suishoha",
       "level": 375,
-      "enabled": true,
-      "spell": "suiton suishoha"
+      "cooldownUntil": 0
     },
     {
-      "cooldownUntil": 0,
+      "enabled": true,
+      "spell": "suiton tenkyu",
       "level": 450,
-      "enabled": true,
-      "spell": "suiton tenkyu"
+      "cooldownUntil": 0
     },
     {
-      "cooldownUntil": 0,
+      "enabled": true,
+      "spell": "suiton bakusui shouha",
       "level": 450,
-      "enabled": true,
-      "spell": "suiton bakusui shouha"
+      "cooldownUntil": 0
     },
     {
-      "cooldownUntil": 0,
+      "enabled": true,
+      "spell": "daibakufu no jutsu",
       "level": 450,
-      "enabled": true,
-      "spell": "daibakufu no jutsu"
+      "cooldownUntil": 0
     },
     {
-      "cooldownUntil": 0,
+      "enabled": true,
+      "spell": "suiton suiryudan no jutsu",
       "level": 500,
-      "enabled": true,
-      "spell": "suiton suiryudan no jutsu"
+      "cooldownUntil": 0
     }
   ],
-  "enabled": false,
   "widgetPos": {
-    "x": 540,
-    "y": 189
-  }
+    "y": 189,
+    "x": 540
+  },
+  "enabled": false
 }

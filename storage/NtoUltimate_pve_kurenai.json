@@ -1,59 +1,59 @@
 {
-  "enabled": true,
   "spells": [
     {
-      "cooldownUntil": 0,
-      "level": 160,
+      "enabled": false,
       "spell": "kouyoumu",
-      "enabled": false
+      "cooldownUntil": 0,
+      "level": 160
     },
     {
-      "cooldownUntil": 0,
-      "level": 200,
+      "enabled": false,
       "spell": "jubaku no jutsu",
-      "enabled": false
+      "cooldownUntil": 0,
+      "level": 200
     },
     {
-      "cooldownUntil": 0,
-      "level": 250,
+      "enabled": false,
       "spell": "botanyuki",
-      "enabled": false
+      "cooldownUntil": 0,
+      "level": 250
     },
     {
-      "cooldownUntil": 0,
-      "level": 275,
+      "enabled": false,
       "spell": "magen hiei no jutsu",
-      "enabled": false
+      "cooldownUntil": 0,
+      "level": 275
     },
     {
-      "cooldownUntil": 0,
-      "level": 300,
+      "enabled": true,
       "spell": "kaki buyou",
-      "enabled": true
+      "cooldownUntil": 0,
+      "level": 300
     },
     {
-      "cooldownUntil": 0,
-      "level": 350,
+      "enabled": true,
       "spell": "magen hanagasumi",
-      "enabled": true
+      "cooldownUntil": 0,
+      "level": 350
     },
     {
-      "cooldownUntil": 0,
-      "level": 400,
+      "enabled": true,
       "spell": "sansai no jutsu",
-      "enabled": true
+      "cooldownUntil": 0,
+      "level": 400
     },
     {
-      "cooldownUntil": 0,
-      "level": 450,
+      "enabled": true,
       "spell": "anshousui",
-      "enabled": true
+      "cooldownUntil": 0,
+      "level": 450
     },
     {
-      "cooldownUntil": 0,
-      "level": 500,
+      "enabled": true,
       "spell": "magen jubaku satsu",
-      "enabled": true
+      "cooldownUntil": 0,
+      "level": 500
     }
-  ]
+  ],
+  "enabled": true
 }

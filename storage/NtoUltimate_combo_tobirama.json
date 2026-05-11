@@ -3,124 +3,116 @@
   "burstEnabled": false,
   "comboSpells": [
     {
-      "enabled": true,
-      "cooldownSpells": 8093649,
-      "widgetPos": {
-        "y": 451,
-        "x": 668
-      },
       "spellCast": "suiton suiryudan no jutsu",
       "orangeSpell": "suiton suiryudan no jutsu",
       "onScreen": "Suiryudan",
+      "enabled": true,
       "cooldown": 5058,
-      "index": 1,
+      "enableTimeSpell": false,
       "distance": 7,
-      "enableTimeSpell": false
+      "widgetPos": {
+        "x": 668,
+        "y": 451
+      },
+      "index": 1
     },
     {
-      "enabled": true,
-      "cooldownSpells": 8036089,
-      "widgetPos": {
-        "y": 431,
-        "x": 669
-      },
       "spellCast": "suiton suijinheki no jutsu",
       "orangeSpell": "suiton suijinheki no jutsu",
       "onScreen": "Suijinheki",
+      "enabled": true,
       "cooldown": 1095,
-      "index": 2,
+      "enableTimeSpell": false,
       "distance": 6,
-      "enableTimeSpell": false
+      "widgetPos": {
+        "x": 669,
+        "y": 431
+      },
+      "index": 2
     },
     {
-      "enabled": true,
-      "cooldownSpells": 8093682,
-      "widgetPos": {
-        "y": 412,
-        "x": 667
-      },
       "spellCast": "daibakufu no jutsu",
       "orangeSpell": "daibakufu no jutsu",
       "onScreen": "Daibakufu",
+      "enabled": true,
       "cooldown": 2539,
-      "index": 3,
+      "enableTimeSpell": false,
       "distance": 6,
-      "enableTimeSpell": false
+      "widgetPos": {
+        "x": 667,
+        "y": 412
+      },
+      "index": 3
     },
     {
-      "enabled": true,
-      "cooldownSpells": 8092634,
-      "widgetPos": {
-        "y": 488,
-        "x": 663
-      },
       "spellCast": "suiton goshokuzame",
       "orangeSpell": "suiton goshokuzame",
       "onScreen": "Goshokuzame",
+      "enabled": true,
       "cooldown": 2002,
-      "index": 4,
+      "enableTimeSpell": false,
       "distance": 7,
-      "enableTimeSpell": false
+      "widgetPos": {
+        "x": 663,
+        "y": 488
+      },
+      "index": 4
     },
     {
-      "enabled": true,
-      "cooldownSpells": 8091101,
-      "widgetPos": {
-        "y": 507,
-        "x": 666
-      },
       "spellCast": "suiton teppodama",
       "orangeSpell": "suiton teppodama",
       "onScreen": "Teppo",
+      "enabled": true,
       "cooldown": 2009,
-      "index": 5,
+      "enableTimeSpell": false,
       "distance": 7,
-      "enableTimeSpell": false
+      "widgetPos": {
+        "x": 666,
+        "y": 507
+      },
+      "index": 5
     },
     {
-      "enabled": true,
-      "cooldownSpells": 8092697,
-      "widgetPos": {
-        "y": 548,
-        "x": 661
-      },
       "spellCast": "suiton suishoha",
       "orangeSpell": "suiton suishoha",
       "onScreen": "Suishoha",
+      "enabled": true,
       "cooldown": 3096,
-      "index": 6,
+      "enableTimeSpell": false,
       "distance": 1,
-      "enableTimeSpell": false
+      "widgetPos": {
+        "x": 661,
+        "y": 548
+      },
+      "index": 6
     },
     {
-      "enabled": true,
-      "cooldownSpells": 8061405,
-      "widgetPos": {
-        "y": 528,
-        "x": 663
-      },
       "spellCast": "suiton bakusui shouha",
       "orangeSpell": "suiton bakusui shouha",
       "onScreen": "Bakusui",
+      "enabled": true,
       "cooldown": 30073,
-      "index": 7,
+      "enableTimeSpell": false,
       "distance": 7,
-      "enableTimeSpell": false
+      "widgetPos": {
+        "x": 663,
+        "y": 528
+      },
+      "index": 7
     },
     {
-      "enabled": true,
-      "cooldownSpells": 8093077,
-      "widgetPos": {
-        "y": 467,
-        "x": 668
-      },
       "spellCast": "suiton tenkyu",
       "orangeSpell": "suiton tenkyu",
       "onScreen": "Tenkyu",
+      "enabled": true,
       "cooldown": 5003,
-      "index": 8,
+      "enableTimeSpell": false,
       "distance": 7,
-      "enableTimeSpell": false
+      "widgetPos": {
+        "x": 668,
+        "y": 467
+      },
+      "index": 8
     }
   ]
 }

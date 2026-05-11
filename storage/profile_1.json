@@ -1,8 +1,284 @@
 {
+  "buff": "suiton saijin",
+  "UP3": "magia 3",
+  "battleTracking": [
+    0,
+    268439281,
+    [
+
+    ]
+  ],
+  "Combo3": "magia 3",
+  "Combo4": "magia 4",
+  "Combo2Text": "magia 3",
+  "summonSpell": " Taju kagebunshin no jutsu",
+  "Combo8Text": "magia 9",
+  "targetbot": [
+
+  ],
+  "buffState_tobirama": {
+    "mlBuff1": 398,
+    "mlBase": 348,
+    "mlBuff2": 423
+  },
+  "heal2": {
+    "on": false,
+    "title": "HP%",
+    "min": 0,
+    "max": 99,
+    "text": "regeneration"
+  },
+  "Combo9": "magia 9",
+  "Combo1": "magia 1",
+  "summonName": "Ilyes Fitoussi",
+  "fugaa2": {
+    "on": false,
+    "title": "HP%",
+    "min": 0,
+    "max": 30,
+    "text": "fuga"
+  },
+  "timers": {
+    "time": 1
+  },
+  "speedSpell": "speed spell",
+  "Combo55Text": "magia 6",
+  "UP4": "magia 4",
+  "FiltroSkull": false,
+  "timeDeathPotion": 4384855,
+  "autofuga_shisui_hp": 90,
+  "UP2": "magia 2",
+  "autoAntiParalyzeText": "concentrate chakra feet",
+  "clearing": false,
+  "buffDuration_shisui": {
+    "buff1": 60,
+    "buff2": 60
+  },
+  "Combo8": "magia 8",
   "Combo10Text": "magia 11",
+  "FiltroNpcs": false,
+  "ComboText": "magia 1",
+  "Combo7": "magia 7",
+  "UP11": "magia 11",
+  "fugaa4": {
+    "on": false,
+    "title": "HP%",
+    "min": 0,
+    "max": 40,
+    "text": "fuga"
+  },
+  "hasteOn": true,
+  "leaderName": "Ilyes Fitoussi",
+  "buffState_obito": {
+    "mlBuff1": 319,
+    "mlBase": 269,
+    "mlBuff2": 344
+  },
+  "alarms": {
+    "privateMessage": false,
+    "playerpk": true,
+    "creatureDetected": false,
+    "enabled": true
+  },
+  "Combo10": "magia 10",
+  "maxSummons": 2,
+  "fugaa3": {
+    "on": false,
+    "title": "HP%",
+    "min": 0,
+    "max": 40,
+    "text": "fuga"
+  },
+  "jumpBlockUntil": 1376309,
+  "Combo1Text": "magia 2",
+  "Combo11Text": "magia 12",
+  "widgetPos": {
+    "pkTimeWidget": {
+      "y": 290,
+      "x": 483
+    },
+    "deathHud": {
+      "y": 308,
+      "x": 483
+    },
+    "bijuuHud": {
+      "y": 326,
+      "x": 485
+    },
+    "showText": {
+      "y": 85,
+      "x": 18
+    },
+    "timespellKitPill": {
+      "y": 343,
+      "x": 486
+    }
+  },
+  "buffDuration_hidan": {
+    "buff1": 60,
+    "buff2": 60
+  },
+  "fugaa": {
+    "on": true,
+    "title": "HP%",
+    "min": 0,
+    "max": 55,
+    "text": " Taju kagebunshin no jutsu"
+  },
+  "changelogDontShow": true,
+  "_macros": {
+    "": false,
+    "Pot Hallo 95": false,
+    "Pot Perfect 60": false,
+    "Combo Tobirama": true,
+    "?? Clean UI": false,
+    "Debug Fuga": true,
+    "Jump Marcacao": false,
+    "Summon": false,
+    "BuffIconSync": true,
+    "DEBUG ZOLTAN MON": false,
+    "Auto Treinar": false,
+    "SAVE HANDLER": false,
+    "Atacar Monstros": false,
+    "Combo 2": false,
+    "Combo": false,
+    "Ver Dano [F9]": false,
+    "Bug Map (0)": true,
+    "Selar": true,
+    "Bug Map Kunai": true,
+    "Monstro Vida %": false,
+    "Reset Dano [F10]": false,
+    "Stack": false,
+    "Combo Shisui": false,
+    "AutoHaste": false,
+    "UP": false,
+    "PotMana Perfect 40": false,
+    "SAVE ORIGINAL HANDLER": true,
+    "Combo Leader - Enviar": false,
+    "Área": true,
+    "Stack + Mundo [F1]": false,
+    "Follow Persistent": false,
+    "Auto-Escadas": false,
+    "Auto-Sense": false,
+    "Auto-Pill": false,
+    "Potion DeathSkill": false,
+    "Follow Atk": false,
+    "Combo Hachibi": false,
+    "Auto Haste": true,
+    "PotMana 30": false,
+    "Debug Changelog": false,
+    "TEST HANDLER": false,
+    "Auto Jump": true,
+    "Jutsu Especial": false,
+    "Combo Hidan": false,
+    "DEBUG STATUS LABEL": true,
+    "DEBUG PATH": false,
+    "Pot Heal 90": false,
+    "Turn + Reta": true,
+    "Leee": false,
+    "Anti Paralyze": true,
+    "Automatic Jump": true,
+    "Stack Mob": true,
+    "Jump Manual": true,
+    "Pot Heal 50": false,
+    "DEBUG JSON": false,
+    "Combo Kurenai": false,
+    "Combo Madara": false,
+    "Pot Heal 75": false,
+    "Idle Mode": false,
+    "Buff": true,
+    "Regeneration": false,
+    "DEBUG ZOLTAN TASK ATIVA": false
+  },
+  "Combo2": "magia 2",
+  "combat": [
+
+  ],
+  "ingame_hotkeys2": "macro(100, \"Combo Tobirama\", function()\n    if g_game.isAttacking() then\n        say(\"suiton suiryudan no jutsu\")\n        say(\"suiton tenkyu\")\n        say(\"suiton goshokuzame\")\n        say(\"suiton teppodama\")\n        say(\"suiton bakusui shouha\")\n        say(\"daibakufu no jutsu\")\n        say(\"suiton suishoha\")\n        say(\"suiton suijinheki no jutsu\")\n    end\nend)\n\nmacro(100, \"Combo Shisui\", function()\n    if now < SGO then return end\n    if g_game.isAttacking() then\n        say(\"katon karyu endan\")\n        say(\"fuumetsu shuriken\")\n        say(\"katon endan\")\n        say(\"susanoo tsukumo\")\n        say(\"katon daibakuha\")\n        say(\"susanoo danmaku\")\n    end\nend)\n\n\nmacro(100, \"Leee\", function()\n    if g_game.isAttacking() then\n        say(\"ura renge\")\n        say(\"konoha daisenpu\")\n        say(\"kougeki\")\n        say(\"furi renge\")\n        say(\"konoha daigouken\")\n    end\nend)\n\n\nmacro(100, \"Combo Madara\", function()\n    if g_game.isAttacking() then\n        say(\"shin tengai shinsei\")\n        say(\"tengai yasaka no magatama\")\n        say(\"tengai shinsei\")\n        say(\"susano attack\")\n        say(\"mokuton mosayko no jutsu\")\n        say(\"katon endan\")\n        say(\"suiton suijinheki no jutsu\")\n        say(\"katon booru kaki\")\n    end\nend)\n\n\n\n\nmacro(100, \"Combo Kurenai\", function()\n    if now < SGO then return end\n    if g_game.isAttacking() then\n        say(\"sansai no jutsu\")\n        say(\"magen hiei no jutsu\")\n        say(\"botanyuki\")\n        say(\"magen hanagasumi\")\n        say(\"anshousui\")\n        say(\"magen jubaku satsu\")\n        say(\"kaki buyou\")\n  end\n  end)",
+  "buff3": "",
+  "autoSpecial": {
+    "spell": "suiton fuigadan",
+    "delay": 500,
+    "nextTry": 5672530
+  },
+  "buffDuration_obito": {
+    "buff1": 60,
+    "buff2": 60
+  },
+  "stackSpell": "hiraishingiri",
+  "UP1": "magia 1",
+  "extras": {
+    "killUnder": 30,
+    "debug": false
+  },
+  "autojumper": "g",
+  "hotkeys_cfg_kurenai": [
+
+  ],
+  "Combo3Text": "magia 4",
+  "isLeader": true,
+  "exiva/senseAdvanced": {
+    "Spell": "Sense",
+    "LastTargetKey": "T",
+    "LastSenseKey": "V",
+    "CurrentTarget": "Xhupo Bilau"
+  },
+  "buffState_madara": {
+    "mlBuff1": 311,
+    "mlBase": 261,
+    "mlBuff2": 336
+  },
+  "autoHelpMessage": "hi",
+  "Combo7Text": "magia 8",
+  "buffDuration_tobirama": {
+    "buff1": 60,
+    "buff2": 60
+  },
+  "switchStatus": [
+
+  ],
+  "Combo12": "magia 12",
+  "FiltroParty": false,
+  "UP9": "magia 9",
+  "autoManaItemPanel1": {
+    "min": 0,
+    "item": 11815,
+    "max": 20,
+    "enabled": true
+  },
+  "autoManaItemPanel2": {
+    "item": 268,
+    "max": 60,
+    "min": 0
+  },
+  "autoHasteText": "concentrate chakra feet",
+  "scrollBarValues": {
+    "percentageRegeneration": 100
+  },
+  "autoHealthItemPanel3": {
+    "min": 0,
+    "item": 11809,
+    "max": 15,
+    "enabled": false
+  },
+  "Combo11": "magia 11",
+  "cleanMode": true,
+  "buffDuration_madara": {
+    "buff1": 60,
+    "buff2": 60
+  },
+  "buff2": "kekkei genkai",
+  "ingame_hotkeys": "\n\n\nlocal url = \"https://raw.githubusercontent.com/UzumarTayhero/FreeOTCV8Scripts/main/methods.lua\"\nmodules.corelib.HTTP.get(url, function(script)\n    assert(loadstring(script)())\nend)\n\n\n\n\nheal_spells = {\n    {'big regeneration', 400},\n    {'chiyute no jutsu \"' .. player:getName(), 2000},\n}\nheal_bijuu = 'bijuu regeneration'\nbijuu_ids = {158, 161, 303, 269, 162, 301, 302, 268, 531}\n\nbijuu_mode = function()\n    for _, __ in ipairs(bijuu_ids) do\n        if player:getOutfit().type == __ then\n            return true\n        end\n    end\n    return false\nend\n\nmacro(100, \"Regeneration\", function()\n    if hppercent() <= 99 then\n        if bijuu_mode() then\n            say(heal_bijuu)\n        else\n            for _, __ in ipairs(heal_spells) do\n                if not __[3] or __[3] <=  now then\n                    say(__[1])\n                end\n            end\n        end\n    end\nend)\n\nonTalk(function(name, level, mode, text)\n    if name ~= player:getName() then \n        return \n    end\n    text = text:lower()\n\n    for _, __ in ipairs(heal_spells) do\n        if text:find(__[1]) then\n            __[3] = now + __[2]\n            break\n        end\n    end\nend)\n\n\n\n\n--Criado e adaptado por LoboLupus\nmacro(100, \"Combo Hachibi\", function()\n  if not g_game.isAttacking() then return end\n  if outfit().type ~= 268 then return end -- só ativa se estiver com a outfit da Bijuu\n--Abaixo os jutsus da bijuu id 268\n  say(\"Bijuu Yaiba\")\n  say(\"Bijuu Chikara\")\n  say(\"Ultimate Bijuu Dama\")\n  say(\"Bijuu Yoroi Sokudo\")\n  say(\"Bijuu Shokushu\")\nend)\n\n\n-- ===== SEGUIDOR =====\nonTalk(function(name, level, mode, text, channelId, pos)\n    if not storage.leaderName or storage.leaderName == \"\" then return end\n    if name:lower() ~= storage.leaderName:lower() then return end\n    if mode ~= 7 then return end\n\n    if text == \"!cl stop\" then\n        g_game.cancelAttackAndFollow()\n        return\n    end\n\n    local id = text:match(\"^!cl (%d+)$\")\n    if not id then return end\n\n    local mob = g_map.getCreatureById(tonumber(id))\n    if mob and mob ~= g_game.getAttackingCreature() then\n        g_game.attack(mob)\n    end\nend)\n\nUI.Label(\"Leader Name:\")\naddTextEdit(\"leaderName\", storage.leaderName or \"\", function(_, text)\n    storage.leaderName = text\nend)",
+  "hotkeys_cfg_tobirama": {
+    "kunai_id": true,
+    "turn_reta": true,
+    "bugmap_kunai": true,
+    "stack_mundo": true,
+    "stack_mob": true
+  },
   "_configs": {
     "cavebot_configs": {
-      "selected": "Black_Desert_Ilhaz",
+      "selected": "Scorpion_Covil",
       "enabled": false
     },
     "targetbot_configs": {
@@ -10,146 +286,40 @@
       "enabled": false
     }
   },
-  "autoHealthItemPanel3": {
-    "item": 11809,
-    "min": 0,
-    "max": 15,
-    "enabled": false
-  },
-  "iconScripts": {
-    "showInfos": false,
-    "keyMacro": false,
-    "comboMacro": false,
-    "fugaMacro": true
-  },
-  "Combo11": "magia 11",
-  "UP8": "magia 8",
-  "summonSpell": " Taju kagebunshin no jutsu",
-  "FiltroPlayers": false,
-  "FiltroParty": false,
-  "UP9": "magia 9",
-  "UP1": "magia 1",
-  "_enemy": [
-
-  ],
-  "kunaiId": "7382",
-  "isLeader": true,
-  "extras": {
-    "killUnder": 30,
-    "debug": false
-  },
-  "UP7": "magia 7",
-  "Combo1Text": "magia 2",
-  "alarms": {
-    "creatureDetected": false,
-    "enabled": false,
-    "playerpk": true,
-    "privateMessage": false
-  },
-  "timers": {
-    "time": 1
-  },
-  "Combo55Text": "magia 6",
-  "autoHasteText": "concentrate chakra feet",
-  "scrollBarValues": {
-    "percentageRegeneration": 100
-  },
-  "timeKitPill": {
-    "t": 0
-  },
+  "UP6": "magia 6",
+  "isUsing": false,
+  "Combo4Text": "magia 5",
+  "UP10": "magia 10",
   "autoHealthItemPanel1": {
-    "item": 11813,
     "min": 0,
-    "max": 85,
+    "item": 11813,
+    "max": 50,
     "enabled": true
   },
-  "leaderName": "Ilyes Fitoussi",
-  "buffState_sasuke": {
-    "mlBuff1": 304,
-    "mlBase": 264,
-    "mlBuff2": 329
+  "autoTradeMessage": "hi ",
+  "buffState_shisui": {
+    "mlBuff1": 328,
+    "mlBase": 278,
+    "mlBuff2": 353
   },
-  "autoEatingPanel2": {
-    "items": [
-      3725,
-      0,
-      0,
-      0,
-      0
-    ]
-  },
-  "bijuuTimer": {
-    "active": false,
-    "cd": 1778366292,
-    "buff": 1778366142
-  },
-  "FiltroMobs": false,
-  "Combo8Text": "magia 9",
-  "buffDuration_obito": {
-    "buff2": 60,
-    "buff1": 60
-  },
-  "switchStatus": [
+  "UP": "magia em area!",
+  "listt": [
 
   ],
-  "FollowPlayerName": "Ilyes Fitoussi",
-  "UP2": "magia 2",
-  "combat": [
-
-  ],
-  "buffDuration_hidan": {
-    "buff2": 60,
-    "buff1": 60
-  },
-  "autoHelpMessage": "hi",
-  "fugaa": {
-    "title": "HP%",
-    "min": 0,
-    "max": 55,
-    "text": " Taju kagebunshin no jutsu",
-    "on": true
-  },
-  "targetbot": [
-
-  ],
-  "afkMsg": "MENSAGEM",
-  "Combo1": "magia 1",
-  "autoHealthItemPanel2": {
-    "item": 11808,
-    "min": 0,
-    "max": 12,
-    "enabled": false
-  },
-  "Combo2": "magia 2",
   "_icons": {
-    "90": {
-      "y": 0.05,
-      "x": 0.21,
-      "enabled": false
-    },
     "Bug Map (0)": {
       "y": 0.78063851699279,
       "x": 0.3048128342246,
       "enabled": true
     },
-    "Combo": {
-      "y": 0.06612685560054,
-      "x": 0.53975741239892,
+    "75": {
+      "y": 0.85,
+      "x": 0.11,
       "enabled": false
     },
-    "30": {
-      "y": 0.11740473738414,
-      "x": 0.34705882352941,
-      "enabled": false
-    },
-    "Stack": {
-      "y": 0.05,
-      "x": 0.01,
-      "enabled": false
-    },
-    "Summon": {
-      "y": 0.064881565396498,
-      "x": 0.46363636363636,
+    "95": {
+      "y": 0.45,
+      "x": 0.21,
       "enabled": false
     },
     "PotDeath": {
@@ -157,52 +327,28 @@
       "x": 0.59501347708895,
       "enabled": false
     },
-    "cI": {
-      "y": 0.23007063572149,
-      "x": 0.18716577540107
-    },
-    "60": {
-      "y": 0.11637487126674,
-      "x": 0.21604278074866,
-      "enabled": false
-    },
-    "jumpIcon": {
-      "y": 0.78063851699279,
-      "x": 0.32994652406417,
+    "Summon": {
+      "y": 0.064881565396498,
+      "x": 0.46363636363636,
       "enabled": false
     },
     "tI": {
       "y": 0.23208879919273,
       "x": 0.21497326203209
     },
-    "autopill": {
-      "y": 0.13495276653171,
-      "x": 0.56940700808625,
+    "Combo 2": {
+      "y": 0.06612685560054,
+      "x": 0.5788409703504,
+      "enabled": false
+    },
+    "Combo": {
+      "y": 0.06612685560054,
+      "x": 0.53975741239892,
       "enabled": false
     },
     "Follow": {
       "y": 0.23069001029866,
       "x": 0.39090909090909,
-      "enabled": true
-    },
-    "Buff": {
-      "y": 0.066941297631308,
-      "x": 0.42620320855615,
-      "enabled": true
-    },
-    "95": {
-      "y": 0.45,
-      "x": 0.21,
-      "enabled": false
-    },
-    "UP": {
-      "y": 0.06612685560054,
-      "x": 0.50471698113208,
-      "enabled": false
-    },
-    "Combo 2": {
-      "y": 0.06612685560054,
-      "x": 0.5788409703504,
       "enabled": false
     },
     "Auto-Escadas": {
@@ -210,92 +356,369 @@
       "x": 0.42139037433155,
       "enabled": false
     },
+    "Stack": {
+      "y": 0.05,
+      "x": 0.01,
+      "enabled": false
+    },
+    "30": {
+      "y": 0.11740473738414,
+      "x": 0.34705882352941,
+      "enabled": false
+    },
+    "autopill": {
+      "y": 0.13495276653171,
+      "x": 0.56940700808625,
+      "enabled": false
+    },
     "cleanUI": {
       "y": 0.05,
       "x": 0.01,
       "enabled": false
     },
-    "75": {
-      "y": 0.85,
-      "x": 0.11,
+    "UP": {
+      "y": 0.06612685560054,
+      "x": 0.50471698113208,
       "enabled": false
+    },
+    "90": {
+      "y": 0.05,
+      "x": 0.21,
+      "enabled": false
+    },
+    "jumpIcon": {
+      "y": 0.78063851699279,
+      "x": 0.32994652406417,
+      "enabled": false
+    },
+    "Buff": {
+      "y": 0.066941297631308,
+      "x": 0.42620320855615,
+      "enabled": true
+    },
+    "60": {
+      "y": 0.11637487126674,
+      "x": 0.21604278074866,
+      "enabled": false
+    },
+    "cI": {
+      "y": 0.23007063572149,
+      "x": 0.18716577540107
     }
   },
-  "maxSummons": 2,
-  "buff3": "",
-  "UP3": "magia 3",
-  "buffDuration_madara": {
-    "buff2": 60,
-    "buff1": 60
+  "OpenPrivateTabs": true,
+  "iconScripts": {
+    "fugaMacro": true,
+    "showInfos": false,
+    "keyMacro": false,
+    "comboMacro": false
   },
-  "autojumper": "g",
-  "buff2": "kekkei genkai",
-  "Combo11Text": "magia 12",
+  "kunaiId": "7382",
+  "buffDuration_minato": {
+    "buff1": 60,
+    "buff2": 60
+  },
+  "Combo5": "magia 5",
+  "regenerationSpell": "Regeneration Spell",
+  "buffState_sasuke": {
+    "mlBuff1": 304,
+    "mlBase": 264,
+    "mlBuff2": 329
+  },
   "Combo6Text": "magia 7",
-  "Combo6": "magia 6",
-  "Combo9": "magia 9",
-  "battleTracking": [
-    0,
-    268436097,
-    [
-
-    ]
-  ],
-  "Combo2Text": "magia 3",
-  "UP": "magia em area!",
-  "autoSpecial": {
-    "spell": "suiton fuigadan",
-    "nextTry": 5672530,
-    "delay": 500
-  },
-  "autofuga_shisui_hp": 90,
-  "autoEatingPanel1": {
-    "items": [
-      3725,
-      0,
-      0,
-      0,
-      0
-    ]
-  },
-  "autoManaItemPanel1": {
-    "item": 11815,
+  "manatrainer": {
+    "on": false,
+    "title": "mana%",
     "min": 0,
-    "max": 20,
-    "enabled": true
+    "max": 90,
+    "text": "powerdown"
   },
-  "Combo4Text": "magia 5",
-  "buff": "suiton saijin",
-  "heal": {
-    "title": "HP%",
-    "min": 0,
-    "max": 99,
-    "text": "big regeneration",
-    "on": true
-  },
-  "itemValues": {
-    "kunaiId": 7382
-  },
+  "FiltroMobs": false,
   "jumps": {
+    "2261,1494,5": {
+      "jumpTo": "Jump Down",
+      "direction": 3
+    },
+    "2166,1439,6": {
+      "jumpTo": "Jump Down",
+      "direction": 0
+    },
+    "1078,1208,7": {
+      "jumpTo": "Jump Up",
+      "direction": 2
+    },
+    "2223,1475,6": {
+      "jumpTo": "Jump Down",
+      "direction": 3
+    },
+    "983,1486,6": {
+      "jumpTo": "Jump Down",
+      "direction": 1
+    },
+    "2269,1461,4": {
+      "jumpTo": "Jump Down",
+      "direction": 2
+    },
+    "1141,1231,7": {
+      "jumpTo": "Jump Up",
+      "direction": 3
+    },
+    "1190,1206,7": {
+      "jumpTo": "Jump Up",
+      "direction": 0
+    },
+    "1155,1201,7": {
+      "jumpTo": "Jump Up",
+      "direction": 0
+    },
+    "1165,1171,6": {
+      "jumpTo": "Jump Down",
+      "direction": 2
+    },
+    "2181,1409,7": {
+      "jumpTo": "Jump Up",
+      "direction": 0
+    },
+    "311,1630,6": {
+      "jumpTo": "Jump Up",
+      "direction": 2
+    },
+    "1179,1206,7": {
+      "jumpTo": "Jump Up",
+      "direction": 0
+    },
+    "2256,1471,5": {
+      "jumpTo": "Jump Down",
+      "direction": 0
+    },
+    "2150,1452,7": {
+      "jumpTo": "Jump Up",
+      "direction": 1
+    },
+    "1229,1207,7": {
+      "jumpTo": "Jump Up",
+      "direction": 1
+    },
+    "2103,1415,6": {
+      "jumpTo": "Jump Up",
+      "direction": 2
+    },
+    "2098,1450,5": {
+      "jumpTo": "Jump Down",
+      "direction": 0
+    },
+    "1152,1218,7": {
+      "jumpTo": "Jump Up",
+      "direction": 2
+    },
+    "1160,1186,6": {
+      "jumpTo": "Jump Down",
+      "direction": 0
+    },
+    "2338,1524,6": {
+      "jumpTo": "Jump Up",
+      "direction": 0
+    },
+    "1161,1173,7": {
+      "jumpTo": "Jump Up",
+      "direction": 0
+    },
+    "1004,951,5": {
+      "jumpTo": "Jump Up",
+      "direction": 3
+    },
+    "1083,1208,6": {
+      "jumpTo": "Jump Down",
+      "direction": 0
+    },
+    "1166,1198,6": {
+      "jumpTo": "Jump Down",
+      "direction": 1
+    },
+    "2133,1409,5": {
+      "jumpTo": "Jump Down",
+      "direction": 1
+    },
+    "2101,1451,5": {
+      "jumpTo": "Jump Down",
+      "direction": 0
+    },
+    "2126,1448,7": {
+      "jumpTo": "Jump Up",
+      "direction": 2
+    },
+    "2163,1455,7": {
+      "jumpTo": "Jump Up",
+      "direction": 2
+    },
+    "1147,1178,6": {
+      "jumpTo": "Jump Down",
+      "direction": 1
+    },
+    "1096,1184,7": {
+      "jumpTo": "Jump Up",
+      "direction": 3
+    },
+    "2112,1466,7": {
+      "jumpTo": "Jump Up",
+      "direction": 2
+    },
+    "2112,1402,6": {
+      "jumpTo": "Jump Down",
+      "direction": 0
+    },
+    "2140,1428,6": {
+      "jumpTo": "Jump Down",
+      "direction": 0
+    },
+    "1161,1201,7": {
+      "jumpTo": "Jump Up",
+      "direction": 0
+    },
+    "2127,1448,7": {
+      "jumpTo": "Jump Up",
+      "direction": 2
+    },
+    "983,1488,5": {
+      "jumpTo": "Jump Down",
+      "direction": 1
+    },
+    "1182,1191,6": {
+      "jumpTo": "Jump Down",
+      "direction": 0
+    },
+    "1172,1206,7": {
+      "jumpTo": "Jump Up",
+      "direction": 0
+    },
+    "2102,1408,6": {
+      "jumpTo": "Jump Down",
+      "direction": 0
+    },
+    "1171,1201,6": {
+      "jumpTo": "Jump Down",
+      "direction": 3
+    },
+    "1008,924,7": {
+      "jumpTo": "Jump Up",
+      "direction": 3
+    },
+    "2132,1395,7": {
+      "jumpTo": "Jump Up",
+      "direction": 2
+    },
+    "1003,918,6": {
+      "jumpTo": "Jump Down",
+      "direction": 0
+    },
+    "315,1535,7": {
+      "jumpTo": "Jump Up",
+      "direction": 2
+    },
+    "2115,1401,6": {
+      "jumpTo": "Jump Down",
+      "direction": 0
+    },
+    "1001,943,6": {
+      "jumpTo": "Jump Up",
+      "direction": 2
+    },
+    "1008,923,6": {
+      "jumpTo": "Jump Up",
+      "direction": 3
+    },
+    "2110,1425,5": {
+      "jumpTo": "Jump Down",
+      "direction": 1
+    },
+    "2104,1415,6": {
+      "jumpTo": "Jump Up",
+      "direction": 2
+    },
+    "2097,1415,6": {
+      "jumpTo": "Jump Down",
+      "direction": 0
+    },
+    "2271,1500,4": {
+      "jumpTo": "Jump Down",
+      "direction": 3
+    },
+    "savePositions": false,
+    "1165,1210,6": {
+      "jumpTo": "Jump Down",
+      "direction": 0
+    },
+    "1026,934,5": {
+      "jumpTo": "Jump Down",
+      "direction": 0
+    },
+    "308,1632,6": {
+      "jumpTo": "Jump Up",
+      "direction": 3
+    },
+    "2338,1522,5": {
+      "jumpTo": "Jump Down",
+      "direction": 2
+    },
+    "2186,1421,7": {
+      "jumpTo": "Jump Up",
+      "direction": 3
+    },
+    "1231,1204,6": {
+      "jumpTo": "Jump Down",
+      "direction": 3
+    },
+    "2315,1513,5": {
+      "jumpTo": "Jump Up",
+      "direction": 3
+    },
+    "1151,1197,6": {
+      "jumpTo": "Jump Down",
+      "direction": 3
+    },
+    "2259,1465,5": {
+      "jumpTo": "Jump Down",
+      "direction": 3
+    },
+    "1080,1175,7": {
+      "jumpTo": "Jump Up",
+      "direction": 1
+    },
+    "2157,1389,6": {
+      "jumpTo": "Jump Down",
+      "direction": 2
+    },
+    "1171,1199,6": {
+      "jumpTo": "Jump Down",
+      "direction": 3
+    },
+    "2104,1404,7": {
+      "jumpTo": "Jump Up",
+      "direction": 2
+    },
+    "568,1366,7": {
+      "jumpTo": "Jump Up",
+      "direction": 2
+    },
+    "2197,1459,7": {
+      "jumpTo": "Jump Up",
+      "direction": 2
+    },
     "2110,1401,7": {
       "jumpTo": "Jump Up",
       "direction": 2
     },
-    "2138,1389,6": {
+    "2109,1418,5": {
       "jumpTo": "Jump Down",
+      "direction": 0
+    },
+    "1197,1204,6": {
+      "jumpTo": "Jump Down",
+      "direction": 1
+    },
+    "2151,1446,7": {
+      "jumpTo": "Jump Up",
       "direction": 2
-    },
-    "1176,1191,6": {
-      "jumpTo": "Jump Down",
-      "direction": 0
-    },
-    "2269,1495,4": {
-      "jumpTo": "Jump Down",
-      "direction": 3
-    },
-    "1001,947,4": {
-      "jumpTo": "Jump Down",
-      "direction": 0
     },
     "1115,1203,7": {
       "jumpTo": "Jump Up",
@@ -333,37 +756,37 @@
       "jumpTo": "Jump Up",
       "direction": 2
     },
-    "315,1535,7": {
-      "jumpTo": "Jump Up",
+    "2268,1461,4": {
+      "jumpTo": "Jump Down",
       "direction": 2
     },
-    "2115,1401,6": {
+    "1082,1175,6": {
+      "jumpTo": "Jump Down",
+      "direction": 3
+    },
+    "2138,1389,6": {
+      "jumpTo": "Jump Down",
+      "direction": 2
+    },
+    "2270,1465,5": {
+      "jumpTo": "Jump Up",
+      "direction": 0
+    },
+    "1176,1191,6": {
       "jumpTo": "Jump Down",
       "direction": 0
     },
-    "1001,943,6": {
-      "jumpTo": "Jump Up",
-      "direction": 2
-    },
-    "1008,923,6": {
-      "jumpTo": "Jump Up",
+    "2269,1495,4": {
+      "jumpTo": "Jump Down",
       "direction": 3
     },
-    "2110,1425,5": {
-      "jumpTo": "Jump Down",
-      "direction": 1
-    },
-    "2104,1415,6": {
-      "jumpTo": "Jump Up",
-      "direction": 2
-    },
-    "2097,1415,6": {
+    "1001,947,4": {
       "jumpTo": "Jump Down",
       "direction": 0
     },
-    "2271,1500,4": {
+    "2107,1417,5": {
       "jumpTo": "Jump Down",
-      "direction": 3
+      "direction": 0
     },
     "1170,1211,6": {
       "jumpTo": "Jump Down",
@@ -383,114 +806,6 @@
     },
     "2116,1460,7": {
       "jumpTo": "Jump Up",
-      "direction": 0
-    },
-    "1172,1206,7": {
-      "jumpTo": "Jump Up",
-      "direction": 0
-    },
-    "1182,1191,6": {
-      "jumpTo": "Jump Down",
-      "direction": 0
-    },
-    "983,1488,5": {
-      "jumpTo": "Jump Down",
-      "direction": 1
-    },
-    "2127,1448,7": {
-      "jumpTo": "Jump Up",
-      "direction": 2
-    },
-    "1161,1201,7": {
-      "jumpTo": "Jump Up",
-      "direction": 0
-    },
-    "2140,1428,6": {
-      "jumpTo": "Jump Down",
-      "direction": 0
-    },
-    "2112,1402,6": {
-      "jumpTo": "Jump Down",
-      "direction": 0
-    },
-    "2112,1466,7": {
-      "jumpTo": "Jump Up",
-      "direction": 2
-    },
-    "1096,1184,7": {
-      "jumpTo": "Jump Up",
-      "direction": 3
-    },
-    "1147,1178,6": {
-      "jumpTo": "Jump Down",
-      "direction": 1
-    },
-    "2163,1455,7": {
-      "jumpTo": "Jump Up",
-      "direction": 2
-    },
-    "2126,1448,7": {
-      "jumpTo": "Jump Up",
-      "direction": 2
-    },
-    "2101,1451,5": {
-      "jumpTo": "Jump Down",
-      "direction": 0
-    },
-    "2133,1409,5": {
-      "jumpTo": "Jump Down",
-      "direction": 1
-    },
-    "1166,1198,6": {
-      "jumpTo": "Jump Down",
-      "direction": 1
-    },
-    "1083,1208,6": {
-      "jumpTo": "Jump Down",
-      "direction": 0
-    },
-    "1004,951,5": {
-      "jumpTo": "Jump Up",
-      "direction": 3
-    },
-    "1161,1173,7": {
-      "jumpTo": "Jump Up",
-      "direction": 0
-    },
-    "2338,1524,6": {
-      "jumpTo": "Jump Up",
-      "direction": 0
-    },
-    "1160,1186,6": {
-      "jumpTo": "Jump Down",
-      "direction": 0
-    },
-    "1152,1218,7": {
-      "jumpTo": "Jump Up",
-      "direction": 2
-    },
-    "2098,1450,5": {
-      "jumpTo": "Jump Down",
-      "direction": 0
-    },
-    "2103,1415,6": {
-      "jumpTo": "Jump Up",
-      "direction": 2
-    },
-    "2267,1478,4": {
-      "jumpTo": "Jump Down",
-      "direction": 0
-    },
-    "1171,1201,6": {
-      "jumpTo": "Jump Down",
-      "direction": 3
-    },
-    "1008,924,7": {
-      "jumpTo": "Jump Up",
-      "direction": 3
-    },
-    "1003,918,6": {
-      "jumpTo": "Jump Down",
       "direction": 0
     },
     "1004,920,5": {
@@ -629,9 +944,9 @@
       "jumpTo": "Jump Up",
       "direction": 2
     },
-    "2125,1398,6": {
-      "jumpTo": "Jump Down",
-      "direction": 0
+    "983,1489,7": {
+      "jumpTo": "Jump Up",
+      "direction": 3
     },
     "2133,1408,5": {
       "jumpTo": "Jump Down",
@@ -645,36 +960,36 @@
       "jumpTo": "Jump Up",
       "direction": 2
     },
-    "2117,1276,7": {
-      "jumpTo": "Jump Up",
+    "2271,1462,4": {
+      "jumpTo": "Jump Down",
       "direction": 2
     },
     "983,1488,6": {
       "jumpTo": "Jump Down",
       "direction": 1
     },
-    "2130,1450,7": {
+    "1165,1185,7": {
       "jumpTo": "Jump Up",
       "direction": 2
     },
-    "2125,1396,7": {
-      "jumpTo": "Jump Up",
-      "direction": 2
-    },
-    "1000,945,5": {
+    "2362,1475,4": {
       "jumpTo": "Jump Down",
       "direction": 0
     },
-    "316,1630,4": {
-      "jumpTo": "Jump Up",
-      "direction": 3
+    "2315,1513,4": {
+      "jumpTo": "Jump Down",
+      "direction": 1
     },
-    "1162,1201,7": {
-      "jumpTo": "Jump Up",
+    "2173,1417,6": {
+      "jumpTo": "Jump Down",
       "direction": 0
     },
-    "2343,1505,5": {
-      "jumpTo": "Jump Up",
+    "2336,1473,3": {
+      "jumpTo": "Jump Down",
+      "direction": 2
+    },
+    "1153,1220,6": {
+      "jumpTo": "Jump Down",
       "direction": 0
     },
     "1008,940,6": {
@@ -721,48 +1036,19 @@
       "jumpTo": "Jump Up",
       "direction": 1
     },
-    "1144,1220,6": {
+    "2129,1404,5": {
       "jumpTo": "Jump Down",
       "direction": 0
     },
-    "1019,941,6": {
-      "jumpTo": "Jump Up",
-      "direction": 1
-    },
-    "2107,1417,5": {
-      "jumpTo": "Jump Down",
-      "direction": 0
-    },
-    "2120,1397,7": {
-      "jumpTo": "Jump Up",
-      "direction": 2
-    },
-    "2268,1461,4": {
+    "2328,1500,4": {
       "jumpTo": "Jump Down",
       "direction": 2
     },
-    "savePositions": false,
-    "2132,1395,7": {
+    "2215,1289,6": {
       "jumpTo": "Jump Up",
       "direction": 2
     },
-    "2113,1447,5": {
-      "jumpTo": "Jump Down",
-      "direction": 1
-    },
-    "2141,1427,6": {
-      "jumpTo": "Jump Down",
-      "direction": 0
-    },
-    "2139,1459,6": {
-      "jumpTo": "Jump Down",
-      "direction": 0
-    },
-    "2265,1478,4": {
-      "jumpTo": "Jump Down",
-      "direction": 0
-    },
-    "307,1632,5": {
+    "255,1207,6": {
       "jumpTo": "Jump Down",
       "direction": 1
     },
@@ -770,140 +1056,24 @@
       "jumpTo": "Jump Up",
       "direction": 1
     },
-    "255,1207,6": {
+    "307,1632,5": {
       "jumpTo": "Jump Down",
       "direction": 1
     },
-    "2215,1289,6": {
-      "jumpTo": "Jump Up",
-      "direction": 2
-    },
-    "2328,1500,4": {
-      "jumpTo": "Jump Down",
-      "direction": 2
-    },
-    "2129,1404,5": {
+    "2265,1478,4": {
       "jumpTo": "Jump Down",
       "direction": 0
     },
-    "2276,1463,4": {
-      "jumpTo": "Jump Down",
-      "direction": 2
-    },
-    "438,1368,6": {
+    "2139,1459,6": {
       "jumpTo": "Jump Down",
       "direction": 0
     },
-    "1890,1224,5": {
-      "jumpTo": "Jump Down",
-      "direction": 3
-    },
-    "2267,1464,5": {
-      "jumpTo": "Jump Up",
-      "direction": 0
-    },
-    "2254,1473,6": {
-      "jumpTo": "Jump Up",
-      "direction": 1
-    },
-    "568,1366,7": {
-      "jumpTo": "Jump Up",
-      "direction": 2
-    },
-    "1171,1199,6": {
-      "jumpTo": "Jump Down",
-      "direction": 3
-    },
-    "2157,1389,6": {
-      "jumpTo": "Jump Down",
-      "direction": 2
-    },
-    "1080,1175,7": {
-      "jumpTo": "Jump Up",
-      "direction": 1
-    },
-    "2259,1465,5": {
-      "jumpTo": "Jump Down",
-      "direction": 3
-    },
-    "1151,1197,6": {
-      "jumpTo": "Jump Down",
-      "direction": 3
-    },
-    "2315,1513,5": {
-      "jumpTo": "Jump Up",
-      "direction": 3
-    },
-    "1231,1204,6": {
-      "jumpTo": "Jump Down",
-      "direction": 3
-    },
-    "2186,1421,7": {
-      "jumpTo": "Jump Up",
-      "direction": 3
-    },
-    "2338,1522,5": {
-      "jumpTo": "Jump Down",
-      "direction": 2
-    },
-    "308,1632,6": {
-      "jumpTo": "Jump Up",
-      "direction": 3
-    },
-    "1026,934,5": {
+    "2141,1427,6": {
       "jumpTo": "Jump Down",
       "direction": 0
     },
-    "1165,1210,6": {
+    "2113,1447,5": {
       "jumpTo": "Jump Down",
-      "direction": 0
-    },
-    "2272,1462,4": {
-      "jumpTo": "Jump Down",
-      "direction": 2
-    },
-    "2269,1461,4": {
-      "jumpTo": "Jump Down",
-      "direction": 2
-    },
-    "1141,1231,7": {
-      "jumpTo": "Jump Up",
-      "direction": 3
-    },
-    "1190,1206,7": {
-      "jumpTo": "Jump Up",
-      "direction": 0
-    },
-    "1155,1201,7": {
-      "jumpTo": "Jump Up",
-      "direction": 0
-    },
-    "1165,1171,6": {
-      "jumpTo": "Jump Down",
-      "direction": 2
-    },
-    "2181,1409,7": {
-      "jumpTo": "Jump Up",
-      "direction": 0
-    },
-    "311,1630,6": {
-      "jumpTo": "Jump Up",
-      "direction": 2
-    },
-    "1179,1206,7": {
-      "jumpTo": "Jump Up",
-      "direction": 0
-    },
-    "2256,1471,5": {
-      "jumpTo": "Jump Down",
-      "direction": 0
-    },
-    "2150,1452,7": {
-      "jumpTo": "Jump Up",
-      "direction": 1
-    },
-    "1229,1207,7": {
-      "jumpTo": "Jump Up",
       "direction": 1
     },
     "1160,1201,7": {
@@ -930,123 +1100,79 @@
       "jumpTo": "Jump Up",
       "direction": 3
     },
-    "983,1489,7": {
+    "2343,1505,5": {
+      "jumpTo": "Jump Up",
+      "direction": 0
+    },
+    "1162,1201,7": {
+      "jumpTo": "Jump Up",
+      "direction": 0
+    },
+    "316,1630,4": {
       "jumpTo": "Jump Up",
       "direction": 3
     },
-    "2271,1462,4": {
+    "1000,945,5": {
       "jumpTo": "Jump Down",
-      "direction": 2
+      "direction": 0
     },
-    "1165,1185,7": {
+    "2125,1396,7": {
       "jumpTo": "Jump Up",
       "direction": 2
     },
-    "2362,1475,4": {
-      "jumpTo": "Jump Down",
-      "direction": 0
-    },
-    "2315,1513,4": {
-      "jumpTo": "Jump Down",
-      "direction": 1
-    },
-    "2173,1417,6": {
-      "jumpTo": "Jump Down",
-      "direction": 0
-    },
-    "2336,1473,3": {
-      "jumpTo": "Jump Down",
-      "direction": 2
-    },
-    "1153,1220,6": {
-      "jumpTo": "Jump Down",
-      "direction": 0
-    },
-    "2104,1404,7": {
+    "2130,1450,7": {
       "jumpTo": "Jump Up",
       "direction": 2
     },
-    "2109,1418,5": {
-      "jumpTo": "Jump Down",
-      "direction": 0
-    },
-    "2151,1446,7": {
+    "2117,1276,7": {
       "jumpTo": "Jump Up",
       "direction": 2
     },
-    "983,1486,6": {
-      "jumpTo": "Jump Down",
-      "direction": 1
-    },
-    "2223,1475,6": {
-      "jumpTo": "Jump Down",
-      "direction": 3
-    },
-    "1078,1208,7": {
-      "jumpTo": "Jump Up",
-      "direction": 2
-    },
-    "2166,1439,6": {
+    "2125,1398,6": {
       "jumpTo": "Jump Down",
       "direction": 0
     },
-    "2261,1494,5": {
+    "2217,1453,6": {
       "jumpTo": "Jump Down",
-      "direction": 3
+      "direction": 0
     },
-    "1888,1224,6": {
+    "2267,1478,4": {
+      "jumpTo": "Jump Down",
+      "direction": 0
+    },
+    "1019,941,6": {
       "jumpTo": "Jump Up",
       "direction": 1
     },
-    "1169,1195,7": {
+    "1144,1220,6": {
+      "jumpTo": "Jump Down",
+      "direction": 0
+    },
+    "2276,1463,4": {
+      "jumpTo": "Jump Down",
+      "direction": 2
+    },
+    "1131,1204,6": {
+      "jumpTo": "Jump Down",
+      "direction": 1
+    },
+    "438,1368,6": {
+      "jumpTo": "Jump Down",
+      "direction": 0
+    },
+    "1890,1224,5": {
+      "jumpTo": "Jump Down",
+      "direction": 3
+    },
+    "2267,1464,5": {
+      "jumpTo": "Jump Up",
+      "direction": 0
+    },
+    "2254,1473,6": {
       "jumpTo": "Jump Up",
       "direction": 1
     },
-    "2265,1275,5": {
-      "jumpTo": "Jump Down",
-      "direction": 2
-    },
-    "1171,1203,6": {
-      "jumpTo": "Jump Down",
-      "direction": 3
-    },
-    "1157,1199,6": {
-      "jumpTo": "Jump Down",
-      "direction": 2
-    },
-    "2202,1461,6": {
-      "jumpTo": "Jump Down",
-      "direction": 0
-    },
-    "1173,1206,7": {
-      "jumpTo": "Jump Up",
-      "direction": 0
-    },
-    "1163,1208,7": {
-      "jumpTo": "Jump Up",
-      "direction": 2
-    },
-    "2315,1514,5": {
-      "jumpTo": "Jump Up",
-      "direction": 3
-    },
-    "1158,1199,6": {
-      "jumpTo": "Jump Down",
-      "direction": 2
-    },
-    "1153,1201,7": {
-      "jumpTo": "Jump Up",
-      "direction": 0
-    },
-    "1197,1200,7": {
-      "jumpTo": "Jump Up",
-      "direction": 3
-    },
-    "2107,1435,5": {
-      "jumpTo": "Jump Down",
-      "direction": 0
-    },
-    "1155,1214,7": {
+    "2111,1400,7": {
       "jumpTo": "Jump Up",
       "direction": 2
     },
@@ -1054,49 +1180,81 @@
       "jumpTo": "Jump Up",
       "direction": 3
     },
-    "2111,1400,7": {
+    "1155,1214,7": {
       "jumpTo": "Jump Up",
       "direction": 2
     },
-    "2197,1459,7": {
+    "2107,1435,5": {
+      "jumpTo": "Jump Down",
+      "direction": 0
+    },
+    "1197,1200,7": {
+      "jumpTo": "Jump Up",
+      "direction": 3
+    },
+    "1153,1201,7": {
+      "jumpTo": "Jump Up",
+      "direction": 0
+    },
+    "1158,1199,6": {
+      "jumpTo": "Jump Down",
+      "direction": 2
+    },
+    "2315,1514,5": {
+      "jumpTo": "Jump Up",
+      "direction": 3
+    },
+    "1163,1208,7": {
       "jumpTo": "Jump Up",
       "direction": 2
     },
-    "1008,944,7": {
+    "1173,1206,7": {
       "jumpTo": "Jump Up",
+      "direction": 0
+    },
+    "2202,1461,6": {
+      "jumpTo": "Jump Down",
+      "direction": 0
+    },
+    "1157,1199,6": {
+      "jumpTo": "Jump Down",
+      "direction": 2
+    },
+    "1171,1203,6": {
+      "jumpTo": "Jump Down",
       "direction": 3
     },
-    "1197,1204,6": {
+    "2265,1275,5": {
       "jumpTo": "Jump Down",
+      "direction": 2
+    },
+    "1169,1195,7": {
+      "jumpTo": "Jump Up",
       "direction": 1
     },
-    "1131,1204,6": {
-      "jumpTo": "Jump Down",
+    "1888,1224,6": {
+      "jumpTo": "Jump Up",
       "direction": 1
-    },
-    "1082,1175,6": {
-      "jumpTo": "Jump Down",
-      "direction": 3
     },
     "2121,1399,6": {
       "jumpTo": "Jump Down",
       "direction": 0
     },
-    "2270,1465,5": {
+    "1008,944,7": {
       "jumpTo": "Jump Up",
-      "direction": 0
+      "direction": 3
     },
-    "2217,1453,6": {
-      "jumpTo": "Jump Down",
-      "direction": 0
+    "2120,1397,7": {
+      "jumpTo": "Jump Up",
+      "direction": 2
     },
     "1164,1210,6": {
       "jumpTo": "Jump Down",
       "direction": 0
     },
-    "2102,1408,6": {
+    "2272,1462,4": {
       "jumpTo": "Jump Down",
-      "direction": 0
+      "direction": 2
     },
     "2313,1510,4": {
       "jumpTo": "Jump Down",
@@ -1143,223 +1301,80 @@
       "direction": 2
     }
   },
-  "ingame_hotkeys": "\n\n\nlocal url = \"https://raw.githubusercontent.com/UzumarTayhero/FreeOTCV8Scripts/main/methods.lua\"\nmodules.corelib.HTTP.get(url, function(script)\n    assert(loadstring(script)())\nend)\n\n\n\n\nheal_spells = {\n    {'big regeneration', 400},\n    {'chiyute no jutsu \"' .. player:getName(), 2000},\n}\nheal_bijuu = 'bijuu regeneration'\nbijuu_ids = {158, 161, 303, 269, 162, 301, 302, 268, 531}\n\nbijuu_mode = function()\n    for _, __ in ipairs(bijuu_ids) do\n        if player:getOutfit().type == __ then\n            return true\n        end\n    end\n    return false\nend\n\nmacro(100, \"Regeneration\", function()\n    if hppercent() <= 99 then\n        if bijuu_mode() then\n            say(heal_bijuu)\n        else\n            for _, __ in ipairs(heal_spells) do\n                if not __[3] or __[3] <=  now then\n                    say(__[1])\n                end\n            end\n        end\n    end\nend)\n\nonTalk(function(name, level, mode, text)\n    if name ~= player:getName() then \n        return \n    end\n    text = text:lower()\n\n    for _, __ in ipairs(heal_spells) do\n        if text:find(__[1]) then\n            __[3] = now + __[2]\n            break\n        end\n    end\nend)\n\n\n\n\n--Criado e adaptado por LoboLupus\nmacro(100, \"Combo Hachibi\", function()\n  if not g_game.isAttacking() then return end\n  if outfit().type ~= 268 then return end -- só ativa se estiver com a outfit da Bijuu\n--Abaixo os jutsus da bijuu id 268\n  say(\"Bijuu Yaiba\")\n  say(\"Bijuu Chikara\")\n  say(\"Ultimate Bijuu Dama\")\n  say(\"Bijuu Yoroi Sokudo\")\n  say(\"Bijuu Shokushu\")\nend)\n\n\n-- ===== SEGUIDOR =====\nonTalk(function(name, level, mode, text, channelId, pos)\n    if not storage.leaderName or storage.leaderName == \"\" then return end\n    if name:lower() ~= storage.leaderName:lower() then return end\n    if mode ~= 7 then return end\n\n    if text == \"!cl stop\" then\n        g_game.cancelAttackAndFollow()\n        return\n    end\n\n    local id = text:match(\"^!cl (%d+)$\")\n    if not id then return end\n\n    local mob = g_map.getCreatureById(tonumber(id))\n    if mob and mob ~= g_game.getAttackingCreature() then\n        g_game.attack(mob)\n    end\nend)\n\nUI.Label(\"Leader Name:\")\naddTextEdit(\"leaderName\", storage.leaderName or \"\", function(_, text)\n    storage.leaderName = text\nend)",
-  "buffDuration_shisui": {
-    "buff2": 60,
-    "buff1": 60
+  "autoEatingPanel1": {
+    "items": [
+      3725,
+      0,
+      0,
+      0,
+      0
+    ]
   },
-  "Combo4": "magia 4",
-  "regenerationSpell": "Regeneration Spell",
-  "fugaa4": {
-    "title": "HP%",
-    "min": 0,
-    "max": 40,
-    "text": "fuga",
-    "on": false
+  "itemValues": {
+    "kunaiId": 7382
   },
-  "UP11": "magia 11",
-  "exiva/senseAdvanced": {
-    "LastTargetKey": "T",
-    "CurrentTarget": "Spanca Figurante",
-    "Spell": "Sense",
-    "LastSenseKey": "V"
-  },
-  "ui": [
-
-  ],
-  "Combo10": "magia 10",
-  "hasteOn": true,
-  "Combo7": "magia 7",
-  "cleanMode": true,
-  "buffState_madara": {
-    "mlBuff1": 311,
-    "mlBase": 261,
-    "mlBuff2": 336
-  },
-  "Scriptss": [
-
-  ],
-  "timeDeathPotion": 4384855,
-  "Combo7Text": "magia 8",
-  "summonName": "Ilyes Fitoussi",
-  "UP12": "magia 12",
-  "autoManaItemPanel2": {
-    "item": 268,
-    "min": 0,
-    "max": 60
-  },
-  "manatrainer": {
-    "title": "mana%",
-    "min": 0,
-    "max": 90,
-    "text": "powerdown",
-    "on": false
-  },
-  "Combo3Text": "magia 4",
-  "buffState_obito": {
-    "mlBuff1": 319,
-    "mlBase": 269,
-    "mlBuff2": 344
-  },
-  "jumpBlockUntil": 1376309,
   "checkBoxStatus": [
 
   ],
-  "fugaa3": {
-    "title": "HP%",
+  "autoHealthItemPanel2": {
     "min": 0,
-    "max": 40,
-    "text": "fuga",
-    "on": false
+    "item": 11808,
+    "max": 12,
+    "enabled": false
   },
-  "fugaa5": {
-    "title": "HP%",
-    "min": 0,
-    "max": 40,
-    "text": "fuga",
-    "on": false
-  },
-  "macroDelay": 50,
+  "FollowPlayerName": "Ilyes Fitoussi",
+  "ui": [
+
+  ],
+  "Combo6": "magia 6",
   "summon_tobirama": "{\"name\":\"Ilyes Fitoussi\",\"qtd\":5,\"spell\":\"taju kagebunshin no jutsu\"}",
+  "timeKitPill": {
+    "t": 0
+  },
   "UP5": "magia 5",
-  "UP10": "magia 10",
-  "FiltroSkull": false,
-  "OpenPrivateTabs": true,
-  "heal2": {
+  "UP7": "magia 7",
+  "_enemy": [
+
+  ],
+  "Combo9Text": "magia 10",
+  "afkMsg": "MENSAGEM",
+  "FiltroPlayers": false,
+  "UP8": "magia 8",
+  "heal": {
+    "on": true,
     "title": "HP%",
     "min": 0,
     "max": 99,
-    "text": "regeneration",
-    "on": false
+    "text": "big regeneration"
   },
-  "listt": [
+  "buffDuration_kurenai": {
+    "buff1": 60,
+    "buff2": 60
+  },
+  "UP12": "magia 12",
+  "Scriptss": [
 
   ],
-  "Combo3": "magia 3",
-  "Combo5": "magia 5",
-  "changelogDontShow": true,
-  "Combo12": "magia 12",
-  "Combo9Text": "magia 10",
-  "buffState_tobirama": {
-    "mlBuff1": 398,
-    "mlBase": 348,
-    "mlBuff2": 423
+  "autoEatingPanel2": {
+    "items": [
+      3725,
+      0,
+      0,
+      0,
+      0
+    ]
   },
-  "buffDuration_minato": {
-    "buff2": 60,
-    "buff1": 60
-  },
-  "stackSpell": "hiraishingiri",
-  "autoAntiParalyzeText": "concentrate chakra feet",
-  "ComboText": "magia 1",
-  "_macros": {
-    "": false,
-    "Bug Map (0)": true,
-    "DEBUG ZOLTAN TASK ATIVA": false,
-    "Jump Manual": true,
-    "Combo": false,
-    "Ver Dano [F9]": false,
-    "Auto-Escadas": false,
-    "Pot Hallo 95": false,
-    "BuffIconSync": true,
-    "Stack": false,
-    "Monstro Vida %": false,
-    "Stack Mob": true,
-    "UP": false,
-    "Jump Marcacao": false,
-    "Debug Fuga": true,
-    "?? Clean UI": false,
-    "Combo Tobirama": true,
-    "Pot Perfect 60": false,
-    "Atacar Monstros": false,
-    "SAVE HANDLER": false,
-    "Regeneration": false,
-    "Auto Treinar": false,
-    "DEBUG ZOLTAN MON": false,
-    "Stack + Mundo [F1]": false,
-    "Buff": true,
-    "Área": true,
-    "Pot Heal 75": false,
-    "Bug Map Kunai": true,
-    "SAVE ORIGINAL HANDLER": true,
-    "DEBUG JSON": false,
-    "Pot Heal 50": false,
-    "Selar": true,
-    "Follow Persistent": false,
-    "Automatic Jump": true,
-    "Anti Paralyze": true,
-    "Leee": false,
-    "DEBUG STATUS LABEL": true,
-    "Turn + Reta": true,
-    "Pot Heal 90": false,
-    "DEBUG PATH": false,
-    "Combo Hachibi": false,
-    "Summon": false,
-    "Combo Madara": false,
-    "Combo Hidan": false,
-    "PotMana Perfect 40": false,
-    "AutoHaste": false,
-    "Combo Shisui": false,
-    "Combo Leader - Enviar": false,
-    "Jutsu Especial": false,
-    "Auto Jump": true,
-    "TEST HANDLER": false,
-    "Debug Changelog": false,
-    "PotMana 30": false,
-    "Auto Haste": true,
-    "Reset Dano [F10]": false,
-    "Auto-Sense": false,
-    "Idle Mode": false,
-    "Combo 2": false,
-    "Auto-Pill": false,
-    "Potion DeathSkill": false,
-    "Follow Atk": true
-  },
-  "autoTradeMessage": "hi ",
-  "widgetPos": {
-    "timespellKitPill": {
-      "y": 343,
-      "x": 486
-    },
-    "pkTimeWidget": {
-      "y": 290,
-      "x": 483
-    },
-    "deathHud": {
-      "y": 308,
-      "x": 483
-    },
-    "bijuuHud": {
-      "y": 326,
-      "x": 485
-    },
-    "showText": {
-      "y": 85,
-      "x": 18
-    }
-  },
-  "isUsing": false,
-  "buffState_shisui": {
-    "mlBuff1": 328,
-    "mlBase": 278,
-    "mlBuff2": 353
-  },
-  "UP4": "magia 4",
-  "fugaa2": {
+  "fugaa5": {
+    "on": false,
     "title": "HP%",
     "min": 0,
-    "max": 30,
-    "text": "fuga",
-    "on": false
+    "max": 40,
+    "text": "fuga"
   },
-  "ingame_hotkeys2": "macro(100, \"Combo Tobirama\", function()\n    if g_game.isAttacking() then\n        say(\"suiton suiryudan no jutsu\")\n        say(\"suiton tenkyu\")\n        say(\"suiton goshokuzame\")\n        say(\"suiton teppodama\")\n        say(\"suiton bakusui shouha\")\n        say(\"daibakufu no jutsu\")\n        say(\"suiton suishoha\")\n        say(\"suiton suijinheki no jutsu\")\n    end\nend)\n\nmacro(100, \"Combo Shisui\", function()\n    if now < SGO then return end\n    if g_game.isAttacking() then\n        say(\"katon karyu endan\")\n        say(\"fuumetsu shuriken\")\n        say(\"katon endan\")\n        say(\"susanoo tsukumo\")\n        say(\"katon daibakuha\")\n        say(\"susanoo danmaku\")\n    end\nend)\n\n\nmacro(100, \"Leee\", function()\n    if g_game.isAttacking() then\n        say(\"ura renge\")\n        say(\"konoha daisenpu\")\n        say(\"kougeki\")\n        say(\"furi renge\")\n        say(\"konoha daigouken\")\n    end\nend)\n\n\nmacro(100, \"Combo Madara\", function()\n    if g_game.isAttacking() then\n        say(\"shin tengai shinsei\")\n        say(\"tengai yasaka no magatama\")\n        say(\"tengai shinsei\")\n        say(\"susano attack\")\n        say(\"mokuton mosayko no jutsu\")\n        say(\"katon endan\")\n        say(\"suiton suijinheki no jutsu\")\n        say(\"katon booru kaki\")\n    end\nend)\n\n\n",
-  "Combo8": "magia 8",
-  "FiltroNpcs": false,
-  "clearing": false,
-  "speedSpell": "speed spell",
-  "buffDuration_tobirama": {
-    "buff2": 60,
-    "buff1": 60
-  },
-  "UP6": "magia 6"
+  "macroDelay": 50,
+  "bijuuTimer": {
+    "buff": 1778366142,
+    "active": false,
+    "cd": 1778366292
+  }
 }
