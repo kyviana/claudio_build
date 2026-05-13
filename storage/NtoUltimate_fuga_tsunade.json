@@ -1,58 +1,62 @@
 {
   "fugaSpells": [
     {
-      "cooldownActive": 0,
-      "widgetPos": {
-        "x": 0,
-        "y": 0
-      },
-      "spellCast": "dai chiyute no jutsu",
-      "orangeSpell": "",
-      "onScreen": "dai chiyute no jutsu",
-      "selfHealth": 100,
-      "cooldownTotal": 0,
-      "enabled": false,
-      "totalCooldown": 0,
-      "activeCooldown": 0,
-      "outfitId": 0,
-      "enableTimeSpell": false,
-      "index": 1
-    },
-    {
-      "cooldownActive": 0,
-      "widgetPos": {
-        "x": 0,
-        "y": 0
-      },
-      "spellCast": "byakugou no in",
-      "orangeSpell": "",
-      "onScreen": "byakugou no in",
-      "selfHealth": 100,
-      "cooldownTotal": 0,
-      "enabled": false,
-      "totalCooldown": 0,
-      "activeCooldown": 0,
-      "outfitId": 0,
-      "enableTimeSpell": false,
-      "index": 2
-    },
-    {
-      "activeByOutfit": false,
-      "enabled": true,
       "spellCast": "kawarimi no jutsu",
-      "index": 3,
+      "orangeSpell": "kawarimi",
       "onScreen": "Kawarimi",
       "selfHealth": 50,
       "cooldownTotal": 35,
       "cooldownActive": 10,
-      "widgetPos": {
-        "x": 480,
-        "y": 373
-      },
       "outfitId": 0,
-      "isTimeSpell": false,
       "enableTimeSpell": true,
-      "orangeSpell": "kawarimi"
+      "widgetPos": {
+        "y": 373,
+        "x": 480
+      },
+      "index": 1,
+      "activeByOutfit": false,
+      "enabled": true,
+      "isTimeSpell": false
+    },
+    {
+      "spellCast": "byakugou no in",
+      "orangeSpell": "byakugou no in",
+      "onScreen": "byakugou no in",
+      "selfHealth": 60,
+      "cooldownTotal": 50,
+      "cooldownActive": 10,
+      "totalCooldown": 1778620333,
+      "activeCooldown": 1778620293,
+      "outfitId": 0,
+      "enableTimeSpell": true,
+      "isTimeSpell": false,
+      "index": 2,
+      "activeByOutfit": false,
+      "enabled": true,
+      "widgetPos": {
+        "y": 395,
+        "x": 460
+      }
+    },
+    {
+      "spellCast": "byakugo no jutsu",
+      "orangeSpell": "byakugo no jutsu",
+      "onScreen": "byakugo no jutsu",
+      "selfHealth": 1,
+      "cooldownTotal": 40,
+      "cooldownActive": 15,
+      "totalCooldown": 1778620302,
+      "activeCooldown": 1778620277,
+      "outfitId": 0,
+      "enableTimeSpell": true,
+      "widgetPos": {
+        "y": 414,
+        "x": 462
+      },
+      "index": 3,
+      "activeByOutfit": false,
+      "enabled": true,
+      "isTimeSpell": true
     }
   ],
   "comboSpells": [

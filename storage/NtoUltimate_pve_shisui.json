@@ -1,101 +1,101 @@
 {
-  "enabled": false,
   "spells": [
     {
       "enabled": false,
       "spell": "katon gokakyu no jutsu",
-      "level": 25,
-      "cooldownUntil": 0
+      "cooldownUntil": 0,
+      "level": 25
     },
     {
       "enabled": false,
       "spell": "katon ryuka no jutsu",
-      "level": 35,
-      "cooldownUntil": 0
+      "cooldownUntil": 0,
+      "level": 35
     },
     {
       "enabled": false,
       "spell": "explosion kunai",
-      "level": 50,
-      "cooldownUntil": 0
+      "cooldownUntil": 0,
+      "level": 50
     },
     {
       "enabled": false,
       "spell": "katon dragon furie",
-      "level": 80,
-      "cooldownUntil": 0
+      "cooldownUntil": 0,
+      "level": 80
     },
     {
       "enabled": false,
       "spell": "susanoo",
-      "level": 100,
-      "cooldownUntil": 0
+      "cooldownUntil": 0,
+      "level": 100
     },
     {
       "enabled": false,
       "spell": "katon dragon no jutsu",
-      "level": 100,
-      "cooldownUntil": 0
+      "cooldownUntil": 0,
+      "level": 100
     },
     {
       "enabled": false,
       "spell": "katon dragon furie no jutsu",
-      "level": 130,
-      "cooldownUntil": 0
+      "cooldownUntil": 0,
+      "level": 130
     },
     {
       "enabled": false,
       "spell": "katon hosenka tsumabeni",
-      "level": 160,
-      "cooldownUntil": 0
+      "cooldownUntil": 0,
+      "level": 160
     },
     {
       "enabled": false,
       "spell": "shunka shuto",
-      "level": 200,
-      "cooldownUntil": 0
+      "cooldownUntil": 0,
+      "level": 200
     },
     {
       "enabled": false,
       "spell": "fuumetsu shuriken",
-      "level": 225,
-      "cooldownUntil": 0
+      "cooldownUntil": 0,
+      "level": 225
     },
     {
       "enabled": false,
       "spell": "higasa no mai",
-      "level": 260,
-      "cooldownUntil": 0
+      "cooldownUntil": 0,
+      "level": 260
     },
     {
       "enabled": true,
       "spell": "katon endan",
-      "level": 300,
-      "cooldownUntil": 0
+      "cooldownUntil": 0,
+      "level": 300
     },
     {
       "enabled": true,
       "spell": "katon daibakuha",
-      "level": 350,
-      "cooldownUntil": 0
+      "cooldownUntil": 0,
+      "level": 350
     },
     {
       "enabled": true,
       "spell": "katon karyu endan",
-      "level": 360,
-      "cooldownUntil": 0
+      "cooldownUntil": 0,
+      "level": 360
     },
     {
       "enabled": true,
       "spell": "susanoo danmaku",
-      "level": 400,
-      "cooldownUntil": 0
+      "cooldownUntil": 0,
+      "level": 400
     },
     {
       "enabled": true,
       "spell": "susanoo tsukumo",
-      "level": 450,
-      "cooldownUntil": 0
+      "cooldownUntil": 0,
+      "level": 450
     }
-  ]
+  ],
+  "enabled": true
 }

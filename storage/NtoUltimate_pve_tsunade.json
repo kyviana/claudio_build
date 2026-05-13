@@ -2,58 +2,58 @@
   "enabled": true,
   "spells": [
     {
+      "enabled": false,
+      "cooldownUntil": 0,
       "spell": "ground punch",
-      "level": 100,
-      "enabled": false,
-      "cooldownUntil": 0
+      "level": 100
     },
     {
+      "enabled": false,
+      "cooldownUntil": 0,
       "spell": "tsutenkyaku",
-      "level": 130,
-      "enabled": false,
-      "cooldownUntil": 0
+      "level": 130
     },
     {
+      "enabled": false,
+      "cooldownUntil": 0,
       "spell": "kuchyose katsuyu",
-      "level": 175,
-      "enabled": false,
-      "cooldownUntil": 0
+      "level": 175
     },
     {
+      "enabled": false,
+      "cooldownUntil": 0,
       "spell": "taihou kyaku no jutsu",
-      "level": 200,
-      "enabled": false,
-      "cooldownUntil": 0
+      "level": 200
     },
     {
+      "enabled": true,
+      "cooldownUntil": 0,
       "spell": "chuusuusei biribiri",
-      "level": 300,
-      "enabled": true,
-      "cooldownUntil": 0
+      "level": 300
     },
     {
+      "enabled": true,
+      "cooldownUntil": 0,
       "spell": "yantou chakra mesu",
-      "level": 350,
-      "enabled": true,
-      "cooldownUntil": 0
+      "level": 350
     },
     {
+      "enabled": true,
+      "cooldownUntil": 0,
       "spell": "jiware",
-      "level": 400,
-      "enabled": true,
-      "cooldownUntil": 0
+      "level": 400
     },
     {
+      "enabled": true,
+      "cooldownUntil": 0,
       "spell": "ranshinsho",
-      "level": 400,
-      "enabled": true,
-      "cooldownUntil": 0
+      "level": 400
     },
     {
-      "spell": "dai tsutenkyaku",
-      "level": 450,
       "enabled": true,
-      "cooldownUntil": 0
+      "cooldownUntil": 0,
+      "spell": "dai tsutenkyaku",
+      "level": 450
     }
   ]
 }

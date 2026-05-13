@@ -1,106 +1,106 @@
 {
   "spells": [
     {
-      "enabled": false,
       "spell": "katon gokakyu no jutsu",
+      "cooldownUntil": 0,
       "level": 25,
-      "cooldownUntil": 0
+      "enabled": false
     },
     {
-      "enabled": false,
       "spell": "suiton suikiri",
+      "cooldownUntil": 0,
       "level": 30,
-      "cooldownUntil": 0
+      "enabled": false
     },
     {
-      "enabled": false,
       "spell": "katon ryuka no jutsu",
+      "cooldownUntil": 0,
       "level": 35,
-      "cooldownUntil": 0
+      "enabled": false
     },
     {
-      "enabled": false,
       "spell": "katon no jutsu",
+      "cooldownUntil": 0,
       "level": 40,
-      "cooldownUntil": 0
+      "enabled": false
     },
     {
-      "enabled": false,
       "spell": "sharingan explosion",
+      "cooldownUntil": 0,
       "level": 50,
-      "cooldownUntil": 0
+      "enabled": false
     },
     {
-      "enabled": false,
       "spell": "katon dragon furie",
+      "cooldownUntil": 0,
       "level": 80,
-      "cooldownUntil": 0
+      "enabled": false
     },
     {
-      "enabled": false,
       "spell": "katon dragon no jutsu",
+      "cooldownUntil": 0,
       "level": 100,
-      "cooldownUntil": 0
+      "enabled": false
     },
     {
-      "enabled": false,
       "spell": "sharingan katohenke",
+      "cooldownUntil": 0,
       "level": 130,
-      "cooldownUntil": 0
+      "enabled": false
     },
     {
-      "enabled": false,
       "spell": "doton dragon furie",
+      "cooldownUntil": 0,
       "level": 150,
-      "cooldownUntil": 0
+      "enabled": false
     },
     {
-      "enabled": false,
       "spell": "suiton suijinheki no jutsu",
+      "cooldownUntil": 0,
       "level": 210,
-      "cooldownUntil": 0
+      "enabled": false
     },
     {
-      "enabled": false,
       "spell": "katon endan",
+      "cooldownUntil": 0,
       "level": 300,
-      "cooldownUntil": 0
+      "enabled": false
     },
     {
-      "enabled": false,
       "spell": "katon booru kaki",
+      "cooldownUntil": 0,
       "level": 300,
-      "cooldownUntil": 0
+      "enabled": false
     },
     {
-      "enabled": true,
       "spell": "mokuton mosayko no jutsu",
+      "cooldownUntil": 0,
       "level": 325,
-      "cooldownUntil": 0
+      "enabled": true
     },
     {
-      "enabled": true,
       "spell": "tengai shinsei",
+      "cooldownUntil": 0,
       "level": 400,
-      "cooldownUntil": 0
+      "enabled": true
     },
     {
-      "enabled": true,
       "spell": "susano attack",
+      "cooldownUntil": 0,
       "level": 450,
-      "cooldownUntil": 0
+      "enabled": true
     },
     {
-      "enabled": true,
       "spell": "shin tengai shinsei",
+      "cooldownUntil": 0,
       "level": 475,
-      "cooldownUntil": 0
+      "enabled": true
     },
     {
-      "enabled": true,
       "spell": "tengai yasaka no magatama",
+      "cooldownUntil": 0,
       "level": 500,
-      "cooldownUntil": 0
+      "enabled": true
     }
   ],
   "enabled": false

@@ -1,92 +1,92 @@
 {
-  "enabled": true,
   "keys": [
     {
-      "blockOnChat": true,
-      "mode": "say",
       "input": "",
-      "sayText": "concentrate chakra feet",
-      "enabled": false
-    },
-    {
+      "enabled": false,
       "blockOnChat": true,
       "mode": "say",
-      "sayText": "kawarimi no jutsu",
-      "requireTarget": false,
-      "enabled": true,
-      "input": "X"
+      "sayText": "concentrate chakra feet"
     },
     {
+      "requireTarget": false,
+      "input": "X",
+      "enabled": true,
       "blockOnChat": true,
       "mode": "say",
-      "sayText": "kai",
-      "requireTarget": false,
-      "enabled": true,
-      "input": "F"
+      "sayText": "kawarimi no jutsu"
     },
     {
+      "requireTarget": false,
+      "input": "F",
+      "enabled": true,
       "blockOnChat": true,
       "mode": "say",
-      "sayText": "magen shinkirou",
-      "requireTarget": false,
-      "enabled": true,
-      "input": "Mouse5"
+      "sayText": "kai"
     },
     {
+      "requireTarget": false,
+      "input": "Mouse5",
+      "enabled": true,
       "blockOnChat": true,
+      "mode": "say",
+      "sayText": "magen shinkirou"
+    },
+    {
+      "requireTarget": false,
       "input": "Mouse4",
-      "sayText": "dai magen shinkirou",
-      "mode": "say",
       "enabled": true,
-      "requireTarget": false
+      "blockOnChat": true,
+      "mode": "say",
+      "sayText": "dai magen shinkirou"
     },
     {
-      "blockOnChat": true,
+      "requireTarget": false,
       "input": "1",
-      "sayText": "genjutsu no hanabira",
-      "mode": "say",
       "enabled": true,
-      "requireTarget": false
+      "blockOnChat": true,
+      "mode": "say",
+      "sayText": "genjutsu no hanabira"
     },
     {
-      "blockOnChat": true,
+      "requireTarget": false,
       "input": "4",
-      "sayText": "undo cho kosoku",
-      "mode": "say",
       "enabled": true,
-      "requireTarget": false
+      "blockOnChat": true,
+      "mode": "say",
+      "sayText": "undo cho kosoku"
     },
     {
-      "blockOnChat": true,
+      "requireTarget": false,
       "input": "3",
-      "sayText": "gentei jutsu",
-      "mode": "say",
       "enabled": true,
-      "requireTarget": false
+      "blockOnChat": true,
+      "mode": "say",
+      "sayText": "gentei jutsu"
     },
     {
-      "blockOnChat": true,
+      "requireTarget": false,
       "input": "G",
-      "sayText": "chakura kanchi",
-      "mode": "say",
       "enabled": true,
-      "requireTarget": false
+      "blockOnChat": true,
+      "mode": "say",
+      "sayText": "chakura kanchi"
     },
     {
-      "blockOnChat": true,
+      "requireTarget": false,
       "input": "5",
-      "sayText": "bunshin no jutsu",
-      "mode": "say",
       "enabled": true,
-      "requireTarget": false
-    },
-    {
       "blockOnChat": true,
       "mode": "say",
+      "sayText": "bunshin no jutsu"
+    },
+    {
       "requireTarget": true,
-      "sayText": "sansai no jutsu",
+      "input": "2",
       "enabled": true,
-      "input": "2"
+      "blockOnChat": true,
+      "mode": "say",
+      "sayText": "sansai no jutsu"
     }
-  ]
+  ],
+  "enabled": true
 }

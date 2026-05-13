@@ -810,3 +810,490 @@ ui.alerts.onClick = function(widget)
     alarmsWindow:raise()
     alarmsWindow:focus()
 end
+-- ==============================
+-- BIJUU SYSTEM
+-- ==============================
+
+setDefaultTab("Utility")
+
+UI.Separator()
+local bijuuLabel = addLabel("BIJUU", "BIJUU")
+bijuuLabel:setColor("orange")
+UI.Separator()
+
+-- Catálogo completo de bijuus
+local BIJUU_CATALOG = {
+    { name="Ichibi",  id=158, spells={"Bijuu Sabaku Kyu","Bijuu Sabaku Taisou","Bijuu Shudan","Ultimate Bijuu Dama"} },
+    { name="Nibi",    id=161, spells={"Bijuu Katon Ryuka","Bijuu Katon Endan","Bijuu Katon no Jutsu","Ultimate Bijuu Dama"} },
+    { name="Sanbi",   id=303, spells={"Bijuu Suigadan","Bijuu Goshokuzame","Bijuu Suisahan","Ultimate Bijuu Dama"} },
+    { name="Yonbi",   id=269, spells={"Bijuu Yokai Furie","Bijuu Yokai Youton","Bijuu Youton Shaku Karyu","Ultimate Bijuu Dama"} },
+    { name="Gobi",    id=162, spells={"Bijuu Yuugeton Koogeki","Bijuu Chinbou","Bijuu Suihei","Ultimate Bijuu Dama"} },
+    { name="Rokubi",  id=301, spells={"Bijuu Doku Chiri","Bijuu Suiton Homatsu","Bijuu Chiyute Saisei","Ultimate Bijuu Dama"} },
+    { name="Nanabi",  id=302, spells={"Bijuu Fuujin","Bijuu Doton Kouka","Ultimate Bijuu Dama"} },
+    { name="Hachibi", id=268, spells={"Bijuu Chikara","Bijuu Yoroi Sokudo","Bijuu Shokushu","Ultimate Bijuu Dama"} },
+    { name="Kyuubi",  id=531, spells={"Bijuu Dai Panchi","Bijuu Renzoku Dama","Bijuu Chakura Tenso","Ultimate Bijuu Dama"} },
+}
+
+-- IDs válidos de bijuu
+local BIJUU_IDS = {}
+for _, b in ipairs(BIJUU_CATALOG) do BIJUU_IDS[b.id] = b end
+
+-- Estado
+local _bijuuActive    = false   -- está transformado agora
+local _bijuuExpires   = 0       -- when transformation ends
+local _bijuuCooldown  = 0       -- when can transform again
+local _yaibaCooldown  = 0       -- CD do bijuu yaiba (15s)
+local BIJUU_DURATION  = 30000   -- 30s em ms
+local BIJUU_CD_TOTAL  = 180000  -- 180s em ms
+local BIJUU_YAIBA_CD  = 15000   -- 15s em ms
+
+-- Detecta qual bijuu está ativa agora
+local function getCurrentBijuu()
+    local outfitId = player:getOutfit().type
+    return BIJUU_IDS[outfitId]
+end
+
+local function inBijuuMode()
+    return getCurrentBijuu() ~= nil
+end
+
+-- Storage de configuração (checkboxes por bijuu)
+local _BJ_DIR  = "/bot/" .. modules.game_bot.contentsPanel.config:getCurrentOption().text .. "/storage/"
+local _BJ_FILE = _BJ_DIR .. "bijuu_cfg.json"
+local _bjCfg   = { enabled = {}, active_spells = {} }
+if g_resources.fileExists(_BJ_FILE) then
+    local ok, result = pcall(function()
+        return json.decode(g_resources.readFileContents(_BJ_FILE))
+    end)
+    if ok and result then _bjCfg = result end
+end
+if type(_bjCfg.enabled) ~= "table" then _bjCfg.enabled = {} end
+if type(_bjCfg.active_spells) ~= "table" then _bjCfg.active_spells = {} end
+
+local function saveBijuuCfg()
+    pcall(function()
+        g_resources.writeFileContents(_BJ_FILE, json.encode(_bjCfg, 2))
+    end)
+end
+
+-- Detecta transformação via mudança de outfit
+local _lastOutfit = player:getOutfit().type
+onCreatureAppear(function(creature)
+    if creature ~= player then return end
+end)
+
+-- Checa entrada/saída da bijuu por polling de outfit
+local function checkBijuuState()
+    local bijuu = getCurrentBijuu()
+    local wasActive = _bijuuActive
+    _bijuuActive = bijuu ~= nil
+
+    if _bijuuActive and not wasActive then
+        -- Acabou de transformar
+        _bijuuExpires  = now + BIJUU_DURATION
+        _bijuuCooldown = now + BIJUU_CD_TOTAL
+        _yaibaCooldown = 0
+    elseif not _bijuuActive and wasActive then
+        -- Voltou ao normal
+        _bijuuExpires = 0
+    end
+end
+
+-- Janela de configuração
+local bijuuWindow = setupUI([[
+MainWindow
+  text: Bijuu Setup
+  size: 260 420
+  visible: false
+  Button
+    id: bjCloseBtn
+    text: Fechar
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+    margin-bottom: 8
+    margin-right: 8
+    width: 60
+    height: 22
+]], g_ui.getRootWidget())
+
+-- Scroll com checkboxes por bijuu
+local bjScrollPanel = setupUI([[
+Panel
+  anchors.top: parent.top
+  anchors.left: parent.left
+  anchors.right: parent.right
+  anchors.bottom: bjCloseBtn.top
+  margin-bottom: 5
+  TextList
+    id: bjList
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.bottom: parent.bottom
+    anchors.right: bjScroll.left
+    vertical-scrollbar: bjScroll
+  VerticalScrollBar
+    id: bjScroll
+    anchors.top: parent.top
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+    step: 14
+    pixels-scroll: true
+]], bijuuWindow)
+
+local bjList = bjScrollPanel.bjList
+
+-- Popular checkboxes
+for _, bijuu in ipairs(BIJUU_CATALOG) do
+    -- Label da bijuu
+    local bjHeader = g_ui.createWidget("Label", bjList)
+    bjHeader:setText("[ " .. bijuu.name .. " - outfit " .. bijuu.id .. " ]")
+    bjHeader:setColor("#FF6600")
+    bjHeader:setHeight(18)
+    bjHeader:setFont("verdana-11px-rounded")
+
+    -- Bijuu Yaiba é sempre incluído (não configurável)
+    local yaibaLbl = g_ui.createWidget("Label", bjList)
+    yaibaLbl:setText("  + Bijuu Yaiba [auto - CD 15s]")
+    yaibaLbl:setColor("#888888")
+    yaibaLbl:setHeight(16)
+
+    -- Checkboxes dos outros jutsus
+    for _, spell in ipairs(bijuu.spells) do
+        local key = bijuu.id .. "_" .. spell
+        local isChecked = (_bjCfg.active_spells[key] ~= false)
+        local cb = g_ui.createWidget("CheckBox", bjList)
+        cb:setText(spell)
+        cb:setChecked(isChecked)
+        cb:setHeight(18)
+        cb:setMarginLeft(6)
+        cb.onCheckChange = function(widget, checked)
+            _bjCfg.active_spells[key] = checked
+            saveBijuuCfg()
+        end
+    end
+end
+
+bijuuWindow.bjCloseBtn.onClick = function() bijuuWindow:hide() end
+
+-- Painel na aba Utility
+-- Switch único: controla Healing + Yaiba juntos
+local bijuuPanel = setupUI([[
+Panel
+  height: 25
+  BotSwitch
+    id: bjSwitch
+    anchors.top: parent.top
+    anchors.left: parent.left
+    width: 130
+    text: Bijuu
+  Button
+    id: bjSetup
+    anchors.top: parent.top
+    anchors.left: prev.right
+    anchors.right: parent.right
+    margin-left: 3
+    height: 25
+    text: Setup
+]], parent)
+
+bijuuPanel.bjSwitch:setOn(_bjCfg.enabled and true or false)
+bijuuPanel.bjSwitch.onClick = function(widget)
+    _bjCfg.enabled = not (_bjCfg.enabled == true)
+    widget:setOn(_bjCfg.enabled)
+    saveBijuuCfg()
+end
+
+bijuuPanel.bjSetup.onClick = function()
+    bijuuWindow:show()
+    bijuuWindow:raise()
+    bijuuWindow:focus()
+end
+
+-- Combo bijuu: switch separado, opcional
+-- CD global dos jutsus de bijuu — setado pelo onTextMessage
+local _bijuuSpellCD = 0
+
+-- Captura "Aguarde X segundos para usar o jutsu novamente."
+-- e "Somente pode usar jutsus de bijuu com suas transformacoes!"
+onTextMessage(function(mode, text)
+    if text:find("Aguarde (%d+) segundo") then
+        local secs = tonumber(text:match("Aguarde (%d+) segundo"))
+        if secs then
+            _bijuuSpellCD = now + (secs + 1) * 1000
+        end
+    elseif text:find("Somente pode usar jutsus de bijuu") then
+        -- bijuu acabou, bloqueia combo por 3s pra não spammar
+        _bijuuSpellCD = now + 3000
+    end
+end)
+
+local bijuuComboMacro
+bijuuComboMacro = macro(100, "Bijuu Combo", function()
+    if bijuuComboMacro:isOff() then return end
+    checkBijuuState()
+    if not _bijuuActive then return end
+    if SGO and now < SGO then return end
+    if not g_game.isAttacking() then return end
+    if now < _bijuuSpellCD then return end
+    local bijuu = getCurrentBijuu()
+    if not bijuu then return end
+    for _, spell in ipairs(bijuu.spells) do
+        local key = bijuu.id .. "_" .. spell
+        if _bjCfg.active_spells[key] ~= false then
+            say(spell)
+        end
+    end
+end, parent)
+
+-- Healing e Yaiba: controlados pelo bjSwitch, sem switch próprio
+local function _bjIsOn()
+    return bijuuPanel.bjSwitch:isOn()
+end
+
+macro(100, function()
+    if not _bjIsOn() then return end
+    checkBijuuState()
+    -- Usa inBijuuOutfit() como verificação direta além de _bijuuActive
+    local emBijuu = _bijuuActive or (inBijuuOutfit and inBijuuOutfit())
+    if not emBijuu then return end
+    -- Healing: sem target, sem SGO
+    if hppercent() < 100 then
+        say("bijuu regeneration")
+    end
+    -- Yaiba: com SGO, sem target
+    if SGO and now < SGO then return end
+    if now >= _yaibaCooldown then
+        say("Bijuu Yaiba")
+        _yaibaCooldown = now + BIJUU_YAIBA_CD
+    end
+end)
+
+-- HUD Timer Bijuu — sem fundo, so texto colorido, some quando OK
+local _BJ_HUD_POS_FILE = _BJ_DIR .. "bijuu_hud_pos.json"
+local _bjHudPos = { x = 720, y = 250 }
+if g_resources.fileExists(_BJ_HUD_POS_FILE) then
+    local ok, result = pcall(function()
+        return json.decode(g_resources.readFileContents(_BJ_HUD_POS_FILE))
+    end)
+    if ok and result and result.x then _bjHudPos = result end
+end
+
+local bijuuHud = setupUI([[
+UIWidget
+  background-color: alpha
+  opacity: 1
+  padding: 0 2
+  focusable: true
+  phantom: false
+  draggable: true
+  font: verdana-13px-rounded
+  width: 80
+  height: 16
+  text-auto-resize: true
+]], g_ui.getRootWidget())
+
+bijuuHud:setPosition({ x = _bjHudPos.x, y = _bjHudPos.y })
+
+bijuuHud.onDragEnter = function(widget, mousePos)
+    if not modules.corelib.g_keyboard.isCtrlPressed() then return false end
+    widget:breakAnchors()
+    widget.movingReference = { x = mousePos.x - widget:getX(), y = mousePos.y - widget:getY() }
+    return true
+end
+bijuuHud.onDragMove = function(widget, mousePos)
+    local p = widget:getParent():getRect()
+    local x = math.min(math.max(p.x, mousePos.x - widget.movingReference.x), p.x + p.width - widget:getWidth())
+    local y = math.min(math.max(p.y, mousePos.y - widget.movingReference.y), p.y + p.height - widget:getHeight())
+    widget:move(x, y)
+    return true
+end
+bijuuHud.onDragLeave = function(widget)
+    _bjHudPos = { x = widget:getX(), y = widget:getY() }
+    pcall(function()
+        g_resources.writeFileContents(_BJ_HUD_POS_FILE, json.encode(_bjHudPos, 2))
+    end)
+    return true
+end
+
+macro(100, function()
+    if now < _bijuuExpires then
+        local rem = math.ceil((_bijuuExpires - now) / 1000)
+        bijuuHud:setOpacity(1)
+        bijuuHud:setColor("#FF00FF")
+        bijuuHud:setText("Bijuu " .. rem .. "s")
+        bijuuHud:show()
+    elseif now < _bijuuCooldown then
+        local rem = math.ceil((_bijuuCooldown - now) / 1000)
+        local total = BIJUU_CD_TOTAL / 1000
+        local pct = 1 - (rem / total)
+        local r, g
+        if pct < 0.5 then
+            r = 255
+            g = math.floor(pct * 2 * 165)
+        else
+            r = 255
+            g = math.floor(165 + (pct - 0.5) * 2 * 90)
+        end
+        local hex = string.format("#%02X%02X00", r, g)
+        bijuuHud:setOpacity(1)
+        bijuuHud:setColor(hex)
+        bijuuHud:setText("Bijuu " .. rem .. "s")
+        bijuuHud:show()
+    else
+        local pulse = (math.sin(now / 300) + 1) / 2
+        local opacity = 0.4 + pulse * 0.6
+        bijuuHud:setOpacity(opacity)
+        bijuuHud:setColor("white")
+        bijuuHud:setText("Bijuu")
+        bijuuHud:show()
+    end
+end)
+
+UI.Separator()
+
+-- ==============================
+-- COMBO LEADER
+-- ==============================
+
+setDefaultTab("Utility")
+
+UI.Separator()
+local clLabel = addLabel("PVE", "PVE")
+clLabel:setColor("orange")
+UI.Separator()
+
+local _lastSentId = nil
+local _lastCancelFollow = 0
+local FOLLOW_DELAY = 300
+local _clLeaderName = nil
+
+-- LIDER
+local clLeaderMacro
+clLeaderMacro = macro(500, "Sou o Lider", function()
+    if clLeaderMacro:isOff() then
+        if _lastSentId ~= nil then
+            talkChannel(1, "!cl stop")
+            _lastSentId = nil
+        end
+        return
+    end
+    local target = g_game.getAttackingCreature()
+    if target then
+        local id = target:getId()
+        if id ~= _lastSentId then
+            talkChannel(1, "!cl " .. id)
+            _lastSentId = id
+        end
+    else
+        if _lastSentId ~= nil then
+            talkChannel(1, "!cl stop")
+            _lastSentId = nil
+        end
+    end
+end, parent)
+
+-- SEGUIDOR: onTalk escuta qualquer !cl no party
+local clFollowMacro
+onTalk(function(name, level, mode, text, channelId, pos)
+    if clFollowMacro and clFollowMacro:isOff() then return end
+    if name == player:getName() then return end
+    if mode ~= 7 then return end
+    -- Atualiza nome do lider automaticamente
+    if text:match("^!cl") then
+        _clLeaderName = name
+    end
+    if text == "!cl stop" then
+        g_game.cancelAttackAndFollow()
+        local leader = _clLeaderName and getCreatureByName(_clLeaderName)
+        if leader then
+            schedule(500, function() g_game.follow(leader) end)
+        end
+        return
+    end
+    local id = text:match("^!cl (%d+)$")
+    if not id then return end
+    local mob = g_map.getCreatureById(tonumber(id))
+    if mob and mob ~= g_game.getAttackingCreature() then
+        g_game.cancelFollow()
+        _lastCancelFollow = now + 1000
+        g_game.attack(mob)
+    end
+end)
+
+clFollowMacro = macro(FOLLOW_DELAY, "Seguidor", function()
+    if clFollowMacro:isOff() then
+        g_game.cancelAttackAndFollow()
+        _clLeaderName = nil
+        _lastCancelFollow = 0
+        return
+    end
+    if not _clLeaderName then return end
+    if g_game.getAttackingCreature() then return end
+    local leader = getCreatureByName(_clLeaderName)
+    if not leader then return end
+    local following = g_game.getFollowingCreature()
+    if not findPath(pos(), leader:getPosition(), 50, {ignoreNonPathable=true, precision=0, ignoreCreatures=true}) then
+        if following and following:getId() == leader:getId() then
+            _lastCancelFollow = now + FOLLOW_DELAY
+            g_game.cancelFollow()
+        end
+    elseif not following and leader:canShoot() and _lastCancelFollow < now then
+        g_game.follow(leader)
+    end
+end, parent)
+
+-- JUTSU DE AREA
+UI.Separator()
+
+local _CADVOC_PATH = "/bot/" .. modules.game_bot.contentsPanel.config:getCurrentOption().text .. "/storage/cadastro_vocacoes.json"
+local _areaSpellCD = 0
+
+local function loadAreaSpell()
+    if not g_resources.fileExists(_CADVOC_PATH) then return "" end
+    local ok, data = pcall(function() return json.decode(g_resources.readFileContents(_CADVOC_PATH)) end)
+    if ok and data and data.vocacoes and charClass then
+        local voc = data.vocacoes[charClass]
+        if voc and voc.areaSpell then return voc.areaSpell end
+    end
+    return ""
+end
+
+local function saveAreaSpell(spell)
+    local data = { vocacoes = {} }
+    if g_resources.fileExists(_CADVOC_PATH) then
+        local ok, result = pcall(function() return json.decode(g_resources.readFileContents(_CADVOC_PATH)) end)
+        if ok and result then data = result end
+    end
+    if not data.vocacoes then data.vocacoes = {} end
+    if not data.vocacoes[charClass] then data.vocacoes[charClass] = {} end
+    data.vocacoes[charClass].areaSpell = spell
+    pcall(function() g_resources.writeFileContents(_CADVOC_PATH, json.encode(data, 2)) end)
+end
+
+local _areaSpell = loadAreaSpell()
+
+onTextMessage(function(mode, text)
+    if text:find("Aguarde (%d+) segundo") then
+        local secs = tonumber(text:match("Aguarde (%d+) segundo"))
+        if secs and _areaSpell ~= "" then
+            _areaSpellCD = now + (secs + 1) * 1000
+        end
+    end
+end)
+
+local areaMacro
+areaMacro = macro(200, "Jutsu Area", function()
+    if areaMacro:isOff() then return end
+    if SGO and now < SGO then return end
+    if now < _areaSpellCD then return end
+    if _areaSpell == "" then return end
+    say(_areaSpell)
+end, parent)
+
+UI.Label("Jutsu de Area:")
+UI.TextEdit(_areaSpell, function(widget, text)
+    _areaSpell = text:trim():lower()
+    saveAreaSpell(_areaSpell)
+end)
+
+UI.Separator()

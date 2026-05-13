@@ -1,162 +1,162 @@
 {
+  "comboSpells": [
+
+  ],
   "fugaSpells": [
     {
-      "activeCooldown": 0,
-      "outfitId": 0,
-      "widgetPos": {
-        "x": 0,
-        "y": 0
-      },
-      "enableTimeSpell": false,
-      "enabled": false,
-      "index": 1,
       "spellCast": "mokuton prision",
       "orangeSpell": "",
       "onScreen": "mokuton prision",
       "selfHealth": 100,
       "cooldownTotal": 0,
       "cooldownActive": 0,
-      "totalCooldown": 0
+      "totalCooldown": 0,
+      "activeCooldown": 0,
+      "widgetPos": {
+        "y": 0,
+        "x": 0
+      },
+      "index": 1,
+      "enableTimeSpell": false,
+      "outfitId": 0,
+      "enabled": false
     },
     {
-      "activeCooldown": 0,
-      "outfitId": 0,
-      "widgetPos": {
-        "x": 0,
-        "y": 0
-      },
-      "enableTimeSpell": false,
-      "enabled": false,
-      "index": 2,
       "spellCast": "senpou mokuton prision",
       "orangeSpell": "",
       "onScreen": "senpou mokuton prision",
       "selfHealth": 100,
       "cooldownTotal": 0,
       "cooldownActive": 0,
-      "totalCooldown": 0
+      "totalCooldown": 0,
+      "activeCooldown": 0,
+      "widgetPos": {
+        "y": 0,
+        "x": 0
+      },
+      "index": 2,
+      "enableTimeSpell": false,
+      "outfitId": 0,
+      "enabled": false
     },
     {
-      "activeCooldown": 0,
-      "outfitId": 0,
-      "widgetPos": {
-        "x": 0,
-        "y": 0
-      },
-      "enableTimeSpell": false,
-      "enabled": false,
-      "index": 3,
       "spellCast": "rinbo hengoku",
       "orangeSpell": "",
       "onScreen": "rinbo hengoku",
       "selfHealth": 100,
       "cooldownTotal": 0,
       "cooldownActive": 0,
-      "totalCooldown": 0
+      "totalCooldown": 0,
+      "activeCooldown": 0,
+      "widgetPos": {
+        "y": 0,
+        "x": 0
+      },
+      "index": 3,
+      "enableTimeSpell": false,
+      "outfitId": 0,
+      "enabled": false
     },
     {
-      "activeCooldown": 1777834945,
-      "outfitId": 0,
       "widgetPos": {
-        "x": 520,
-        "y": 419
+        "y": 419,
+        "x": 520
       },
       "enableTimeSpell": true,
-      "activeByOutfit": false,
-      "index": 4,
-      "enabled": true,
-      "isTimeSpell": false,
       "spellCast": "izanagi",
       "orangeSpell": "izanagi",
       "onScreen": "izanagi",
       "selfHealth": 25,
       "cooldownTotal": 60,
       "cooldownActive": 10,
-      "totalCooldown": 1777834995
+      "totalCooldown": 1777834995,
+      "activeCooldown": 1777834945,
+      "isTimeSpell": false,
+      "index": 4,
+      "activeByOutfit": false,
+      "outfitId": 0,
+      "enabled": true
     },
     {
-      "activeCooldown": 1777862957,
-      "outfitId": 0,
-      "widgetPos": {
-        "x": 514,
-        "y": 437
-      },
       "enableTimeSpell": true,
-      "activeByOutfit": false,
-      "cooldownTotal": 65,
-      "enabled": true,
-      "isTimeSpell": false,
+      "widgetPos": {
+        "y": 437,
+        "x": 514
+      },
       "spellCast": "mangekyou susanoo",
       "orangeSpell": "mangekyou susanoo",
       "onScreen": "Susanoo",
       "selfHealth": 40,
-      "index": 5,
+      "cooldownTotal": 65,
       "cooldownActive": 20,
-      "totalCooldown": 1777863002
+      "totalCooldown": 1777863002,
+      "activeCooldown": 1777862957,
+      "isTimeSpell": false,
+      "index": 5,
+      "activeByOutfit": false,
+      "outfitId": 0,
+      "enabled": true
     },
     {
-      "activeCooldown": 1777862948,
-      "outfitId": 0,
-      "widgetPos": {
-        "x": 511,
-        "y": 457
-      },
       "enableTimeSpell": true,
-      "activeByOutfit": false,
-      "cooldownTotal": 35,
-      "enabled": true,
-      "isTimeSpell": false,
+      "widgetPos": {
+        "y": 457,
+        "x": 511
+      },
       "spellCast": "kawarimi no jutsu",
       "orangeSpell": "kawarimi",
       "onScreen": "Kawarimi",
       "selfHealth": 50,
-      "index": 6,
+      "cooldownTotal": 35,
       "cooldownActive": 10,
-      "totalCooldown": 1777862973
+      "totalCooldown": 1777862973,
+      "activeCooldown": 1777862948,
+      "isTimeSpell": false,
+      "index": 6,
+      "activeByOutfit": false,
+      "outfitId": 0,
+      "enabled": true
     },
     {
-      "activeCooldown": 1777862902,
-      "outfitId": 0,
       "widgetPos": {
-        "x": 516,
-        "y": 401
+        "y": 401,
+        "x": 516
       },
       "enableTimeSpell": true,
-      "activeByOutfit": false,
-      "index": 7,
-      "enabled": true,
-      "isTimeSpell": false,
       "spellCast": "katon haijingakure no jutsu",
       "orangeSpell": "katon haijingakure no jutsu",
       "onScreen": "Fumasa",
       "selfHealth": 60,
       "cooldownTotal": 45,
       "cooldownActive": 0,
-      "totalCooldown": 1777862947
+      "totalCooldown": 1777862947,
+      "activeCooldown": 1777862902,
+      "isTimeSpell": false,
+      "index": 7,
+      "activeByOutfit": false,
+      "outfitId": 0,
+      "enabled": true
     },
     {
-      "activeCooldown": 1777862967,
-      "outfitId": 0,
       "widgetPos": {
-        "x": 512,
-        "y": 376
+        "y": 376,
+        "x": 512
       },
       "enableTimeSpell": true,
-      "index": 8,
-      "activeByOutfit": false,
-      "enabled": true,
-      "isTimeSpell": false,
       "spellCast": "kuchiyose kyuubi no jutsu",
       "orangeSpell": "kuchiyose kyuubi no jutsu",
       "onScreen": "Kyuubi",
       "selfHealth": 55,
       "cooldownTotal": 70,
       "cooldownActive": 45,
-      "totalCooldown": 1777862992
+      "totalCooldown": 1777862992,
+      "activeCooldown": 1777862967,
+      "isTimeSpell": false,
+      "index": 8,
+      "activeByOutfit": false,
+      "outfitId": 0,
+      "enabled": true
     }
-  ],
-  "comboSpells": [
-
   ],
   "keySpells": [
 

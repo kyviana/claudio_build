@@ -1,0 +1,9 @@
+{
+  "turn_reta": false,
+  "bugmap_kunai": false,
+  "stack_mundo": false,
+  "heal_party": true,
+  "saikan": true,
+  "stack_mob": true,
+  "kunai_id": false
+}

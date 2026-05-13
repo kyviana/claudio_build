@@ -1,62 +1,62 @@
 {
-  "enabled": true,
   "keys": [
     {
-      "enabled": true,
+      "mode": "say",
       "input": "X",
-      "sayText": "kawarimi no jutsu",
-      "mode": "say",
-      "blockOnChat": true
+      "blockOnChat": true,
+      "enabled": true,
+      "sayText": "kawarimi no jutsu"
     },
     {
-      "enabled": true,
+      "mode": "say",
       "input": "F",
-      "sayText": "kai",
-      "mode": "say",
-      "blockOnChat": true
+      "blockOnChat": true,
+      "enabled": true,
+      "sayText": "kai"
     },
     {
-      "enabled": true,
+      "mode": "say",
       "input": "1",
-      "sayText": "kokuangyo no jutsu",
-      "mode": "say",
-      "blockOnChat": true
+      "blockOnChat": true,
+      "enabled": true,
+      "sayText": "kokuangyo no jutsu"
     },
     {
-      "enabled": true,
+      "mode": "say",
       "input": "Mouse5",
-      "sayText": "suiton fuin suigadan",
-      "mode": "say",
-      "blockOnChat": true
+      "blockOnChat": true,
+      "enabled": true,
+      "sayText": "suiton fuin suigadan"
     },
     {
-      "enabled": true,
+      "mode": "say",
       "input": "3",
-      "sayText": "suiton suirou no jutsu",
-      "mode": "say",
-      "blockOnChat": true
+      "blockOnChat": true,
+      "enabled": true,
+      "sayText": "suiton suirou no jutsu"
     },
     {
-      "enabled": true,
+      "mode": "say",
       "input": "4",
-      "sayText": "taju kagebunshin no jutsu",
-      "mode": "say",
-      "blockOnChat": true
+      "blockOnChat": true,
+      "enabled": true,
+      "sayText": "taju kagebunshin no jutsu"
     },
     {
-      "enabled": true,
+      "mode": "say",
       "input": "F2",
-      "sayText": "mode bijuu",
-      "mode": "say",
-      "blockOnChat": true
+      "blockOnChat": true,
+      "enabled": true,
+      "sayText": "mode bijuu"
     },
     {
-      "enabled": true,
-      "input": "2",
       "mode": "say",
+      "input": "2",
+      "blockOnChat": true,
+      "enabled": true,
       "sayText": "hiraishingiri",
-      "requireTarget": true,
-      "blockOnChat": true
+      "requireTarget": true
     }
-  ]
+  ],
+  "enabled": true
 }

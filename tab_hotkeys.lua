@@ -43,6 +43,8 @@ local _hkCatalogFull = {
     { key = "turn_reta",    label = "Turn + Reta [` ]",
       spells = { tobirama="suiton suikodan no jutsu", shisui="katon kairyudan no jutsu" } },
     { key = "autofuga",     label = "Autofuga", shisui_only = true },
+    { key = "saikan",       label = "Cura Area (Saikan)" },
+    { key = "heal_party",   label = "Cura Single Target (Party)" },
 }
 for _, hk in ipairs(_hkCatalogFull) do
     if not hk.shisui_only or charClass == "shisui" then
@@ -50,15 +52,29 @@ for _, hk in ipairs(_hkCatalogFull) do
     end
 end
 
--- Carrega config salva ou inicializa vazia (nenhuma habilitada por padrao em vocacoes novas)
-local HK_STORAGE_KEY = "hotkeys_cfg_" .. (charClass or "unknown")
-if not storage[HK_STORAGE_KEY] then
-    storage[HK_STORAGE_KEY] = {}
+-- Persistencia das hotkeys em arquivo JSON (sobrevive ao fechar o client)
+local _HK_DIR  = "/bot/" .. modules.game_bot.contentsPanel.config:getCurrentOption().text .. "/storage/"
+local _HK_FILE = _HK_DIR .. "hotkeys_cfg_" .. (charClass or "unknown") .. ".json"
+
+if not g_resources.directoryExists(_HK_DIR) then g_resources.makeDir(_HK_DIR) end
+
+local _hkCfg = {}
+if g_resources.fileExists(_HK_FILE) then
+    local ok, result = pcall(function()
+        return json.decode(g_resources.readFileContents(_HK_FILE))
+    end)
+    if ok and result then _hkCfg = result end
+end
+
+local function hkSaveCfg()
+    pcall(function()
+        g_resources.writeFileContents(_HK_FILE, json.encode(_hkCfg, 2))
+    end)
 end
 
 -- Helper: checa se hotkey está habilitada para vocacao atual
 local function hkEnabled(key)
-    return storage[HK_STORAGE_KEY][key] == true
+    return _hkCfg[key] == true
 end
 
 -- Helper: spell configurada (usa storage se editado, senão default do catalogo)
@@ -101,7 +117,7 @@ MainWindow
 
     for i, hk in ipairs(HK_CATALOG) do
         local topAnchor = i == 1 and "hkTitle.bottom" or ("hkCheck" .. (i-1) .. ".bottom")
-        local isOn = storage[HK_STORAGE_KEY][hk.key] and "true" or "false"
+        local isOn = _hkCfg[hk.key] and "true" or "false"
         uiStr = uiStr .. [[
   CheckBox
     id: hkCheck]] .. i .. [[
@@ -150,7 +166,8 @@ MainWindow
             local cb = _hkWin:getChildById("hkCheck" .. i)
             newCfg[hk.key] = cb and cb:isChecked() or false
         end
-        storage[HK_STORAGE_KEY] = newCfg
+        _hkCfg = newCfg
+        hkSaveCfg()
         _hkWin:hide()
         reload()
     end
@@ -681,6 +698,133 @@ for _, scripts in pairs({storage.ingame_hotkeys}) do
     end
 end
 
+-- ==============================
+-- SAIKAN: cura em area, sempre dispara
+-- ==============================
+if hkEnabled("saikan") then
+    local _saikanSpell = "saikan chuushutsu no jutsu"
+    local _saikanCfgFile = "/bot/" .. modules.game_bot.contentsPanel.config:getCurrentOption().text .. "/storage/saikan_cfg_" .. (charClass or "unknown") .. ".json"
+    local _saikanCfg = { hp = 90 }
+    if g_resources.fileExists(_saikanCfgFile) then
+        local ok, r = pcall(function() return json.decode(g_resources.readFileContents(_saikanCfgFile)) end)
+        if ok and r then _saikanCfg = r end
+    end
+    local function saveSaikanCfg()
+        pcall(function() g_resources.writeFileContents(_saikanCfgFile, json.encode(_saikanCfg, 2)) end)
+    end
+
+    local _saikanCD = 0
+
+    onTextMessage(function(mode, text)
+        if text:find("Aguarde (%d+) segundo") then
+            local secs = tonumber(text:match("Aguarde (%d+) segundo"))
+            if secs then _saikanCD = now + (secs + 1) * 1000 end
+        end
+    end)
+
+    UI.Separator()
+    local saikanMacro
+    saikanMacro = macro(90, "Cura Area (Saikan)", function()
+        if saikanMacro:isOff() then return end
+        if SGO and now < SGO then return end
+        if now < _saikanCD then return end
+        say(_saikanSpell)
+    end, parent)
+    UI.Separator()
+end
+
+-- ==============================
+-- HEAL PARTY: single target, percorre players visiveis
+-- ==============================
+if hkEnabled("heal_party") then
+    local _healCfgFile = "/bot/" .. modules.game_bot.contentsPanel.config:getCurrentOption().text .. "/storage/heal_party_cfg_" .. (charClass or "unknown") .. ".json"
+
+    local _daiHp     = 95
+    local _chiyuteHp = 85
+    local _daiCD     = 0
+    local _chiyuteCD = 0
+    local _lastHealSpell = ""
+
+    -- Carrega config salva
+    if g_resources.fileExists(_healCfgFile) then
+        local ok, r = pcall(function() return json.decode(g_resources.readFileContents(_healCfgFile)) end)
+        if ok and r then
+            _daiHp     = tonumber(r.daiHp)     or 95
+            _chiyuteHp = tonumber(r.chiyuteHp) or 85
+        end
+    end
+
+    local function saveHealCfg()
+        pcall(function()
+            g_resources.writeFileContents(_healCfgFile, json.encode({ daiHp=_daiHp, chiyuteHp=_chiyuteHp }, 2))
+        end)
+    end
+
+    -- Captura qual jutsu foi usado pelo onTalk mode 44
+    onTalk(function(name, level, mode, text)
+        if name ~= player:getName() then return end
+        if mode ~= 44 then return end
+        local t = text:lower()
+        if t:find("dai chiyute") then _lastHealSpell = "dai"
+        elseif t:find("chiyute") then _lastHealSpell = "chiyute" end
+    end)
+
+    -- Captura cooldown via onTextMessage
+    onTextMessage(function(mode, text)
+        if not text:find("Aguarde") then return end
+        local secs = tonumber(text:match("Aguarde (%d+) segundo"))
+        if not secs then return end
+        local cd = now + (secs + 1) * 1000
+        if _lastHealSpell == "dai" then _daiCD = cd
+        elseif _lastHealSpell == "chiyute" then _chiyuteCD = cd end
+    end)
+
+    local healPartyMacro
+    healPartyMacro = macro(50, "Cura Single (Party)", function()
+        if healPartyMacro:isOff() then return end
+        if SGO and now < SGO then return end
+
+        local specs = getSpectators()
+        local targets = {}
+        for _, spec in ipairs(specs) do
+            if spec:isPlayer() and spec ~= player then
+                local hp = spec:getHealthPercent()
+                if type(hp) == "number" then
+                    table.insert(targets, { creature=spec, hp=hp })
+                end
+            end
+        end
+
+        table.sort(targets, function(a, b) return a.hp < b.hp end)
+
+        for _, t in ipairs(targets) do
+            local name = t.creature:getName()
+            if t.hp <= _daiHp and now >= _daiCD then
+                _lastHealSpell = "dai"
+                say('dai chiyute no Jutsu "' .. name)
+                return
+            elseif t.hp <= _chiyuteHp and now >= _chiyuteCD then
+                _lastHealSpell = "chiyute"
+                say('Chiyute no Jutsu "' .. name)
+                return
+            end
+        end
+    end, parent)
+
+    UI.Label("Dai Chiyute HP% <=:")
+    addTextEdit("daiHp", tostring(_daiHp), function(_, text)
+        local v = tonumber(text)
+        if v then _daiHp = v saveHealCfg() end
+    end)
+    UI.Label("Chiyute HP% <=:")
+    addTextEdit("chiyuteHp", tostring(_chiyuteHp), function(_, text)
+        local v = tonumber(text)
+        if v then _chiyuteHp = v saveHealCfg() end
+    end)
+
+    UI.Separator()
+end
+
 UI.Separator()
 
 -- ==============================
@@ -720,6 +864,8 @@ if rootWidget then
     end
     for _, healingInfo in ipairs({storage.heal, storage.heal2}) do
         local healingmacro = macro(30, function()
+            -- Não usa big regeneration enquanto estiver em modo bijuu
+            if inBijuuOutfit and inBijuuOutfit() then return end
             local hp = player:getHealthPercent()
             if healingInfo.max >= hp and hp >= healingInfo.min then
                 if TargetBot then TargetBot.saySpell(healingInfo.text)
@@ -961,12 +1107,21 @@ Label
         if not buff1Ativo and b1 ~= "" then
             _buffCD = now + 4000
             say(b1)
-            if b2 ~= "" then schedule(2000, function() say(b2) end) end
-            if b3 ~= "" then schedule(3500, function() say(b3) end) end
+            if b2 ~= "" then schedule(2000, function()
+                if buffs:isOff() then return end
+                say(b2)
+            end) end
+            if b3 ~= "" then schedule(3500, function()
+                if buffs:isOff() then return end
+                say(b3)
+            end) end
         elseif buff1Ativo and not buff2Ativo and b2 ~= "" and d2 > 0 then
             _buffCD = now + 4000
             say(b2)
-            if b3 ~= "" then schedule(1500, function() say(b3) end) end
+            if b3 ~= "" then schedule(1500, function()
+                if buffs:isOff() then return end
+                say(b3)
+            end) end
         end
     end, hpPanel4)
 

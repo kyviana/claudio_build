@@ -152,3 +152,14 @@ end
 charClass = charClass or "tobirama"
 
 warn("[CharConfigs] Personagem: " .. _playerName .. " | Classe: " .. charClass)
+-- IDs de outfit das bijuus — global compartilhada entre arquivos
+BIJUU_OUTFIT_IDS = {
+    [158]=true, [161]=true, [303]=true, [269]=true,
+    [162]=true, [301]=true, [302]=true, [268]=true, [531]=true
+}
+
+local function _inBijuuOutfit()
+    local o = player:getOutfit()
+    return o and BIJUU_OUTFIT_IDS[o.type] == true
+end
+inBijuuOutfit = _inBijuuOutfit

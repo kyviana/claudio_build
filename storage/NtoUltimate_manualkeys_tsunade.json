@@ -1,91 +1,94 @@
 {
-  "enabled": true,
   "keys": [
     {
+      "mode": "say",
       "input": "",
       "enabled": false,
       "sayText": "concentrate chakra feet",
-      "blockOnChat": true,
-      "mode": "say"
+      "blockOnChat": true
     },
     {
+      "mode": "say",
       "input": "",
       "enabled": false,
       "sayText": "sozo saisei",
-      "blockOnChat": true,
-      "mode": "say"
+      "blockOnChat": true
     },
     {
+      "mode": "say",
       "input": "",
       "enabled": false,
       "sayText": "saikan chuushutsu no jutsu",
-      "blockOnChat": true,
-      "mode": "say"
+      "blockOnChat": true
     },
     {
+      "mode": "say",
       "input": "",
       "enabled": false,
       "sayText": "saikan no jutsu",
-      "blockOnChat": true,
-      "mode": "say"
+      "blockOnChat": true
     },
     {
+      "mode": "say",
       "input": "",
       "enabled": false,
       "sayText": "chiyute no jutsu",
-      "blockOnChat": true,
-      "mode": "say"
+      "blockOnChat": true
     },
     {
+      "mode": "say",
       "input": "",
       "enabled": false,
       "sayText": "ground barrier",
-      "blockOnChat": true,
-      "mode": "say"
+      "blockOnChat": true
     },
     {
-      "input": "",
-      "enabled": false,
-      "sayText": "ranshinsho",
-      "blockOnChat": true,
-      "mode": "say"
-    },
-    {
+      "mode": "say",
       "input": "",
       "enabled": false,
       "sayText": "dai chiyute no jutsu",
-      "blockOnChat": true,
-      "mode": "say"
-    },
-    {
-      "input": "",
-      "enabled": false,
-      "sayText": "byakugou no in",
-      "blockOnChat": true,
-      "mode": "say"
-    },
-    {
-      "input": "",
-      "enabled": false,
-      "sayText": "byakugo no jutsu",
-      "blockOnChat": true,
-      "mode": "say"
+      "blockOnChat": true
     },
     {
       "mode": "say",
-      "requireTarget": false,
-      "sayText": "kai",
       "input": "F",
       "blockOnChat": true,
-      "enabled": true
+      "enabled": true,
+      "sayText": "kai",
+      "requireTarget": false
     },
     {
       "mode": "say",
-      "requireTarget": false,
-      "sayText": "kawarimi no jutsu",
       "input": "X",
       "blockOnChat": true,
-      "enabled": true
+      "enabled": true,
+      "sayText": "kawarimi no jutsu",
+      "requireTarget": false
+    },
+    {
+      "mode": "say",
+      "input": "2",
+      "blockOnChat": true,
+      "enabled": true,
+      "sayText": "ranshinsho",
+      "requireTarget": false
+    },
+    {
+      "mode": "say",
+      "input": "Mouse5",
+      "blockOnChat": true,
+      "sayText": "byakugou no in",
+      "enabled": true,
+      "requireTarget": false
+    },
+    {
+      "blockOnChat": true,
+      "input": "Mouse4",
+      "mode": "say",
+      "enabled": true,
+      "sayText": "byakugo no jutsu",
+      "requireTarget": false
     }
-  ]
+  ],
+  "enabled": true
 }

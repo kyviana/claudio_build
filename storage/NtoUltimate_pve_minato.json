@@ -1,59 +1,59 @@
 {
+  "enabled": true,
   "spells": [
     {
-      "level": 30,
+      "cooldownUntil": 0,
+      "spell": "rasengan",
       "enabled": false,
-      "cooldownUntil": 0,
-      "spell": "rasengan"
+      "level": 30
     },
     {
-      "level": 100,
+      "cooldownUntil": 0,
+      "spell": "oodama rasengan",
       "enabled": false,
-      "cooldownUntil": 0,
-      "spell": "oodama rasengan"
+      "level": 100
     },
     {
-      "level": 165,
+      "cooldownUntil": 0,
+      "spell": "rasenrengan",
       "enabled": false,
-      "cooldownUntil": 0,
-      "spell": "rasenrengan"
+      "level": 165
     },
     {
-      "level": 250,
+      "cooldownUntil": 0,
+      "spell": "fuuton rasenshuriken",
+      "enabled": true,
+      "level": 250
+    },
+    {
+      "cooldownUntil": 0,
+      "spell": "taikyoku rasengan",
+      "enabled": true,
+      "level": 300
+    },
+    {
+      "cooldownUntil": 0,
+      "spell": "flash rasengan",
       "enabled": false,
-      "cooldownUntil": 0,
-      "spell": "fuuton rasenshuriken"
+      "level": 375
     },
     {
-      "level": 300,
-      "enabled": true,
       "cooldownUntil": 0,
-      "spell": "taikyoku rasengan"
+      "spell": "hiraishin ninodan",
+      "enabled": false,
+      "level": 450
     },
     {
-      "level": 375,
-      "enabled": true,
       "cooldownUntil": 0,
-      "spell": "flash rasengan"
+      "spell": "dai taikyoku rasengan",
+      "enabled": true,
+      "level": 475
     },
     {
-      "level": 450,
-      "enabled": true,
       "cooldownUntil": 0,
-      "spell": "hiraishin ninodan"
-    },
-    {
-      "level": 475,
+      "spell": "taikyoku hiraishin rasengan",
       "enabled": true,
-      "cooldownUntil": 0,
-      "spell": "dai taikyoku rasengan"
-    },
-    {
-      "level": 500,
-      "enabled": true,
-      "cooldownUntil": 0,
-      "spell": "taikyoku hiraishin rasengan"
+      "level": 500
     }
-  ],
-  "enabled": true
+  ]
 }
