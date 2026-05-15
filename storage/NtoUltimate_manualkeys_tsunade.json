@@ -1,93 +1,93 @@
 {
   "keys": [
     {
-      "mode": "say",
       "input": "",
+      "mode": "say",
       "enabled": false,
       "sayText": "concentrate chakra feet",
       "blockOnChat": true
     },
     {
-      "mode": "say",
       "input": "",
+      "mode": "say",
       "enabled": false,
       "sayText": "sozo saisei",
       "blockOnChat": true
     },
     {
-      "mode": "say",
       "input": "",
+      "mode": "say",
       "enabled": false,
       "sayText": "saikan chuushutsu no jutsu",
       "blockOnChat": true
     },
     {
-      "mode": "say",
       "input": "",
+      "mode": "say",
       "enabled": false,
       "sayText": "saikan no jutsu",
       "blockOnChat": true
     },
     {
-      "mode": "say",
       "input": "",
+      "mode": "say",
       "enabled": false,
       "sayText": "chiyute no jutsu",
       "blockOnChat": true
     },
     {
-      "mode": "say",
       "input": "",
+      "mode": "say",
       "enabled": false,
       "sayText": "ground barrier",
       "blockOnChat": true
     },
     {
-      "mode": "say",
       "input": "",
+      "mode": "say",
       "enabled": false,
       "sayText": "dai chiyute no jutsu",
       "blockOnChat": true
     },
     {
-      "mode": "say",
+      "requireTarget": false,
       "input": "F",
-      "blockOnChat": true,
+      "mode": "say",
       "enabled": true,
       "sayText": "kai",
-      "requireTarget": false
+      "blockOnChat": true
     },
     {
-      "mode": "say",
+      "requireTarget": false,
       "input": "X",
-      "blockOnChat": true,
+      "mode": "say",
       "enabled": true,
       "sayText": "kawarimi no jutsu",
-      "requireTarget": false
+      "blockOnChat": true
     },
     {
-      "mode": "say",
+      "requireTarget": false,
       "input": "2",
-      "blockOnChat": true,
+      "mode": "say",
       "enabled": true,
       "sayText": "ranshinsho",
-      "requireTarget": false
+      "blockOnChat": true
     },
     {
-      "mode": "say",
+      "requireTarget": false,
       "input": "Mouse5",
-      "blockOnChat": true,
-      "sayText": "byakugou no in",
+      "mode": "say",
       "enabled": true,
-      "requireTarget": false
+      "sayText": "byakugou no in",
+      "blockOnChat": true
     },
     {
-      "blockOnChat": true,
-      "input": "Mouse4",
+      "requireTarget": false,
       "mode": "say",
+      "input": "Mouse4",
       "enabled": true,
       "sayText": "byakugo no jutsu",
-      "requireTarget": false
+      "blockOnChat": true
     }
   ],
   "enabled": true

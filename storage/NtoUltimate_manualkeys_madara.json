@@ -2,124 +2,124 @@
   "enabled": true,
   "keys": [
     {
+      "input": "",
+      "blockOnChat": true,
+      "mode": "say",
       "sayText": "susanoo",
-      "mode": "say",
-      "input": "",
-      "blockOnChat": true,
       "enabled": false
     },
     {
+      "input": "",
+      "blockOnChat": true,
+      "mode": "say",
       "sayText": "kage bunshin no jutsu",
-      "mode": "say",
-      "input": "",
-      "blockOnChat": true,
       "enabled": false
     },
     {
+      "input": "",
+      "blockOnChat": true,
+      "mode": "say",
       "sayText": "mokuton prision",
-      "mode": "say",
-      "input": "",
-      "blockOnChat": true,
       "enabled": false
     },
     {
+      "input": "",
+      "blockOnChat": true,
+      "mode": "say",
       "sayText": "senpou mokuton prision",
-      "mode": "say",
-      "input": "",
-      "blockOnChat": true,
       "enabled": false
     },
     {
+      "input": "",
+      "blockOnChat": true,
+      "mode": "say",
       "sayText": "dai shinra tensei",
-      "mode": "say",
-      "input": "",
-      "blockOnChat": true,
       "enabled": false
     },
     {
+      "input": "",
+      "blockOnChat": true,
+      "mode": "say",
       "sayText": "dai banshou tein",
-      "mode": "say",
-      "input": "",
-      "blockOnChat": true,
       "enabled": false
     },
     {
+      "input": "",
+      "blockOnChat": true,
+      "mode": "say",
       "sayText": "senpo mokuton hijutsu koutan",
-      "mode": "say",
-      "input": "",
-      "blockOnChat": true,
       "enabled": false
     },
     {
+      "input": "",
+      "blockOnChat": true,
+      "mode": "say",
       "sayText": "rinbo hengoku",
-      "mode": "say",
-      "input": "",
-      "blockOnChat": true,
       "enabled": false
     },
     {
-      "sayText": "kawarimi no jutsu",
-      "mode": "say",
       "input": "X",
       "blockOnChat": true,
+      "mode": "say",
+      "sayText": "kawarimi no jutsu",
       "enabled": true
     },
     {
-      "sayText": "kai",
-      "mode": "say",
       "input": "F",
       "blockOnChat": true,
+      "mode": "say",
+      "sayText": "kai",
       "enabled": true
     },
     {
-      "sayText": "izanagi",
-      "mode": "say",
       "input": "Mouse5",
       "blockOnChat": true,
+      "mode": "say",
+      "sayText": "izanagi",
       "enabled": true
     },
     {
-      "sayText": "katon haijingakure no jutsu",
-      "mode": "say",
       "input": "Mouse4",
       "blockOnChat": true,
+      "mode": "say",
+      "sayText": "katon haijingakure no jutsu",
       "enabled": true
     },
     {
-      "sayText": "mangekyou susanoo",
-      "mode": "say",
       "input": "3",
       "blockOnChat": true,
+      "mode": "say",
+      "sayText": "mangekyou susanoo",
       "enabled": true
     },
     {
-      "sayText": "concentrate chakra feet",
-      "mode": "say",
       "input": "-",
       "blockOnChat": true,
+      "mode": "say",
+      "sayText": "concentrate chakra feet",
       "enabled": true
     },
     {
-      "requireTarget": false,
-      "mode": "say",
       "input": "4",
       "blockOnChat": true,
+      "requireTarget": false,
+      "mode": "say",
       "sayText": "taju kagebunshin no jutsu",
       "enabled": true
     },
     {
-      "requireTarget": false,
-      "mode": "say",
       "input": "1",
       "blockOnChat": true,
+      "requireTarget": false,
+      "mode": "say",
       "sayText": "kuchiyose kyuubi no jutsu",
       "enabled": true
     },
     {
-      "requireTarget": false,
-      "mode": "say",
       "input": "2",
       "blockOnChat": true,
+      "requireTarget": false,
+      "mode": "say",
       "sayText": "sharingan explosion",
       "enabled": true
     }

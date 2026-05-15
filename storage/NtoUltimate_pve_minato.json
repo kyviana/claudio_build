@@ -1,59 +1,59 @@
 {
-  "enabled": true,
   "spells": [
     {
       "cooldownUntil": 0,
-      "spell": "rasengan",
       "enabled": false,
-      "level": 30
+      "level": 30,
+      "spell": "rasengan"
     },
     {
       "cooldownUntil": 0,
-      "spell": "oodama rasengan",
       "enabled": false,
-      "level": 100
+      "level": 100,
+      "spell": "oodama rasengan"
     },
     {
       "cooldownUntil": 0,
-      "spell": "rasenrengan",
       "enabled": false,
-      "level": 165
+      "level": 165,
+      "spell": "rasenrengan"
     },
     {
       "cooldownUntil": 0,
-      "spell": "fuuton rasenshuriken",
+      "enabled": false,
+      "level": 250,
+      "spell": "fuuton rasenshuriken"
+    },
+    {
+      "cooldownUntil": 0,
       "enabled": true,
-      "level": 250
+      "level": 300,
+      "spell": "taikyoku rasengan"
     },
     {
       "cooldownUntil": 0,
-      "spell": "taikyoku rasengan",
-      "enabled": true,
-      "level": 300
-    },
-    {
-      "cooldownUntil": 0,
-      "spell": "flash rasengan",
       "enabled": false,
-      "level": 375
+      "level": 375,
+      "spell": "flash rasengan"
     },
     {
       "cooldownUntil": 0,
-      "spell": "hiraishin ninodan",
       "enabled": false,
-      "level": 450
+      "level": 450,
+      "spell": "hiraishin ninodan"
     },
     {
       "cooldownUntil": 0,
-      "spell": "dai taikyoku rasengan",
       "enabled": true,
-      "level": 475
+      "level": 475,
+      "spell": "dai taikyoku rasengan"
     },
     {
       "cooldownUntil": 0,
-      "spell": "taikyoku hiraishin rasengan",
       "enabled": true,
-      "level": 500
+      "level": 500,
+      "spell": "taikyoku hiraishin rasengan"
     }
-  ]
+  ],
+  "enabled": true
 }

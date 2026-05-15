@@ -37,9 +37,9 @@ local _hkCatalogFull = {
     { key = "kunai_id",     label = "Kunai Item (seletor)" },
     { key = "bugmap_kunai", label = "Bug Map Kunai (dash)" },
     { key = "stack_mundo",  label = "Stack + Mundo [F1]",
-      spells = { tobirama="hiraishingiri" } },
+      spells = { tobirama="hiraishingiri", shisui="shunshin no shisui" } },
     { key = "stack_mob",    label = "Stack Mob [WASD+2]",
-      spells = { tobirama="hiraishingiri", minato="flash rasengan", madara="katon goukakyuu no jutsu" } },
+      spells = { tobirama="hiraishingiri", minato="flash rasengan", madara="katon goukakyuu no jutsu", shisui="shunshin no shisui" } },
     { key = "turn_reta",    label = "Turn + Reta [` ]",
       spells = { tobirama="suiton suikodan no jutsu", shisui="katon kairyudan no jutsu" } },
     { key = "autofuga",     label = "Autofuga", shisui_only = true },
@@ -253,12 +253,18 @@ Panel
 
     -- Stack + Mundo (F1)
     if hkEnabled("stack_mundo") then
-    local hiraCD = 0
+    local _stackSpell = hkSpell("stack_mundo")  -- ex: hiraishingiri / shunshin no shisui
+    local _mundoSpell = hkSpell("stack_mundo_mundo") ~= "" and hkSpell("stack_mundo_mundo") or (
+        charClass == "shisui" and "kotoamatsukami" or "kokuangyo no jutsu"
+    )
+    local stackCD = 0
+
     onTalk(function(name, level, mode, text)
         if name ~= player:getName() then return end
         if mode ~= 44 then return end
-        if text:lower():trim() == "hiraishingiri" then
-            hiraCD = now + 4103
+        local t = text:lower():trim()
+        if t == _stackSpell:lower() then
+            stackCD = now + 4103
         end
     end)
 
@@ -272,9 +278,9 @@ Panel
 
         local distance = getDistanceBetween(targetPos, pos())
         if distance > 0 then
-            if now >= hiraCD then
+            if now >= stackCD then
                 stopCombo = now + 200
-                say("hiraishingiri")
+                say(_stackSpell)
             else
                 local tile = g_map.getTile(targetPos)
                 if tile then
@@ -283,7 +289,7 @@ Panel
             end
         else
             stopCombo = now + 200
-            say("kokuangyo no jutsu")
+            say(_mundoSpell)
         end
     end)
 
@@ -377,8 +383,6 @@ if hkEnabled("turn_reta") then
     local retaSpell = hkSpell("turn_reta")
     local maxDist   = { x = 7, y = 7 }
     local minDist   = 1
-    local _retaPressed = false
-
     UI.Separator()
 
     local _retaLabel = setupUI([[
@@ -399,16 +403,11 @@ Panel
     end
 
     -- Detecta tecla ` (backtick) que nao funciona com isKeyPressed por string
-    onKeyDown(function(keyCode, keyText, modifiers)
+    macro(50, "Turn + Reta", function()
         if modules.game_console:isChatEnabled() then return end
-        if keyCode ~= "`" then return end
-        _retaPressed = true
-        schedule(100, function() _retaPressed = false end)
-    end)
-
-    macro(1, "Turn + Reta", function()
-        if not _retaPressed then return end
-        _retaPressed = false
+        if not modules.corelib.g_keyboard.isKeyPressed("`") then return end
+        if SGO and now < SGO then return end
+        SGO = now + 300  -- pausa o combo enquanto reta ativa
         local target = g_game.getAttackingCreature()
         if not target then return end
         local targetPos = target:getPosition()
@@ -427,15 +426,19 @@ Panel
             end
         end
 
-        local walked = false
+        -- Já está na reta: solta o jutsu imediatamente sem virar ou andar
+        if px == tx or py == ty then
+            turnToTarget()
+            if retaSpell ~= "" then say(retaSpell) end
+            return
+        end
 
-        -- Condicoes exatas do elfbot: diferenca de 1 em cada eixo
-        -- Eixo Y diferente por 1: alinha andando no eixo X
+        -- Não está na reta: tenta alinhar andando 1 sqm
+        local walked = false
         if     ty > py and tx == px+1 then g_game.walk(1) walked = true
         elseif ty > py and tx == px-1 then g_game.walk(3) walked = true
         elseif ty < py and tx == px+1 then g_game.walk(1) walked = true
         elseif ty < py and tx == px-1 then g_game.walk(3) walked = true
-        -- Eixo X diferente por 1: alinha andando no eixo Y
         elseif tx > px and ty == py+1 then g_game.walk(2) walked = true
         elseif tx > px and ty == py-1 then g_game.walk(0) walked = true
         elseif tx < px and ty == py+1 then g_game.walk(2) walked = true
@@ -444,7 +447,6 @@ Panel
 
         if walked then
             schedule(200, function()
-                -- recalcula posicao apos o walk
                 local newPos = pos()
                 local npx, npy = newPos.x, newPos.y
                 if npx == tx then
@@ -456,9 +458,6 @@ Panel
                     if retaSpell ~= "" then say(retaSpell) end
                 end)
             end)
-        elseif px == tx or py == ty then
-            turnToTarget()
-            if retaSpell ~= "" then say(retaSpell) end
         end
     end, parent)
 

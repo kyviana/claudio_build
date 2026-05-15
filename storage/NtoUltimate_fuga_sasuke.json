@@ -1,68 +1,70 @@
 {
-  "comboSpells": [
-
-  ],
   "keySpells": [
 
   ],
   "fugaSpells": [
     {
+      "totalCooldown": 1777772958,
+      "activeCooldown": 1777772950,
+      "outfitId": 0,
+      "enableTimeSpell": false,
+      "index": 1,
+      "activeByOutfit": false,
+      "enabled": false,
+      "widgetPos": {
+        "x": 455,
+        "y": 430
+      },
+      "isTimeSpell": false,
       "spellCast": "chidori raimei",
       "orangeSpell": "chidori raimei",
       "onScreen": "Raimei",
       "selfHealth": 60,
       "cooldownTotal": 8,
-      "cooldownActive": 0,
-      "totalCooldown": 1777772958,
-      "activeCooldown": 1777772950,
-      "outfitId": 0,
-      "enableTimeSpell": false,
-      "isTimeSpell": false,
-      "widgetPos": {
-        "x": 455,
-        "y": 430
-      },
-      "enabled": false,
-      "activeByOutfit": false,
-      "index": 1
+      "cooldownActive": 0
     },
     {
-      "spellCast": "izanagi",
-      "orangeSpell": "izanagi",
-      "onScreen": "Izanagi",
-      "selfHealth": 20,
-      "isTimeSpell": false,
-      "cooldownActive": 10,
       "activeByOutfit": false,
+      "activeCooldown": 1778810643,
       "outfitId": 0,
       "enableTimeSpell": true,
+      "index": 2,
+      "totalCooldown": 1778810693,
+      "enabled": true,
+      "isTimeSpell": false,
       "widgetPos": {
         "x": 454,
         "y": 451
       },
+      "spellCast": "izanagi",
+      "orangeSpell": "izanagi",
+      "onScreen": "Izanagi",
+      "selfHealth": 20,
       "cooldownTotal": 60,
-      "enabled": true,
-      "index": 2
+      "cooldownActive": 10
     },
     {
+      "totalCooldown": 1777773023,
+      "activeCooldown": 1777772978,
+      "outfitId": 0,
+      "enableTimeSpell": true,
+      "index": 3,
+      "activeByOutfit": false,
+      "enabled": true,
+      "widgetPos": {
+        "x": 448,
+        "y": 412
+      },
+      "isTimeSpell": false,
       "spellCast": "mangekyou susanoo",
       "orangeSpell": "mangekyou susanoo",
       "onScreen": "Susanoo",
       "selfHealth": 35,
       "cooldownTotal": 65,
-      "cooldownActive": 20,
-      "totalCooldown": 1777773023,
-      "activeCooldown": 1777772978,
-      "outfitId": 0,
-      "enableTimeSpell": true,
-      "isTimeSpell": false,
-      "widgetPos": {
-        "x": 448,
-        "y": 412
-      },
-      "enabled": true,
-      "activeByOutfit": false,
-      "index": 3
+      "cooldownActive": 20
     }
+  ],
+  "comboSpells": [
+
   ]
 }

@@ -382,3 +382,176 @@ addIcon("Bug Map (0)", {item = 9019, text = "BugMap", hotkey = "0"}, function(ic
   bugMapMacro.setOn(isOn)
 end)
 
+
+-- ==============================
+-- POTION DEATH SKILL + NINJUTSU
+-- ==============================
+
+setDefaultTab("Icon")
+
+UI.Separator()
+local potLabel = addLabel("DEATH POTIONS", "DEATH POTIONS")
+potLabel:setColor("orange")
+UI.Separator()
+
+local POT_SKILL_ID    = 11808
+local POT_NINJUTSU_ID = 11809
+local POT_HP_TRIGGER  = 20
+local POT_DURATION    = 1800000  -- 30 minutos em ms
+
+-- Timers — persistem entre reloads via storage
+if type(storage.cdPotSkill) ~= "table" or
+   (storage.cdPotSkill.t and storage.cdPotSkill.t - now > POT_DURATION) then
+    storage.cdPotSkill = { t = 0 }
+end
+if type(storage.cdPotNinjutsu) ~= "table" or
+   (storage.cdPotNinjutsu.t and storage.cdPotNinjutsu.t - now > POT_DURATION) then
+    storage.cdPotNinjutsu = { t = 0 }
+end
+
+-- Reset ao morrer via downgrade de level
+onTextMessage(function(mode, text)
+    if mode == 18 and text:find("downgraded") then
+        storage.cdPotSkill.t    = 0
+        storage.cdPotNinjutsu.t = 0
+        storage.lastLevelPot    = player:getLevel()
+    end
+end)
+if not storage.lastLevelPot then
+    storage.lastLevelPot = player:getLevel()
+elseif player:getLevel() < storage.lastLevelPot then
+    storage.cdPotSkill.t    = 0
+    storage.cdPotNinjutsu.t = 0
+    storage.lastLevelPot    = player:getLevel()
+else
+    storage.lastLevelPot = player:getLevel()
+end
+
+-- Timer iniciado apenas quando servidor confirma o uso
+onTextMessage(function(mode, text)
+    if mode ~= 46 then return end
+    local t = text:lower()
+    if t:find("perdera ninjutsu") then
+        storage.cdPotNinjutsu.t = now + POT_DURATION
+    end
+    if t:find("perdera skills") then
+        storage.cdPotSkill.t = now + POT_DURATION
+    end
+end)
+
+-- Macro de uso automático em 20% HP
+local potMacro
+potMacro = macro(100, "Death Potions", function()
+    if potMacro:isOff() then return end
+    if hppercent() > POT_HP_TRIGGER then return end
+    local self = g_game.getLocalPlayer()
+    if not self then return end
+
+    if storage.cdPotSkill.t <= now then
+        useWith(POT_SKILL_ID, player)
+        if storage.cdPotNinjutsu.t <= now then
+            schedule(500, function()
+                useWith(POT_NINJUTSU_ID, player)
+            end)
+        end
+    elseif storage.cdPotNinjutsu.t <= now then
+        useWith(POT_NINJUTSU_ID, player)
+    end
+end, parent)
+
+-- Botão reset manual
+UI.Button("Reset Timers", function()
+    storage.cdPotSkill.t    = 0
+    storage.cdPotNinjutsu.t = 0
+end)
+
+UI.Separator()
+
+-- HUD na tela — mesmo estilo do bijuu
+local _POT_HUD_FILE = "/bot/" .. modules.game_bot.contentsPanel.config:getCurrentOption().text .. "/storage/pot_hud_pos.json"
+local _potHudPos = { x = 720, y = 270 }
+if g_resources.fileExists(_POT_HUD_FILE) then
+    local ok, r = pcall(function() return json.decode(g_resources.readFileContents(_POT_HUD_FILE)) end)
+    if ok and r and r.x then _potHudPos = r end
+end
+
+-- Dois widgets separados, um por pote
+local function makeHud(x, y)
+    local w = setupUI([[
+UIWidget
+  background-color: alpha
+  opacity: 1
+  padding: 0 2
+  focusable: true
+  phantom: false
+  draggable: true
+  font: verdana-13px-rounded
+  width: 100
+  height: 16
+  text-auto-resize: true
+]], g_ui.getRootWidget())
+    w:setPosition({ x = x, y = y })
+    w.onDragEnter = function(widget, mousePos)
+        if not modules.corelib.g_keyboard.isCtrlPressed() then return false end
+        widget:breakAnchors()
+        widget.movingReference = { x = mousePos.x - widget:getX(), y = mousePos.y - widget:getY() }
+        return true
+    end
+    w.onDragMove = function(widget, mousePos)
+        local p = widget:getParent():getRect()
+        local x2 = math.min(math.max(p.x, mousePos.x - widget.movingReference.x), p.x + p.width - widget:getWidth())
+        local y2 = math.min(math.max(p.y, mousePos.y - widget.movingReference.y), p.y + p.height - widget:getHeight())
+        widget:move(x2, y2)
+        return true
+    end
+    w.onDragLeave = function(widget)
+        _potHudPos = { x = widget:getX(), y = widget:getY() }
+        pcall(function() g_resources.writeFileContents(_POT_HUD_FILE, json.encode(_potHudPos, 2)) end)
+        return true
+    end
+    return w
+end
+
+local potHudSkill    = makeHud(_potHudPos.x, _potHudPos.y)
+local potHudNinjutsu = makeHud(_potHudPos.x, _potHudPos.y + 18)
+
+local function potGradientColor(cdEnd)
+    if cdEnd <= now then return nil end
+    local total = POT_DURATION / 1000
+    local rem   = math.ceil((cdEnd - now) / 1000)
+    local pct   = 1 - (rem / total)  -- 0=inicio, 1=pronto
+    local r, g
+    if pct < 0.5 then
+        r = 255; g = math.floor(pct * 2 * 165)
+    else
+        r = 255; g = math.floor(165 + (pct - 0.5) * 2 * 90)
+    end
+    return string.format("#%02X%02X00", r, g), rem
+end
+
+local function formatTime(secs)
+    if secs >= 60 then
+        return math.floor(secs/60) .. "m" .. string.format("%02d", secs%60) .. "s"
+    end
+    return secs .. "s"
+end
+
+local function updateHud(widget, cdEnd, label)
+    local color, rem = potGradientColor(cdEnd)
+    if rem then
+        widget:setOpacity(1)
+        widget:setColor(color)
+        widget:setText(label .. " " .. formatTime(rem))
+    else
+        local pulse = (math.sin(now / 300) + 1) / 2
+        widget:setOpacity(0.4 + pulse * 0.6)
+        widget:setColor("white")
+        widget:setText(label .. " OK")
+    end
+    widget:show()
+end
+
+macro(100, function()
+    updateHud(potHudSkill,    storage.cdPotSkill.t,    "Skill")
+    updateHud(potHudNinjutsu, storage.cdPotNinjutsu.t, "Ninjutsu")
+end)
