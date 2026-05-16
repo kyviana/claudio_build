@@ -1,154 +1,160 @@
 {
-  "keySpells": [
-
-  ],
-  "comboSpells": [
-
-  ],
   "fugaSpells": [
     {
+      "enabled": false,
+      "outfitId": 0,
       "widgetPos": {
         "y": 0,
         "x": 0
       },
-      "totalCooldown": 0,
+      "index": 1,
+      "activeCooldown": 0,
+      "enableTimeSpell": false,
       "spellCast": "doton prision",
       "orangeSpell": "",
       "onScreen": "doton prision",
-      "enabled": false,
+      "selfHealth": 100,
       "cooldownTotal": 0,
       "cooldownActive": 0,
-      "index": 1,
-      "activeCooldown": 0,
-      "outfitId": 0,
-      "enableTimeSpell": false,
-      "selfHealth": 100
+      "totalCooldown": 0
     },
     {
+      "enabled": false,
+      "outfitId": 0,
       "widgetPos": {
         "y": 0,
         "x": 0
       },
-      "totalCooldown": 0,
+      "index": 2,
+      "activeCooldown": 0,
+      "enableTimeSpell": false,
       "spellCast": "kamui me",
       "orangeSpell": "",
       "onScreen": "kamui me",
-      "enabled": false,
+      "selfHealth": 100,
       "cooldownTotal": 0,
       "cooldownActive": 0,
-      "index": 2,
-      "activeCooldown": 0,
-      "outfitId": 0,
-      "enableTimeSpell": false,
-      "selfHealth": 100
+      "totalCooldown": 0
     },
     {
+      "enabled": false,
+      "outfitId": 0,
       "widgetPos": {
         "y": 0,
         "x": 0
       },
-      "totalCooldown": 0,
+      "index": 3,
+      "activeCooldown": 0,
+      "enableTimeSpell": false,
       "spellCast": "keiyaku fuin",
       "orangeSpell": "",
       "onScreen": "keiyaku fuin",
-      "enabled": false,
+      "selfHealth": 100,
       "cooldownTotal": 0,
       "cooldownActive": 0,
-      "index": 3,
-      "activeCooldown": 0,
-      "outfitId": 0,
-      "enableTimeSpell": false,
-      "selfHealth": 100
+      "totalCooldown": 0
     },
     {
+      "enabled": false,
+      "outfitId": 0,
       "widgetPos": {
         "y": 0,
         "x": 0
       },
-      "totalCooldown": 0,
+      "index": 4,
+      "activeCooldown": 0,
+      "enableTimeSpell": false,
       "spellCast": "kamui no jutsu",
       "orangeSpell": "",
       "onScreen": "kamui no jutsu",
-      "enabled": false,
+      "selfHealth": 100,
       "cooldownTotal": 0,
       "cooldownActive": 0,
-      "index": 4,
-      "activeCooldown": 0,
-      "outfitId": 0,
-      "enableTimeSpell": false,
-      "selfHealth": 100
+      "totalCooldown": 0
     },
     {
+      "enabled": false,
+      "outfitId": 0,
       "widgetPos": {
         "y": 0,
         "x": 0
       },
-      "totalCooldown": 0,
+      "index": 5,
+      "activeCooldown": 0,
+      "enableTimeSpell": false,
       "spellCast": "dai kamui",
       "orangeSpell": "",
       "onScreen": "dai kamui",
-      "enabled": false,
+      "selfHealth": 100,
       "cooldownTotal": 0,
       "cooldownActive": 0,
-      "index": 5,
-      "activeCooldown": 0,
-      "outfitId": 0,
-      "enableTimeSpell": false,
-      "selfHealth": 100
+      "totalCooldown": 0
     },
     {
+      "enabled": true,
+      "outfitId": 0,
       "widgetPos": {
         "y": 459,
         "x": 493
       },
       "isTimeSpell": false,
+      "activeByOutfit": false,
+      "index": 6,
+      "enableTimeSpell": true,
+      "activeCooldown": 1778891829,
       "spellCast": "kawarimi no jutsu",
       "orangeSpell": "kawarimi",
       "onScreen": "Kawarimi",
       "selfHealth": 60,
       "cooldownTotal": 35,
       "cooldownActive": 10,
-      "index": 6,
-      "enabled": true,
-      "outfitId": 0,
-      "enableTimeSpell": true,
-      "activeByOutfit": false
+      "totalCooldown": 1778891854
     },
     {
+      "enabled": true,
+      "outfitId": 0,
       "widgetPos": {
         "y": 437,
         "x": 475
       },
       "isTimeSpell": false,
+      "activeByOutfit": false,
+      "index": 7,
+      "enableTimeSpell": true,
+      "activeCooldown": 1778891777,
       "spellCast": "kamui muzan",
       "orangeSpell": "kamui muzan",
       "onScreen": "kamui muzan",
       "selfHealth": 35,
       "cooldownTotal": 40,
       "cooldownActive": 7,
-      "index": 7,
-      "enabled": true,
-      "outfitId": 0,
-      "enableTimeSpell": true,
-      "activeByOutfit": false
+      "totalCooldown": 1778891810
     },
     {
+      "enabled": true,
+      "outfitId": 0,
       "widgetPos": {
         "y": 478,
         "x": 498
       },
       "isTimeSpell": false,
+      "activeByOutfit": false,
+      "index": 8,
+      "enableTimeSpell": true,
+      "activeCooldown": 1778891769,
       "spellCast": "izanagi",
       "orangeSpell": "izanagi",
       "onScreen": "izanagi",
       "selfHealth": 20,
       "cooldownTotal": 60,
       "cooldownActive": 10,
-      "index": 8,
-      "enabled": true,
-      "outfitId": 0,
-      "enableTimeSpell": true,
-      "activeByOutfit": false
+      "totalCooldown": 1778891819
     }
+  ],
+  "comboSpells": [
+
+  ],
+  "keySpells": [
+
   ]
 }
