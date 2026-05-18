@@ -1,127 +1,132 @@
 {
+  "enabled": true,
   "keys": [
     {
-      "enabled": false,
-      "input": "",
       "sayText": "concentrate chakra feet",
       "mode": "say",
-      "blockOnChat": true
+      "input": "",
+      "blockOnChat": true,
+      "enabled": false
     },
     {
-      "enabled": false,
-      "input": "",
-      "sayText": "jikuukan kekkai",
-      "mode": "say",
-      "blockOnChat": true
-    },
-    {
-      "enabled": false,
-      "input": "",
       "sayText": "kage bunshin no jutsu",
       "mode": "say",
-      "blockOnChat": true
+      "input": "",
+      "blockOnChat": true,
+      "enabled": false
     },
     {
-      "enabled": false,
-      "input": "",
       "sayText": "gamatatsu kuchyose",
       "mode": "say",
-      "blockOnChat": true
+      "input": "",
+      "blockOnChat": true,
+      "enabled": false
     },
     {
-      "enabled": false,
-      "input": "",
       "sayText": "kuchyose gamatatsu no jutsu",
       "mode": "say",
-      "blockOnChat": true
+      "input": "",
+      "blockOnChat": true,
+      "enabled": false
     },
     {
-      "enabled": false,
-      "input": "",
       "sayText": "kuchyose gamakichi no jutsu",
       "mode": "say",
-      "blockOnChat": true
-    },
-    {
-      "enabled": false,
       "input": "",
-      "sayText": "fuin hiraishin dorai",
-      "mode": "say",
-      "blockOnChat": true
+      "blockOnChat": true,
+      "enabled": false
     },
     {
-      "enabled": true,
-      "input": "Mouse5",
-      "sayText": "shiki fuujin",
-      "mode": "say",
-      "blockOnChat": true
-    },
-    {
-      "enabled": true,
-      "input": "Mouse4",
-      "sayText": "fuin kaisho",
-      "mode": "say",
-      "blockOnChat": true
-    },
-    {
-      "enabled": true,
-      "input": "F",
       "sayText": "kai",
       "mode": "say",
-      "blockOnChat": true
+      "input": "F",
+      "blockOnChat": true,
+      "enabled": true
     },
     {
-      "enabled": true,
-      "input": "X",
       "sayText": "kawarimi no jutsu",
       "mode": "say",
-      "blockOnChat": true
+      "input": "X",
+      "blockOnChat": true,
+      "enabled": true
     },
     {
-      "enabled": true,
-      "input": "3",
-      "sayText": "fuin kai",
-      "mode": "say",
-      "blockOnChat": true
-    },
-    {
-      "enabled": true,
-      "input": "1",
       "sayText": "ninpou no jutsu",
       "mode": "say",
-      "blockOnChat": true
+      "input": "1",
+      "blockOnChat": true,
+      "enabled": true
     },
     {
-      "enabled": true,
-      "input": "4",
       "sayText": "kuchyose gamabunta no jutsu",
       "mode": "say",
-      "blockOnChat": true
+      "input": "4",
+      "blockOnChat": true,
+      "enabled": true
     },
     {
       "requireTarget": false,
       "enabled": true,
-      "input": "5",
+      "blockOnChat": true,
       "mode": "say",
       "sayText": "taju kagebunshin no jutsu",
-      "blockOnChat": true
+      "input": "5"
     },
     {
       "requireTarget": false,
       "enabled": true,
-      "input": "F1",
+      "blockOnChat": true,
       "mode": "say",
       "sayText": "mode bijuu",
-      "blockOnChat": true
+      "input": "F1"
     },
     {
       "requireTarget": false,
-      "enabled": true,
-      "input": "2",
+      "input": "MouseMid",
       "mode": "say",
+      "enabled": true,
+      "blockOnChat": true,
+      "sayText": "jikuukan kekkai"
+    },
+    {
+      "requireTarget": false,
+      "input": "F2",
+      "mode": "say",
+      "enabled": true,
+      "blockOnChat": true,
+      "sayText": "fuin hiraishin dorai"
+    },
+    {
+      "requireTarget": true,
       "sayText": "flash rasengan",
-      "blockOnChat": true
+      "mode": "say",
+      "input": "2",
+      "blockOnChat": true,
+      "enabled": true
+    },
+    {
+      "requireTarget": true,
+      "sayText": "fuin kai",
+      "mode": "say",
+      "input": "3",
+      "blockOnChat": true,
+      "enabled": true
+    },
+    {
+      "requireTarget": true,
+      "sayText": "fuin kaisho",
+      "mode": "say",
+      "input": "Mouse4",
+      "blockOnChat": true,
+      "enabled": true
+    },
+    {
+      "requireTarget": true,
+      "sayText": "shiki fuujin",
+      "mode": "say",
+      "input": "Mouse5",
+      "blockOnChat": true,
+      "enabled": true
     }
-  ],
-  "enabled": true
+  ]
 }

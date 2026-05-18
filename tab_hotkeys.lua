@@ -79,7 +79,7 @@ end
 
 -- Helper: spell configurada (usa storage se editado, senão default do catalogo)
 local function hkSpell(key)
-    local spellKey = "hkspell_" .. key
+    local spellKey = "hkspell_" .. key .. "_" .. (charClass or "unknown")
     if storage[spellKey] and storage[spellKey] ~= "" then
         return storage[spellKey]
     end
@@ -234,8 +234,17 @@ Panel
     }
     bugMap.isKeyPressed = modules.corelib.g_keyboard.isKeyPressed
 
+    local _kunaiCD = 0
+
+    onTextMessage(function(mode, text)
+        if mode == 28 and text:find("lose 4500 chakra") then
+            _kunaiCD = now + 5000
+        end
+    end)
+
     macro(100, "Bug Map Kunai", function()
         if modules.game_console:isChatEnabled() or modules.corelib.g_keyboard.isCtrlPressed() then return end
+        if now < _kunaiCD then return end
         local curPos = pos()
         for key, config in pairs(bugMap.directions) do
             if bugMap.isKeyPressed(key) then
@@ -322,7 +331,7 @@ Panel
     local stackSpellEdit = UI.TextEdit(stackSpell, parent)
     stackSpellEdit.onTextChange = function(_, text)
         stackSpell = text:trim()
-        storage["hkspell_stack_mob"] = stackSpell
+        storage["hkspell_stack_mob_" .. (charClass or "unknown")] = stackSpell
     end
 
     -- Stack: pega mob mais distante na direcao pressionada
@@ -399,7 +408,7 @@ Panel
     local retaSpellEdit = UI.TextEdit(retaSpell, parent)
     retaSpellEdit.onTextChange = function(_, text)
         retaSpell = text:trim()
-        storage["hkspell_turn_reta"] = retaSpell
+        storage["hkspell_turn_reta_" .. (charClass or "unknown")] = retaSpell
     end
 
     -- Detecta tecla ` (backtick) que nao funciona com isKeyPressed por string
@@ -1007,12 +1016,16 @@ Label
     cor:setColor("red")
     UI.Separator(hpPanel4)
 
+    local _buffKey1 = "buff_"  .. (charClass or "unknown")
+    local _buffKey2 = "buff2_" .. (charClass or "unknown")
+    local _buffKey3 = "buff3_" .. (charClass or "unknown")
+
     local _charClass = charClass or ""
     if _charClass ~= "" and CHARS and CHARS[_charClass] then
         local defaults = CHARS[_charClass]
-        if not storage.buff  or storage.buff  == "" or storage.buff  == "buff"  then storage.buff  = defaults.buff  end
-        if not storage.buff2 or storage.buff2 == "" or storage.buff2 == "buff 2" then storage.buff2 = defaults.buff2 end
-        if not storage.buff3 or storage.buff3 == "" or storage.buff3 == "buff 3" then storage.buff3 = defaults.buff3 end
+        if not storage[_buffKey1] or storage[_buffKey1] == "" or storage[_buffKey1] == "buff"  then storage[_buffKey1] = defaults.buff  end
+        if not storage[_buffKey2] or storage[_buffKey2] == "" or storage[_buffKey2] == "buff 2" then storage[_buffKey2] = defaults.buff2 end
+        if not storage[_buffKey3] or storage[_buffKey3] == "" or storage[_buffKey3] == "buff 3" then storage[_buffKey3] = defaults.buff3 end
     end
 
     -- Sistema de buff por tempo fixo + detector de selo
@@ -1038,7 +1051,7 @@ Label
     macro(500, function()
         local ml = player:getMagicLevel()
         if ml < _lastML - 20 and not isInPz() then
-            local b1 = storage.buff or ""
+            local b1 = storage[_buffKey1] or ""
             if b1 ~= "" then
                 schedule(200, function() say(b1) end)
             end
@@ -1053,74 +1066,112 @@ Label
         end
     end)
 
-    -- Detector de selos via onTextMessage mode=43
-    -- Quando tenta soltar buff e está selado, servidor retorna a mensagem com tempo restante
-    -- Captura o tempo e seta _buffCD pra tentar de novo só quando o selo acabar
+    -- Estado de confirmação de cada buff — declarado antes dos callbacks
+    local _buff1Confirmed = false
+    local _buff2Confirmed = false
+    local _buff3Confirmed = false
+    local _buffRetryCD = 0
+
+    -- Detector de selos e confirmação de buffs via onTextMessage
     onTextMessage(function(mode, text)
-        if mode ~= 43 then return end
-        local segundos = text:match("[Ss]eu jutsu foi selado por (%d+) segundos")
-        if not segundos then return end
-        -- verificacao de skill removida: valor base ja é 25, nao serve como filtro
-        local duracao = (tonumber(segundos) + 2) * 1000
-        -- zera timers dos buffs pra forçar tentativa apos o selo acabar
-        _buff1ExpiresAt = 0
-        _buff2ExpiresAt = 0
-        _buffCD = now + duracao
-        _sealedUntil = now + duracao
+        local t = text:lower()
+
+        -- Selo: bloqueia buff por X segundos
+        if mode == 43 then
+            local segundos = text:match("[Ss]eu jutsu foi selado por (%d+) segundos")
+            if segundos then
+                local duracao = (tonumber(segundos) + 2) * 1000
+                _buff1ExpiresAt = 0
+                _buff2ExpiresAt = 0
+                _buffCD = now + duracao
+                _sealedUntil = now + duracao
+            end
+            return
+        end
+
+        -- "Este buff já está ativo" mode 46 — confirma buff pendente
+        if t:find("este buff j") or t:find("buff j.*ativo") or t:find("already active") then
+            local b1 = (storage[_buffKey1] or ""):lower():trim()
+            local b2 = (storage[_buffKey2] or ""):lower():trim()
+            local b3 = (storage[_buffKey3] or ""):lower():trim()
+            -- Confirma o último buff tentado baseado em qual estava pendente
+            if b1 ~= "" and not _buff1Confirmed then
+                _buff1Confirmed = true
+                _buff1ExpiresAt = now + (_buffDurations.buff1 * 1000)
+            elseif b2 ~= "" and not _buff2Confirmed then
+                _buff2Confirmed = true
+                _buff2ExpiresAt = now + (_buffDurations.buff2 * 1000)
+            elseif b3 ~= "" and not _buff3Confirmed then
+                _buff3Confirmed = true
+            end
+        end
     end)
 
-    -- Detecta cast dos buffs via onTalk para iniciar o timer
+    -- Detecta confirmação de cada buff via onTalk mode 44
     onTalk(function(name, level, mode, text)
         if name ~= player:getName() then return end
+        if mode ~= 44 then return end
         local t = text:lower():trim()
-        local b1 = (storage.buff  or ""):lower():trim()
-        local b2 = (storage.buff2 or ""):lower():trim()
-        local b2match = (t == "buff" or t == b2)
-
-        if t == b1 and b1 ~= "" and _buffDurations.buff1 > 0 then
+        local b1 = (storage[_buffKey1] or ""):lower():trim()
+        local b2 = (storage[_buffKey2] or ""):lower():trim()
+        local b3 = (storage[_buffKey3] or ""):lower():trim()
+        -- Usa find pra não depender de pontuação extra do servidor
+        if b1 ~= "" and t:find(b1, 1, true) then
+            _buff1Confirmed = true
             _buff1ExpiresAt = now + (_buffDurations.buff1 * 1000)
         end
-        if b2match and b2 ~= "" and _buffDurations.buff2 > 0 then
+        if b2 ~= "" and t:find(b2, 1, true) then
+            _buff2Confirmed = true
             _buff2ExpiresAt = now + (_buffDurations.buff2 * 1000)
+        end
+        if b3 ~= "" and t:find(b3, 1, true) then
+            _buff3Confirmed = true
         end
     end)
 
     buffs = macro(200, "Buff", function()
         if buffs:isOff() then return end
-        if SGO and now < SGO then return end
+        -- SGO pausa apenas a renovação, não o retry de buffs pendentes
         if isInPz() then return end
-        if hasPartyBuff() then return end
         if now < _buffCD then return end
+        if now < _buffRetryCD then return end
 
-        local b1 = storage.buff  or ""
-        local b2 = storage.buff2 or ""
-        local b3 = storage.buff3 or ""
-        local d1 = _buffDurations.buff1
-        local d2 = _buffDurations.buff2
+        local b1 = storage[_buffKey1] or ""
+        local b2 = storage[_buffKey2] or ""
+        local b3 = storage[_buffKey3] or ""
 
-        if d1 == 0 and b1 ~= "" then return end  -- duracao nao configurada
+        if b1 == "" then return end
 
-        local buff1Ativo = (d1 > 0 and now < _buff1ExpiresAt)
-        local buff2Ativo = (d2 > 0 and now < _buff2ExpiresAt)
+        local b1Ativo = _buff1Confirmed and now < _buff1ExpiresAt
+        local b2Ativo = _buff2Confirmed and now < _buff2ExpiresAt
+        local b2needed = b2 ~= "" and _buffDurations.buff2 > 0
+        local b3needed = b3 ~= ""
 
-        if not buff1Ativo and b1 ~= "" then
-            _buffCD = now + 4000
+        -- Se nenhum buff ativo, inicia ciclo completo
+        if not b1Ativo then
+            if SGO and now < SGO then return end  -- pausa renovação durante SGO
+            _buff1Confirmed = false
+            _buff2Confirmed = false
+            _buff3Confirmed = false
+            _buffCD = now + 8000
             say(b1)
-            if b2 ~= "" then schedule(2000, function()
-                if buffs:isOff() then return end
-                say(b2)
-            end) end
-            if b3 ~= "" then schedule(3500, function()
-                if buffs:isOff() then return end
-                say(b3)
-            end) end
-        elseif buff1Ativo and not buff2Ativo and b2 ~= "" and d2 > 0 then
-            _buffCD = now + 4000
+            return
+        end
+
+        -- Buff1 ativo — verifica se buff2 precisa ser usado
+        if b2needed and not b2Ativo then
+            _buff2Confirmed = false
+            _buffRetryCD = now + 3000
             say(b2)
-            if b3 ~= "" then schedule(1500, function()
-                if buffs:isOff() then return end
-                say(b3)
-            end) end
+            return
+        end
+
+        -- Buff2 ativo — verifica buff3 se necessário
+        if b3needed and not _buff3Confirmed then
+            _buff3Confirmed = false
+            _buffRetryCD = now + 3000
+            say(b3)
+            return
         end
     end, hpPanel4)
 
@@ -1209,7 +1260,7 @@ UIWidget
     end)
 
     cor = UI.Label("Buff 1:", hpPanel4) cor:setColor("white")
-    addTextEdit("buff", storage.buff or "", function(widget, text) storage.buff = text end, hpPanel4)
+    addTextEdit("buff_" .. (charClass or "unknown"), storage[_buffKey1] or "", function(widget, text) storage[_buffKey1] = text end, hpPanel4)
     cor = UI.Label("Duracao (s):", hpPanel4) cor:setColor("yellow")
     addTextEdit("buffDur1", tostring(_buffDurations.buff1), function(widget, text)
         local val = tonumber(text)
@@ -1220,7 +1271,7 @@ UIWidget
     end, hpPanel4)
 
     cor = UI.Label("Buff 2:", hpPanel4) cor:setColor("white")
-    addTextEdit("buff2", storage.buff2 or "", function(widget, text) storage.buff2 = text end, hpPanel4)
+    addTextEdit("buff2_" .. (charClass or "unknown"), storage[_buffKey2] or "", function(widget, text) storage[_buffKey2] = text end, hpPanel4)
     cor = UI.Label("Duracao (s):", hpPanel4) cor:setColor("yellow")
     addTextEdit("buffDur2", tostring(_buffDurations.buff2), function(widget, text)
         local val = tonumber(text)
@@ -1231,7 +1282,7 @@ UIWidget
     end, hpPanel4)
 
     cor = UI.Label("Buff 3:", hpPanel4) cor:setColor("white")
-    addTextEdit("buff3", storage.buff3 or "", function(widget, text) storage.buff3 = text end, hpPanel4)
+    addTextEdit("buff3_" .. (charClass or "unknown"), storage[_buffKey3] or "", function(widget, text) storage[_buffKey3] = text end, hpPanel4)
 
     end
 end

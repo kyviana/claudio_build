@@ -1,7 +1,137 @@
 {
-  "comboEnabled": false,
   "burstEnabled": false,
+  "autoBurst": false,
+  "comboEnabled": false,
   "comboSpells": [
-
+    {
+      "index": 1,
+      "enableTimeSpell": false,
+      "spellCast": "rasengan",
+      "distance": 7,
+      "enabled": false,
+      "onScreen": "rasengan",
+      "cooldown": 1031,
+      "orangeSpell": "rasengan",
+      "widgetPos": {
+        "y": 50,
+        "x": 10
+      }
+    },
+    {
+      "index": 2,
+      "enableTimeSpell": false,
+      "spellCast": "oodama rasengan",
+      "distance": 7,
+      "orangeSpell": "oodama rasengan",
+      "widgetPos": {
+        "y": 72,
+        "x": 10
+      },
+      "cooldown": 0,
+      "onScreen": "oodama rasengan",
+      "enabled": false
+    },
+    {
+      "index": 3,
+      "enableTimeSpell": false,
+      "spellCast": "rasenrengan",
+      "distance": 7,
+      "enabled": false,
+      "onScreen": "rasenrengan",
+      "cooldown": 1022,
+      "orangeSpell": "rasenrengan",
+      "widgetPos": {
+        "y": 94,
+        "x": 10
+      }
+    },
+    {
+      "index": 4,
+      "enableTimeSpell": false,
+      "spellCast": "fuuton rasenshuriken",
+      "distance": 7,
+      "enabled": true,
+      "cooldownSpells": 1585952,
+      "onScreen": "fuuton rasenshuriken",
+      "cooldown": 2528,
+      "orangeSpell": "fuuton rasenshuriken",
+      "widgetPos": {
+        "y": 116,
+        "x": 10
+      }
+    },
+    {
+      "index": 5,
+      "enableTimeSpell": false,
+      "spellCast": "taikyoku rasengan",
+      "distance": 7,
+      "enabled": true,
+      "cooldownSpells": 1598395,
+      "onScreen": "taikyoku rasengan",
+      "cooldown": 4651,
+      "orangeSpell": "taikyoku rasengan",
+      "widgetPos": {
+        "y": 138,
+        "x": 10
+      }
+    },
+    {
+      "index": 6,
+      "enableTimeSpell": false,
+      "spellCast": "flash rasengan",
+      "distance": 7,
+      "enabled": true,
+      "cooldownSpells": 1596877,
+      "onScreen": "flash rasengan",
+      "cooldown": 2627,
+      "orangeSpell": "flash rasengan",
+      "widgetPos": {
+        "y": 160,
+        "x": 10
+      }
+    },
+    {
+      "index": 7,
+      "enableTimeSpell": false,
+      "spellCast": "hiraishin ninodan",
+      "distance": 7,
+      "orangeSpell": "hiraishin ninodan",
+      "widgetPos": {
+        "y": 182,
+        "x": 10
+      },
+      "cooldown": 0,
+      "onScreen": "hiraishin ninodan",
+      "enabled": true
+    },
+    {
+      "index": 8,
+      "enableTimeSpell": false,
+      "spellCast": "dai taikyoku rasengan",
+      "distance": 7,
+      "enabled": true,
+      "onScreen": "dai taikyoku rasengan",
+      "cooldown": 67127,
+      "orangeSpell": "dai taikyoku rasengan",
+      "widgetPos": {
+        "y": 204,
+        "x": 10
+      }
+    },
+    {
+      "index": 9,
+      "enableTimeSpell": false,
+      "spellCast": "taikyoku hiraishin rasengan",
+      "distance": 7,
+      "enabled": true,
+      "cooldownSpells": 1596758,
+      "onScreen": "taikyoku hiraishin rasengan",
+      "cooldown": 4109,
+      "orangeSpell": "taikyoku hiraishin rasengan",
+      "widgetPos": {
+        "y": 226,
+        "x": 10
+      }
+    }
   ]
 }

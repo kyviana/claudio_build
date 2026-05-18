@@ -1,82 +1,92 @@
 {
-  "enabled": true,
   "keys": [
     {
-      "sayText": "concentrate chakra feet",
-      "blockOnChat": true,
-      "enabled": false,
+      "mode": "say",
       "input": "",
-      "mode": "say"
+      "enabled": false,
+      "blockOnChat": true,
+      "sayText": "concentrate chakra feet"
     },
     {
-      "sayText": "bijuuka",
-      "blockOnChat": true,
-      "enabled": false,
-      "input": "",
-      "mode": "say"
-    },
-    {
-      "sayText": "suiton mizukagami no jutsu",
-      "blockOnChat": true,
-      "enabled": false,
-      "input": "",
-      "mode": "say"
-    },
-    {
-      "sayText": "kawarimi no jutsu",
-      "blockOnChat": true,
-      "enabled": true,
+      "mode": "say",
       "input": "X",
-      "mode": "say",
-      "requireTarget": false
+      "requireTarget": false,
+      "enabled": true,
+      "blockOnChat": true,
+      "sayText": "kawarimi no jutsu"
     },
     {
-      "sayText": "kai",
-      "blockOnChat": true,
-      "enabled": true,
+      "mode": "say",
       "input": "F",
-      "mode": "say",
-      "requireTarget": false
+      "requireTarget": false,
+      "enabled": true,
+      "blockOnChat": true,
+      "sayText": "kai"
     },
     {
-      "sayText": "sanbi modo",
-      "blockOnChat": true,
-      "enabled": true,
+      "mode": "say",
       "input": "Mouse5",
-      "mode": "say",
-      "requireTarget": false
+      "requireTarget": false,
+      "enabled": true,
+      "blockOnChat": true,
+      "sayText": "sanbi modo"
     },
     {
-      "sayText": "suiton suijin no jutsu",
-      "blockOnChat": true,
-      "enabled": true,
+      "mode": "say",
       "input": "Mouse4",
-      "mode": "say",
-      "requireTarget": false
+      "requireTarget": false,
+      "enabled": true,
+      "blockOnChat": true,
+      "sayText": "suiton suijin no jutsu"
     },
     {
-      "sayText": "shunsui",
-      "blockOnChat": true,
-      "enabled": true,
+      "mode": "say",
       "input": "3",
-      "mode": "say",
-      "requireTarget": false
+      "requireTarget": false,
+      "enabled": true,
+      "blockOnChat": true,
+      "sayText": "shunsui"
     },
     {
-      "sayText": "sango renshou",
-      "blockOnChat": true,
-      "enabled": true,
+      "mode": "say",
       "input": "1",
-      "mode": "say",
-      "requireTarget": false
+      "requireTarget": false,
+      "enabled": true,
+      "blockOnChat": true,
+      "sayText": "sango renshou"
     },
     {
-      "sayText": "suiton suishoha no jutsu",
-      "blockOnChat": true,
-      "enabled": true,
-      "input": "2",
       "mode": "say",
-      "requireTarget": false
+      "input": "G",
+      "requireTarget": false,
+      "enabled": true,
+      "blockOnChat": true,
+      "sayText": "bijuuka"
+    },
+    {
+      "mode": "say",
+      "input": "4",
+      "requireTarget": false,
+      "enabled": true,
+      "blockOnChat": true,
+      "sayText": "suiton mizukagami no jutsu"
+    },
+    {
+      "mode": "say",
+      "input": "6",
+      "requireTarget": false,
+      "enabled": true,
+      "blockOnChat": true,
+      "sayText": "bunshin no jutsu"
+    },
+    {
+      "mode": "say",
+      "input": "2",
+      "requireTarget": false,
+      "enabled": true,
+      "blockOnChat": true,
+      "sayText": "suiton suishoha no jutsu"
     }
-  ]
+  ],
+  "enabled": true
 }

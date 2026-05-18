@@ -1,126 +1,124 @@
 {
-  "burstEnabled": false,
   "comboSpells": [
     {
-      "cooldown": 5058,
       "enabled": true,
-      "distance": 7,
+      "index": 1,
       "enableTimeSpell": false,
       "widgetPos": {
-        "y": 451,
-        "x": 668
+        "x": 668,
+        "y": 451
       },
-      "cooldownSpells": 1819529,
-      "onScreen": "Suiryudan",
+      "cooldown": 5058,
+      "cooldownSpells": 3840620,
       "spellCast": "suiton suiryudan no jutsu",
       "orangeSpell": "suiton suiryudan no jutsu",
-      "index": 1
+      "onScreen": "Suiryudan",
+      "distance": 7
     },
     {
-      "cooldown": 1095,
       "enabled": true,
-      "distance": 6,
+      "index": 2,
       "enableTimeSpell": false,
       "widgetPos": {
-        "y": 431,
-        "x": 669
+        "x": 669,
+        "y": 431
       },
-      "cooldownSpells": 1785805,
-      "onScreen": "Suijinheki",
+      "cooldown": 1095,
       "spellCast": "suiton suijinheki no jutsu",
       "orangeSpell": "suiton suijinheki no jutsu",
-      "index": 2
+      "onScreen": "Suijinheki",
+      "distance": 6
     },
     {
-      "cooldown": 2539,
       "enabled": true,
-      "distance": 6,
+      "index": 3,
       "enableTimeSpell": false,
       "widgetPos": {
-        "y": 412,
-        "x": 667
+        "x": 667,
+        "y": 412
       },
-      "cooldownSpells": 1820478,
-      "onScreen": "Daibakufu",
+      "cooldown": 2539,
+      "cooldownSpells": 3766276,
       "spellCast": "daibakufu no jutsu",
       "orangeSpell": "daibakufu no jutsu",
-      "index": 3
+      "onScreen": "Daibakufu",
+      "distance": 6
     },
     {
-      "cooldown": 2002,
       "enabled": true,
-      "distance": 7,
+      "index": 4,
       "enableTimeSpell": false,
       "widgetPos": {
-        "y": 488,
-        "x": 663
+        "x": 663,
+        "y": 488
       },
-      "cooldownSpells": 1821015,
-      "onScreen": "Goshokuzame",
+      "cooldown": 2002,
       "spellCast": "suiton goshokuzame",
       "orangeSpell": "suiton goshokuzame",
-      "index": 4
+      "onScreen": "Goshokuzame",
+      "distance": 7
     },
     {
-      "cooldown": 2009,
       "enabled": true,
-      "distance": 7,
+      "index": 5,
       "enableTimeSpell": false,
       "widgetPos": {
-        "y": 507,
-        "x": 666
+        "x": 666,
+        "y": 507
       },
-      "cooldownSpells": 1820473,
-      "onScreen": "Teppo",
+      "cooldown": 2009,
       "spellCast": "suiton teppodama",
       "orangeSpell": "suiton teppodama",
-      "index": 5
+      "onScreen": "Teppo",
+      "distance": 7
     },
     {
-      "cooldown": 3096,
       "enabled": true,
-      "distance": 1,
+      "index": 6,
       "enableTimeSpell": false,
       "widgetPos": {
-        "y": 548,
-        "x": 661
+        "x": 661,
+        "y": 548
       },
-      "cooldownSpells": 1818629,
-      "onScreen": "Suishoha",
+      "cooldown": 3096,
+      "cooldownSpells": 3765793,
       "spellCast": "suiton suishoha",
       "orangeSpell": "suiton suishoha",
-      "index": 6
+      "onScreen": "Suishoha",
+      "distance": 1
     },
     {
-      "cooldown": 30073,
       "enabled": true,
-      "distance": 7,
+      "index": 7,
       "enableTimeSpell": false,
       "widgetPos": {
-        "y": 528,
-        "x": 663
+        "x": 663,
+        "y": 528
       },
-      "cooldownSpells": 1810582,
-      "onScreen": "Bakusui",
+      "cooldown": 30073,
+      "cooldownSpells": 3865525,
       "spellCast": "suiton bakusui shouha",
       "orangeSpell": "suiton bakusui shouha",
-      "index": 7
+      "onScreen": "Bakusui",
+      "distance": 7
     },
     {
-      "cooldown": 5003,
       "enabled": true,
-      "distance": 7,
+      "index": 8,
       "enableTimeSpell": false,
       "widgetPos": {
-        "y": 467,
-        "x": 668
+        "x": 668,
+        "y": 467
       },
-      "cooldownSpells": 1818421,
-      "onScreen": "Tenkyu",
+      "cooldown": 5003,
+      "cooldownSpells": 3766640,
       "spellCast": "suiton tenkyu",
       "orangeSpell": "suiton tenkyu",
-      "index": 8
+      "onScreen": "Tenkyu",
+      "distance": 7
     }
   ],
-  "comboEnabled": false
+  "comboEnabled": false,
+  "burstEnabled": false,
+  "autoBurst": false
 }

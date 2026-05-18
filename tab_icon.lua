@@ -354,7 +354,7 @@ local function checkPos(dx, dy)
   end
 end
 
-local bugMapMacro = macro(1, "Bug Map (0)", function()
+local bugMapMacro = macro(100, "Bug Map (0)", function()
   if console:isChatEnabled() then return end
 
   local k = modules.corelib.g_keyboard

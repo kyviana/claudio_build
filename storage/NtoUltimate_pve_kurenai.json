@@ -1,59 +1,59 @@
 {
-  "enabled": true,
   "spells": [
     {
-      "enabled": false,
       "level": 160,
-      "cooldownUntil": 0,
-      "spell": "kouyoumu"
+      "enabled": false,
+      "spell": "kouyoumu",
+      "cooldownUntil": 0
     },
     {
-      "enabled": false,
       "level": 200,
-      "cooldownUntil": 0,
-      "spell": "jubaku no jutsu"
+      "enabled": false,
+      "spell": "jubaku no jutsu",
+      "cooldownUntil": 0
     },
     {
-      "enabled": false,
       "level": 250,
-      "cooldownUntil": 0,
-      "spell": "botanyuki"
+      "enabled": false,
+      "spell": "botanyuki",
+      "cooldownUntil": 0
     },
     {
-      "enabled": false,
       "level": 275,
-      "cooldownUntil": 0,
-      "spell": "magen hiei no jutsu"
-    },
-    {
-      "enabled": true,
-      "level": 300,
-      "cooldownUntil": 0,
-      "spell": "kaki buyou"
-    },
-    {
-      "enabled": true,
-      "level": 350,
-      "cooldownUntil": 0,
-      "spell": "magen hanagasumi"
-    },
-    {
       "enabled": false,
+      "spell": "magen hiei no jutsu",
+      "cooldownUntil": 0
+    },
+    {
+      "level": 300,
+      "enabled": true,
+      "spell": "kaki buyou",
+      "cooldownUntil": 0
+    },
+    {
+      "level": 350,
+      "enabled": true,
+      "spell": "magen hanagasumi",
+      "cooldownUntil": 0
+    },
+    {
       "level": 400,
-      "cooldownUntil": 0,
-      "spell": "sansai no jutsu"
+      "enabled": false,
+      "spell": "sansai no jutsu",
+      "cooldownUntil": 0
     },
     {
-      "enabled": true,
       "level": 450,
-      "cooldownUntil": 0,
-      "spell": "anshousui"
+      "enabled": true,
+      "spell": "anshousui",
+      "cooldownUntil": 0
     },
     {
-      "enabled": true,
       "level": 500,
-      "cooldownUntil": 0,
-      "spell": "magen jubaku satsu"
+      "enabled": true,
+      "spell": "magen jubaku satsu",
+      "cooldownUntil": 0
     }
-  ]
+  ],
+  "enabled": false
 }

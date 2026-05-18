@@ -1,0 +1,82 @@
+{
+  "fugaSpells": [
+    {
+      "index": 1,
+      "outfitId": 0,
+      "orangeSpell": "",
+      "totalCooldown": 0,
+      "cooldownTotal": 0,
+      "spellCast": "daigouken shofu",
+      "cooldownActive": 0,
+      "onScreen": "daigouken shofu",
+      "enabled": false,
+      "selfHealth": 100,
+      "activeCooldown": 0,
+      "enableTimeSpell": false,
+      "widgetPos": {
+        "y": 0,
+        "x": 0
+      }
+    },
+    {
+      "index": 2,
+      "outfitId": 0,
+      "orangeSpell": "",
+      "totalCooldown": 0,
+      "cooldownTotal": 0,
+      "spellCast": "undo cho kosoku",
+      "cooldownActive": 0,
+      "onScreen": "undo cho kosoku",
+      "enabled": false,
+      "selfHealth": 100,
+      "activeCooldown": 0,
+      "enableTimeSpell": false,
+      "widgetPos": {
+        "y": 0,
+        "x": 0
+      }
+    },
+    {
+      "index": 3,
+      "outfitId": 0,
+      "orangeSpell": "",
+      "totalCooldown": 0,
+      "cooldownTotal": 0,
+      "spellCast": "hirudora",
+      "cooldownActive": 0,
+      "onScreen": "hirudora",
+      "enabled": false,
+      "selfHealth": 100,
+      "activeCooldown": 0,
+      "enableTimeSpell": false,
+      "widgetPos": {
+        "y": 0,
+        "x": 0
+      }
+    },
+    {
+      "index": 4,
+      "outfitId": 0,
+      "orangeSpell": "",
+      "totalCooldown": 0,
+      "cooldownTotal": 0,
+      "spellCast": "suiken",
+      "cooldownActive": 0,
+      "onScreen": "suiken",
+      "enabled": false,
+      "selfHealth": 100,
+      "activeCooldown": 0,
+      "enableTimeSpell": false,
+      "widgetPos": {
+        "y": 0,
+        "x": 0
+      }
+    }
+  ],
+  "comboSpells": [
+
+  ],
+  "keySpells": [
+
+  ]
+}

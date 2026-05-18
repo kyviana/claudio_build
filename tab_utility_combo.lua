@@ -97,6 +97,11 @@ scriptFuncs.readProfile(STORAGE_FILE, function(result)
     end
 end)
 
+-- Carrega burstOrder fixado pelo Auto-Burst se existir
+if storage.fixedBurstOrder and CHARS and CHARS[charClass] then
+    CHARS[charClass].burstOrder = storage.fixedBurstOrder
+end
+
 -- WIDGETS FLUTUANTES
 
 local comboWidgets = {}
@@ -649,6 +654,58 @@ comboInterface.closeButton.onClick = function()
     scriptFuncs.saveProfile(STORAGE_FILE, storageCombo)
 end
 
+-- IMPORTAR DO CADASTRO
+local _CADVOC_COMBO = "/bot/" .. modules.game_bot.contentsPanel.config:getCurrentOption().text .. "/storage/cadastro_vocacoes.json"
+
+UI.Button("Importar do Cadastro (" .. (charClass or "?") .. ")", function()
+    if not g_resources.fileExists(_CADVOC_COMBO) then
+        warn("[Combo] cadastro_vocacoes.json nao encontrado.")
+        return
+    end
+    local ok, data = pcall(function()
+        return json.decode(g_resources.readFileContents(_CADVOC_COMBO))
+    end)
+    if not ok or not data or not data.vocacoes or not data.vocacoes[charClass] then
+        warn("[Combo] Vocacao '" .. (charClass or "?") .. "' nao encontrada no cadastro.")
+        return
+    end
+
+    local jutsus = data.vocacoes[charClass].jutsus or {}
+    local inserted, skipped = 0, 0
+
+    for _, jutsu in ipairs(jutsus) do
+        if jutsu.catDano then
+            local exists = false
+            for _, s in ipairs(storageCombo.comboSpells) do
+                if s.spellCast:lower() == jutsu.spell:lower() then
+                    exists = true
+                    break
+                end
+            end
+            if not exists then
+                table.insert(storageCombo.comboSpells, {
+                    index           = #storageCombo.comboSpells + 1,
+                    spellCast       = jutsu.spell,
+                    onScreen        = jutsu.spell,
+                    orangeSpell     = jutsu.spell,
+                    cooldown        = 0,
+                    distance        = 7,
+                    enableTimeSpell = false,
+                    enabled         = true,
+                    widgetPos       = { x = 10, y = 50 + (#storageCombo.comboSpells * 22) }
+                })
+                inserted = inserted + 1
+            else
+                skipped = skipped + 1
+            end
+        end
+    end
+
+    scriptFuncs.saveProfile(STORAGE_FILE, storageCombo)
+    refreshList()
+    warn("[Combo] Importados: " .. inserted .. " | Ja existiam: " .. skipped .. " | Use ! pra detectar CD de cada jutsu.")
+end)
+
 -- JANELA DE DANO
 
 local dmgWindow = setupUI([[
@@ -738,6 +795,51 @@ macro(500, "Reset Dano [F10]", function()
     damageTracker.totals = {}
     damageTracker.lastSpell = ""
     warn("Dados de dano resetados.")
+end)
+
+-- Auto-Burst: reordena automaticamente por dano médio
+storageCombo.autoBurst = storageCombo.autoBurst or false
+
+local autoBurstMacro
+autoBurstMacro = macro(500, "Auto-Burst", function()
+    if autoBurstMacro:isOff() then
+        storageCombo.autoBurst = false
+        return
+    end
+    storageCombo.autoBurst = true
+end, parent)
+
+-- Botão: fixa a ordem atual como burstOrder permanente
+UI.Button("Fixar Ordem Atual", function()
+    local sorted = {}
+    for spell, data in pairs(damageTracker.totals) do
+        table.insert(sorted, { spell=spell, avg=math.floor(data.total/math.max(1,data.hits)) })
+    end
+    table.sort(sorted, function(a, b) return a.avg > b.avg end)
+
+    if #sorted == 0 then
+        warn("[Auto-Burst] Nenhum dado de dano ainda. Lute primeiro!")
+        return
+    end
+
+    if CHARS and CHARS[charClass] then
+        CHARS[charClass].burstOrder = {}
+        for i, entry in ipairs(sorted) do
+            CHARS[charClass].burstOrder[entry.spell] = i
+        end
+    end
+
+    -- Salva no storage pra persistir
+    storage.fixedBurstOrder = {}
+    for i, entry in ipairs(sorted) do
+        storage.fixedBurstOrder[entry.spell] = i
+    end
+
+    local msg = "[Auto-Burst] Ordem fixada:\n"
+    for i, entry in ipairs(sorted) do
+        msg = msg .. i .. ". " .. entry.spell .. " (media: " .. entry.avg .. ")\n"
+    end
+    warn(msg)
 end)
 
 UI.Separator()
@@ -1163,6 +1265,22 @@ onTextMessage(function(mode, text)
             end
             damageTracker.totals[lastSpell].total = damageTracker.totals[lastSpell].total + dmg
             damageTracker.totals[lastSpell].hits  = damageTracker.totals[lastSpell].hits + 1
+
+            -- Auto-reordena burstOrder por dano médio após cada hit
+            if storageCombo.autoBurst then
+                local sorted = {}
+                for spell, data in pairs(damageTracker.totals) do
+                    if data.hits >= 3 then  -- mínimo 3 hits pra ter média confiável
+                        table.insert(sorted, { spell=spell, avg=math.floor(data.total/data.hits) })
+                    end
+                end
+                table.sort(sorted, function(a, b) return a.avg > b.avg end)
+                if CHARS and CHARS[charClass] then
+                    for i, entry in ipairs(sorted) do
+                        CHARS[charClass].burstOrder[entry.spell] = i
+                    end
+                end
+            end
         end
     end
 end)
@@ -1189,6 +1307,7 @@ comboIcon.burstMode.onClick = function(widget)
     widget:setOn(storageCombo.burstEnabled)
     warn(storageCombo.burstEnabled and "Burst Mode ON" or "Burst Mode OFF")
 end
+
 
 local function getAvgDmg(spellName)
     local data = damageTracker.totals[spellName:lower():trim()]
@@ -1271,6 +1390,22 @@ onTalk(function(name, level, mode, text, channelId, pos)
     local textLower = text:lower():trim()
     for _, spell in ipairs(storageCombo.comboSpells) do
         if textLower == spell.spellCast:lower():trim() then
+            if spell.cooldown == 0 then
+                -- Auto-detecta CD: mede tempo entre primeiro e segundo uso
+                if not spell._firstUseTime then
+                    spell._firstUseTime = now
+                else
+                    local detectedCD = now - spell._firstUseTime
+                    if detectedCD > 500 then  -- ignora usos muito rápidos (spam)
+                        spell.cooldown = detectedCD
+                        spell._firstUseTime = nil
+                        scriptFuncs.saveProfile(STORAGE_FILE, storageCombo)
+                        warn("[Combo] CD detectado para '" .. spell.spellCast .. "': " .. string.format("%.1f", detectedCD/1000) .. "s")
+                    else
+                        spell._firstUseTime = now  -- reinicia medição
+                    end
+                end
+            end
             spell.cooldownSpells = now + spell.cooldown
             break
         end

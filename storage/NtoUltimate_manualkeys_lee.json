@@ -1,0 +1,59 @@
+{
+  "enabled": true,
+  "keys": [
+    {
+      "input": "",
+      "sayText": "concentrate chakra feet",
+      "enabled": false,
+      "mode": "say",
+      "blockOnChat": true
+    },
+    {
+      "input": "",
+      "sayText": "hachimon kaimon",
+      "enabled": false,
+      "mode": "say",
+      "blockOnChat": true
+    },
+    {
+      "input": "Mouse5",
+      "sayText": "suiken",
+      "enabled": true,
+      "mode": "say",
+      "blockOnChat": true,
+      "requireTarget": false
+    },
+    {
+      "input": "Mouse4",
+      "sayText": "hirudora",
+      "enabled": true,
+      "mode": "say",
+      "blockOnChat": true,
+      "requireTarget": false
+    },
+    {
+      "input": "1",
+      "sayText": "undo cho kosoku",
+      "enabled": true,
+      "mode": "say",
+      "blockOnChat": true,
+      "requireTarget": false
+    },
+    {
+      "input": "F",
+      "sayText": "kai",
+      "enabled": true,
+      "mode": "say",
+      "blockOnChat": true,
+      "requireTarget": false
+    },
+    {
+      "input": "X",
+      "sayText": "kawarimi no jutsu",
+      "enabled": true,
+      "mode": "say",
+      "blockOnChat": true,
+      "requireTarget": false
+    }
+  ]
+}

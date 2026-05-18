@@ -1,88 +1,86 @@
 {
-  "keySpells": [
+  "comboSpells": [
 
   ],
-  "comboSpells": [
+  "keySpells": [
 
   ],
   "fugaSpells": [
     {
-      "selfHealth": 1,
-      "cooldownTotal": 50,
-      "isTimeSpell": false,
-      "totalCooldown": 1778591938,
+      "cooldownActive": 7,
+      "enabled": true,
       "activeCooldown": 1778591895,
       "outfitId": 0,
       "enableTimeSpell": true,
-      "onScreen": "Mundo",
       "widgetPos": {
-        "y": 437,
-        "x": 466
+        "x": 466,
+        "y": 437
       },
-      "cooldownActive": 7,
-      "enabled": true,
+      "isTimeSpell": false,
+      "totalCooldown": 1778591938,
+      "index": 1,
       "spellCast": "kokuangyo no jutsu",
       "orangeSpell": "kokuangyo no jutsu",
-      "index": 1
+      "onScreen": "Mundo",
+      "selfHealth": 1,
+      "cooldownTotal": 50
     },
     {
-      "selfHealth": 1,
-      "cooldownTotal": 20,
-      "isTimeSpell": false,
-      "totalCooldown": 1778550970,
-      "activeCooldown": 1778550955,
-      "outfitId": 0,
-      "enableTimeSpell": true,
-      "onScreen": "Bola",
-      "widgetPos": {
-        "y": 454,
-        "x": 468
-      },
       "cooldownActive": 5,
       "enabled": true,
+      "activeCooldown": 1779027335,
+      "outfitId": 0,
+      "enableTimeSpell": true,
+      "widgetPos": {
+        "x": 468,
+        "y": 454
+      },
+      "isTimeSpell": false,
+      "totalCooldown": 1779027350,
+      "index": 2,
       "spellCast": "suiton fuin suigadan",
       "orangeSpell": "suiton fuin suigadan",
-      "index": 2
+      "onScreen": "Bola",
+      "selfHealth": 1,
+      "cooldownTotal": 20
     },
     {
-      "selfHealth": 40,
-      "cooldownTotal": 35,
-      "isTimeSpell": false,
-      "totalCooldown": 1778808597,
-      "activeCooldown": 1778808567,
-      "outfitId": 0,
-      "enableTimeSpell": true,
-      "onScreen": "Kawarimi",
       "cooldownActive": 5,
-      "widgetPos": {
-        "y": 472,
-        "x": 467
-      },
-      "activeByOutfit": false,
       "enabled": true,
+      "activeCooldown": 1779042570,
+      "index": 3,
+      "enableTimeSpell": true,
+      "widgetPos": {
+        "x": 467,
+        "y": 472
+      },
+      "isTimeSpell": false,
+      "totalCooldown": 1779042600,
+      "activeByOutfit": false,
+      "outfitId": 0,
       "spellCast": "kawarimi no jutsu",
       "orangeSpell": "kawarimi",
-      "index": 3
+      "onScreen": "Kawarimi",
+      "selfHealth": 40,
+      "cooldownTotal": 35
     },
     {
-      "selfHealth": 50,
-      "cooldownTotal": 4,
-      "isTimeSpell": false,
-      "totalCooldown": 1778807521,
-      "activeCooldown": 1778807517,
-      "outfitId": 0,
-      "enableTimeSpell": false,
-      "onScreen": "Stack",
-      "cooldownActive": 0,
+      "cooldownActive": 2,
+      "enabled": true,
+      "index": 4,
+      "enableTimeSpell": true,
       "widgetPos": {
-        "y": 492,
-        "x": 464
+        "x": 468,
+        "y": 489
       },
-      "activeByOutfit": false,
-      "enabled": false,
+      "activeByOutfit": true,
+      "outfitId": 1015,
+      "isTimeSpell": false,
       "spellCast": "hiraishingiri",
       "orangeSpell": "hiraishingiri",
-      "index": 4
+      "onScreen": "Stack",
+      "selfHealth": 50,
+      "cooldownTotal": 9
     }
   ]
 }

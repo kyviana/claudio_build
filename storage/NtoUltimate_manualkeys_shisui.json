@@ -2,75 +2,77 @@
   "enabled": true,
   "keys": [
     {
+      "blockOnChat": true,
+      "sayText": "kawarimi no jutsu",
       "enabled": true,
       "mode": "say",
-      "sayText": "kawarimi no jutsu",
-      "blockOnChat": true,
       "input": "X"
     },
     {
-      "enabled": true,
-      "mode": "say",
-      "sayText": "kotoamatsukami",
       "blockOnChat": true,
-      "input": "1"
-    },
-    {
-      "enabled": true,
-      "mode": "say",
-      "sayText": "shunshin no shisui",
-      "blockOnChat": true,
-      "input": "2"
-    },
-    {
-      "enabled": true,
-      "mode": "say",
       "sayText": "sanzengarasu no jutsu",
-      "blockOnChat": true,
+      "enabled": true,
+      "mode": "say",
       "input": "3"
     },
     {
+      "blockOnChat": true,
+      "sayText": "shunfu taito",
       "enabled": true,
       "mode": "say",
-      "sayText": "shunfu taito",
-      "blockOnChat": true,
       "input": "4"
     },
     {
+      "blockOnChat": true,
+      "sayText": "mangekyou susanoo",
       "enabled": true,
       "mode": "say",
-      "sayText": "mangekyou susanoo",
-      "blockOnChat": true,
       "input": "5"
     },
     {
+      "blockOnChat": true,
+      "sayText": "izanagi",
       "enabled": true,
       "mode": "say",
-      "sayText": "izanagi",
-      "blockOnChat": true,
       "input": "Mouse5"
     },
     {
+      "blockOnChat": true,
+      "sayText": "magen shinkarasu",
       "enabled": true,
       "mode": "say",
-      "sayText": "magen shinkarasu",
-      "blockOnChat": true,
       "input": "Mouse4"
     },
     {
+      "blockOnChat": true,
+      "sayText": "kai",
       "enabled": true,
       "mode": "say",
-      "sayText": "kai",
-      "blockOnChat": true,
       "input": "F"
     },
     {
-      "enabled": true,
-      "requireTarget": false,
       "blockOnChat": true,
-      "sayText": "susanoo",
+      "input": "MouseMid",
+      "requireTarget": false,
+      "enabled": true,
       "mode": "say",
-      "input": "MouseMid"
+      "sayText": "susanoo"
+    },
+    {
+      "blockOnChat": true,
+      "input": "1",
+      "enabled": true,
+      "requireTarget": true,
+      "mode": "say",
+      "sayText": "kotoamatsukami"
+    },
+    {
+      "blockOnChat": true,
+      "input": "2",
+      "enabled": true,
+      "requireTarget": true,
+      "mode": "say",
+      "sayText": "shunshin no shisui"
     }
   ]
 }

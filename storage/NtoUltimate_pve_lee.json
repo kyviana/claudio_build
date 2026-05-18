@@ -1,113 +1,95 @@
 {
+  "enabled": false,
   "spells": [
     {
+      "level": 30,
+      "cooldownUntil": 0,
       "spell": "omote renge",
-      "enabled": false,
-      "cooldownUntil": 0,
-      "level": 30
+      "enabled": false
     },
     {
+      "level": 75,
+      "cooldownUntil": 0,
       "spell": "hachimon kaimon",
-      "enabled": false,
-      "cooldownUntil": 0,
-      "level": 75
+      "enabled": false
     },
     {
+      "level": 75,
+      "cooldownUntil": 0,
       "spell": "konoha shofu",
-      "enabled": false,
-      "cooldownUntil": 0,
-      "level": 75
+      "enabled": false
     },
     {
+      "level": 100,
+      "cooldownUntil": 0,
       "spell": "konoha senpu",
-      "enabled": false,
-      "cooldownUntil": 0,
-      "level": 100
+      "enabled": false
     },
     {
+      "level": 130,
+      "cooldownUntil": 0,
       "spell": "konoha daishofu",
-      "enabled": false,
-      "cooldownUntil": 0,
-      "level": 130
+      "enabled": false
     },
     {
+      "level": 150,
+      "cooldownUntil": 0,
       "spell": "gouken",
-      "enabled": false,
-      "cooldownUntil": 0,
-      "level": 150
+      "enabled": false
     },
     {
+      "level": 175,
+      "cooldownUntil": 0,
       "spell": "ura renge",
-      "enabled": true,
-      "cooldownUntil": 0,
-      "level": 175
+      "enabled": false
     },
     {
+      "level": 200,
+      "cooldownUntil": 0,
       "spell": "konoha daisenpu",
-      "enabled": true,
-      "cooldownUntil": 0,
-      "level": 200
+      "enabled": false
     },
     {
+      "level": 200,
+      "cooldownUntil": 0,
       "spell": "kougeki",
-      "enabled": true,
-      "cooldownUntil": 0,
-      "level": 200
+      "enabled": false
     },
     {
+      "level": 250,
+      "cooldownUntil": 0,
       "spell": "furi renge",
-      "enabled": true,
-      "cooldownUntil": 0,
-      "level": 250
+      "enabled": false
     },
     {
+      "level": 300,
+      "cooldownUntil": 0,
       "spell": "konoha daigouken",
-      "enabled": true,
-      "cooldownUntil": 0,
-      "level": 300
+      "enabled": true
     },
     {
+      "level": 325,
+      "cooldownUntil": 0,
       "spell": "kage buyo",
-      "enabled": true,
-      "cooldownUntil": 0,
-      "level": 325
+      "enabled": true
     },
     {
+      "level": 350,
+      "cooldownUntil": 0,
       "spell": "konoha gouken",
-      "enabled": true,
-      "cooldownUntil": 0,
-      "level": 350
+      "enabled": true
     },
     {
+      "level": 400,
+      "cooldownUntil": 0,
       "spell": "asa kujaku",
-      "enabled": true,
-      "cooldownUntil": 0,
-      "level": 400
+      "enabled": true
     },
     {
+      "level": 425,
+      "cooldownUntil": 0,
       "spell": "daigouken shofu",
-      "enabled": true,
-      "cooldownUntil": 0,
-      "level": 425
-    },
-    {
-      "spell": "undo cho kosoku",
-      "enabled": true,
-      "cooldownUntil": 0,
-      "level": 425
-    },
-    {
-      "spell": "hirudora",
-      "enabled": true,
-      "cooldownUntil": 0,
-      "level": 450
-    },
-    {
-      "spell": "suiken",
-      "enabled": true,
-      "cooldownUntil": 0,
-      "level": 475
+      "enabled": true
     }
-  ],
-  "enabled": false
+  ]
 }

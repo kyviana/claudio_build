@@ -2,82 +2,82 @@
   "enabled": true,
   "spells": [
     {
-      "spell": "katon dragon furie",
+      "cooldownUntil": 0,
       "level": 80,
       "enabled": false,
-      "cooldownUntil": 0
+      "spell": "katon dragon furie"
     },
     {
-      "spell": "katon dragon no jutsu",
+      "cooldownUntil": 0,
       "level": 100,
       "enabled": false,
-      "cooldownUntil": 0
+      "spell": "katon dragon no jutsu"
     },
     {
-      "spell": "katon dragon furie no jutsu",
+      "cooldownUntil": 0,
       "level": 130,
       "enabled": false,
-      "cooldownUntil": 0
+      "spell": "katon dragon furie no jutsu"
     },
     {
-      "spell": "sharingan katohenke",
+      "cooldownUntil": 0,
       "level": 130,
       "enabled": false,
-      "cooldownUntil": 0
+      "spell": "sharingan katohenke"
     },
     {
-      "spell": "doton dragon furie",
+      "cooldownUntil": 0,
       "level": 150,
       "enabled": false,
-      "cooldownUntil": 0
+      "spell": "doton dragon furie"
     },
     {
-      "spell": "doton mosayko no jutsu",
+      "cooldownUntil": 0,
       "level": 200,
       "enabled": false,
-      "cooldownUntil": 0
+      "spell": "doton mosayko no jutsu"
     },
     {
-      "spell": "kamui",
+      "cooldownUntil": 0,
       "level": 250,
       "enabled": false,
-      "cooldownUntil": 0
+      "spell": "kamui"
     },
     {
-      "spell": "senka no en",
+      "cooldownUntil": 0,
       "level": 300,
-      "enabled": false,
-      "cooldownUntil": 0
+      "enabled": true,
+      "spell": "senka no en"
     },
     {
-      "spell": "katon daibakuha",
+      "cooldownUntil": 0,
       "level": 350,
       "enabled": true,
-      "cooldownUntil": 0
+      "spell": "katon daibakuha"
     },
     {
-      "spell": "katon katohenke no jutsu",
+      "cooldownUntil": 0,
       "level": 350,
       "enabled": true,
-      "cooldownUntil": 0
+      "spell": "katon katohenke no jutsu"
     },
     {
-      "spell": "katon karyu endan",
+      "cooldownUntil": 0,
       "level": 360,
       "enabled": true,
-      "cooldownUntil": 0
+      "spell": "katon karyu endan"
     },
     {
-      "spell": "katon bakufu ranbu",
+      "cooldownUntil": 0,
       "level": 450,
       "enabled": true,
-      "cooldownUntil": 0
+      "spell": "katon bakufu ranbu"
     },
     {
-      "spell": "gedou shinsei",
+      "cooldownUntil": 0,
       "level": 500,
       "enabled": true,
-      "cooldownUntil": 0
+      "spell": "gedou shinsei"
     }
   ]
 }

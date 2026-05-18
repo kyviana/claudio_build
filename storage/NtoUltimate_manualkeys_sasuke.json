@@ -2,67 +2,67 @@
   "keys": [
     {
       "blockOnChat": true,
-      "input": "X",
       "enabled": true,
       "mode": "say",
+      "input": "X",
       "sayText": "kawarimi no jutsu"
     },
     {
       "blockOnChat": true,
-      "input": "Mouse5",
       "enabled": true,
       "mode": "say",
+      "input": "Mouse5",
       "sayText": "izanagi"
     },
     {
       "blockOnChat": true,
-      "input": "Mouse4",
       "enabled": true,
       "mode": "say",
+      "input": "Mouse4",
       "sayText": "susanoo yasaka"
     },
     {
       "blockOnChat": true,
-      "input": "4",
       "enabled": true,
       "mode": "say",
+      "input": "4",
       "sayText": "kuchyose manda no jutsu"
     },
     {
       "blockOnChat": true,
-      "input": "2",
       "enabled": true,
       "mode": "say",
+      "input": "2",
       "sayText": "chidori raimei"
     },
     {
       "blockOnChat": true,
-      "input": "F",
       "enabled": true,
       "mode": "say",
+      "input": "F",
       "sayText": "kai"
     },
     {
       "blockOnChat": true,
-      "input": "3",
       "enabled": true,
       "mode": "say",
+      "input": "3",
       "sayText": "mangekyou susanoo"
     },
     {
       "blockOnChat": true,
-      "input": "1",
       "enabled": true,
       "mode": "say",
+      "input": "1",
       "sayText": "sharingan illusion"
     },
     {
       "blockOnChat": true,
-      "input": "G",
       "enabled": true,
-      "mode": "say",
-      "sayText": "sharingan illusion",
-      "requireTarget": false
+      "sayText": "susanoo",
+      "requireTarget": false,
+      "input": "G",
+      "mode": "say"
     }
   ],
   "enabled": true

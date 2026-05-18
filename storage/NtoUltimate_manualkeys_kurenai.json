@@ -1,92 +1,92 @@
 {
-  "enabled": true,
   "keys": [
     {
-      "mode": "say",
-      "blockOnChat": true,
-      "enabled": false,
       "sayText": "concentrate chakra feet",
-      "input": ""
+      "blockOnChat": true,
+      "input": "",
+      "enabled": false,
+      "mode": "say"
     },
     {
-      "blockOnChat": true,
       "requireTarget": false,
-      "mode": "say",
-      "enabled": true,
       "sayText": "kawarimi no jutsu",
-      "input": "X"
+      "blockOnChat": true,
+      "input": "X",
+      "enabled": true,
+      "mode": "say"
     },
     {
-      "blockOnChat": true,
       "requireTarget": false,
-      "mode": "say",
-      "enabled": true,
       "sayText": "kai",
-      "input": "F"
+      "blockOnChat": true,
+      "input": "F",
+      "enabled": true,
+      "mode": "say"
     },
     {
-      "blockOnChat": true,
       "requireTarget": false,
-      "mode": "say",
-      "enabled": true,
       "sayText": "magen shinkirou",
-      "input": "Mouse5"
+      "blockOnChat": true,
+      "input": "Mouse5",
+      "enabled": true,
+      "mode": "say"
     },
     {
-      "blockOnChat": true,
       "requireTarget": false,
-      "mode": "say",
-      "enabled": true,
       "sayText": "dai magen shinkirou",
-      "input": "Mouse4"
+      "blockOnChat": true,
+      "input": "Mouse4",
+      "enabled": true,
+      "mode": "say"
     },
     {
-      "blockOnChat": true,
       "requireTarget": false,
-      "mode": "say",
-      "enabled": true,
       "sayText": "genjutsu no hanabira",
-      "input": "1"
+      "blockOnChat": true,
+      "input": "1",
+      "enabled": true,
+      "mode": "say"
     },
     {
-      "blockOnChat": true,
       "requireTarget": false,
-      "mode": "say",
-      "enabled": true,
       "sayText": "undo cho kosoku",
-      "input": "4"
+      "blockOnChat": true,
+      "input": "4",
+      "enabled": true,
+      "mode": "say"
     },
     {
-      "blockOnChat": true,
       "requireTarget": false,
-      "mode": "say",
-      "enabled": true,
       "sayText": "gentei jutsu",
-      "input": "3"
+      "blockOnChat": true,
+      "input": "3",
+      "enabled": true,
+      "mode": "say"
     },
     {
-      "blockOnChat": true,
       "requireTarget": false,
-      "mode": "say",
-      "enabled": true,
       "sayText": "chakura kanchi",
-      "input": "G"
+      "blockOnChat": true,
+      "input": "G",
+      "enabled": true,
+      "mode": "say"
     },
     {
-      "blockOnChat": true,
       "requireTarget": false,
-      "mode": "say",
-      "enabled": true,
       "sayText": "bunshin no jutsu",
-      "input": "5"
+      "blockOnChat": true,
+      "input": "5",
+      "enabled": true,
+      "mode": "say"
     },
     {
-      "blockOnChat": true,
       "requireTarget": true,
-      "mode": "say",
-      "enabled": true,
       "sayText": "sansai no jutsu",
-      "input": "2"
+      "blockOnChat": true,
+      "input": "2",
+      "enabled": true,
+      "mode": "say"
     }
-  ]
+  ],
+  "enabled": true
 }

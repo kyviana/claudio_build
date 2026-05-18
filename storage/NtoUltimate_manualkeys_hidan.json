@@ -1,88 +1,97 @@
 {
   "keys": [
     {
+      "mode": "say",
       "input": "",
-      "mode": "say",
       "blockOnChat": true,
-      "sayText": "concentrate chakra feet",
-      "enabled": false
+      "enabled": false,
+      "sayText": "concentrate chakra feet"
     },
     {
+      "mode": "say",
       "input": "X",
-      "mode": "say",
       "blockOnChat": true,
-      "sayText": "kawarimi no jutsu",
-      "enabled": true
+      "enabled": true,
+      "sayText": "kawarimi no jutsu"
     },
     {
+      "mode": "say",
       "input": "F",
-      "mode": "say",
       "blockOnChat": true,
-      "sayText": "kai",
-      "enabled": true
+      "enabled": true,
+      "sayText": "kai"
     },
     {
+      "mode": "say",
       "input": "Mouse5",
-      "mode": "say",
       "blockOnChat": true,
-      "sayText": "jujutsu shiji no jutsu",
-      "enabled": true
+      "enabled": true,
+      "sayText": "jujutsu shiji no jutsu"
     },
     {
-      "input": "2",
       "mode": "say",
-      "blockOnChat": true,
-      "sayText": "shinigami no tsuiseki",
-      "enabled": true
-    },
-    {
       "input": "Mouse4",
-      "mode": "say",
       "blockOnChat": true,
-      "sayText": "jujutsu shiji hyouketsu",
-      "enabled": true
+      "enabled": true,
+      "sayText": "jujutsu shiji hyouketsu"
     },
     {
+      "mode": "say",
       "input": "1",
-      "mode": "say",
       "blockOnChat": true,
-      "sayText": "juijutsu gisei",
-      "enabled": true
+      "enabled": true,
+      "sayText": "juijutsu gisei"
     },
     {
+      "mode": "say",
       "input": "3",
-      "mode": "say",
       "blockOnChat": true,
-      "sayText": "shi no hikiyose",
-      "enabled": true
+      "enabled": true,
+      "sayText": "shi no hikiyose"
     },
     {
+      "mode": "say",
       "input": "4",
-      "mode": "say",
       "blockOnChat": true,
-      "sayText": "dai shiji hyouketsu",
-      "enabled": true
+      "enabled": true,
+      "sayText": "dai shiji hyouketsu"
     },
     {
+      "mode": "say",
       "input": "H",
-      "mode": "say",
       "blockOnChat": true,
-      "sayText": "atract no jutsu",
-      "enabled": true
+      "enabled": true,
+      "sayText": "atract no jutsu"
     },
     {
+      "mode": "say",
       "input": "5",
-      "mode": "say",
       "blockOnChat": true,
-      "sayText": "kushizashi no kei",
-      "enabled": true
+      "enabled": true,
+      "sayText": "kushizashi no kei"
     },
     {
-      "input": "6",
       "mode": "say",
+      "input": "6",
       "blockOnChat": true,
-      "sayText": "shiki",
-      "enabled": true
+      "enabled": true,
+      "sayText": "shiki"
+    },
+    {
+      "mode": "say",
+      "input": "2",
+      "enabled": true,
+      "blockOnChat": true,
+      "requireTarget": false,
+      "sayText": "shiki kuuin"
+    },
+    {
+      "mode": "say",
+      "input": "MouseMid",
+      "enabled": true,
+      "blockOnChat": true,
+      "requireTarget": false,
+      "sayText": "shinigami no tsuiseki"
     }
   ],
   "enabled": true

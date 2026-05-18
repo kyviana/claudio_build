@@ -4,6 +4,6 @@
   "saikan": false,
   "stack_mob": true,
   "kunai_id": false,
-  "turn_reta": true,
+  "turn_reta": false,
   "bugmap_kunai": false
 }

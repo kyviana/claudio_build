@@ -1,0 +1,97 @@
+{
+  "autoBurst": true,
+  "burstEnabled": false,
+  "comboSpells": [
+    {
+      "cooldown": 245405,
+      "index": 1,
+      "cooldownSpells": 3437468,
+      "orangeSpell": "kage buyo",
+      "distance": 7,
+      "spellCast": "kage buyo",
+      "onScreen": "kage buyo",
+      "enabled": false,
+      "enableTimeSpell": false,
+      "widgetPos": {
+        "y": 270,
+        "x": 10
+      }
+    },
+    {
+      "cooldown": 246962,
+      "index": 2,
+      "cooldownSpells": 3320543,
+      "orangeSpell": "asa kujaku",
+      "distance": 7,
+      "spellCast": "asa kujaku",
+      "onScreen": "asa kujaku",
+      "enabled": false,
+      "enableTimeSpell": false,
+      "widgetPos": {
+        "y": 314,
+        "x": 10
+      }
+    },
+    {
+      "cooldown": 248484,
+      "index": 3,
+      "cooldownSpells": 3320959,
+      "orangeSpell": "daigouken shofu",
+      "distance": 7,
+      "spellCast": "daigouken shofu",
+      "onScreen": "daigouken shofu",
+      "enabled": false,
+      "enableTimeSpell": false,
+      "widgetPos": {
+        "y": 336,
+        "x": 10
+      }
+    },
+    {
+      "cooldown": 1007,
+      "index": 4,
+      "cooldownSpells": 3177045,
+      "orangeSpell": "kougeki",
+      "distance": 7,
+      "spellCast": "kougeki",
+      "onScreen": "kougeki",
+      "enabled": false,
+      "enableTimeSpell": false,
+      "widgetPos": {
+        "y": 336,
+        "x": 10
+      }
+    },
+    {
+      "cooldown": 60000,
+      "index": 5,
+      "cooldownSpells": 3226080,
+      "orangeSpell": "konoha gouken",
+      "distance": 7,
+      "spellCast": "konoha gouken",
+      "onScreen": "konoha gouken",
+      "enabled": false,
+      "enableTimeSpell": false,
+      "widgetPos": {
+        "y": 138,
+        "x": 10
+      }
+    },
+    {
+      "cooldown": 1523,
+      "index": 6,
+      "cooldownSpells": 3178165,
+      "orangeSpell": "konoha shofu",
+      "distance": 7,
+      "spellCast": "konoha shofu",
+      "onScreen": "konoha shofu",
+      "enabled": false,
+      "enableTimeSpell": false,
+      "widgetPos": {
+        "y": 182,
+        "x": 10
+      }
+    }
+  ],
+  "comboEnabled": false
+}

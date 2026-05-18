@@ -1,140 +1,140 @@
 {
-  "keySpells": [
-
-  ],
-  "comboSpells": [
-
-  ],
   "fugaSpells": [
     {
+      "enableTimeSpell": false,
+      "index": 1,
       "spellCast": "shunsui",
       "orangeSpell": "",
       "onScreen": "shunsui",
+      "widgetPos": {
+        "x": 0,
+        "y": 0
+      },
+      "enabled": false,
       "selfHealth": 100,
       "cooldownTotal": 0,
       "cooldownActive": 0,
       "totalCooldown": 0,
       "activeCooldown": 0,
-      "outfitId": 0,
-      "enableTimeSpell": false,
-      "enabled": false,
-      "widgetPos": {
-        "y": 0,
-        "x": 0
-      },
-      "index": 1
+      "outfitId": 0
     },
     {
+      "enableTimeSpell": false,
+      "index": 2,
       "spellCast": "sango renshou",
       "orangeSpell": "",
       "onScreen": "sango renshou",
+      "widgetPos": {
+        "x": 0,
+        "y": 0
+      },
+      "enabled": false,
       "selfHealth": 100,
       "cooldownTotal": 0,
       "cooldownActive": 0,
       "totalCooldown": 0,
       "activeCooldown": 0,
-      "outfitId": 0,
-      "enableTimeSpell": false,
-      "enabled": false,
-      "widgetPos": {
-        "y": 0,
-        "x": 0
-      },
-      "index": 2
+      "outfitId": 0
     },
     {
+      "enableTimeSpell": false,
+      "index": 3,
       "spellCast": "suiton mizukagami no jutsu",
       "orangeSpell": "",
       "onScreen": "suiton mizukagami no jutsu",
+      "widgetPos": {
+        "x": 0,
+        "y": 0
+      },
+      "enabled": false,
       "selfHealth": 100,
       "cooldownTotal": 0,
       "cooldownActive": 0,
       "totalCooldown": 0,
       "activeCooldown": 0,
-      "outfitId": 0,
-      "enableTimeSpell": false,
-      "enabled": false,
-      "widgetPos": {
-        "y": 0,
-        "x": 0
-      },
-      "index": 3
+      "outfitId": 0
     },
     {
+      "enableTimeSpell": true,
       "index": 4,
+      "widgetPos": {
+        "x": 473,
+        "y": 448
+      },
+      "activeByOutfit": false,
       "spellCast": "kawarimi no jutsu",
       "orangeSpell": "kawarimi",
       "onScreen": "kawarimi no jutsu",
-      "widgetPos": {
-        "y": 448,
-        "x": 473
-      },
+      "isTimeSpell": false,
+      "enabled": true,
+      "selfHealth": 60,
       "cooldownTotal": 35,
       "cooldownActive": 10,
       "totalCooldown": 1778282337,
       "activeCooldown": 1778282312,
-      "outfitId": 0,
-      "enableTimeSpell": true,
-      "enabled": true,
-      "isTimeSpell": false,
-      "activeByOutfit": false,
-      "selfHealth": 60
+      "outfitId": 0
     },
     {
+      "enableTimeSpell": true,
       "index": 5,
+      "widgetPos": {
+        "x": 470,
+        "y": 465
+      },
+      "activeByOutfit": false,
       "spellCast": "sanbi modo",
       "orangeSpell": "sanbi modo",
       "onScreen": "sanbi modo",
+      "isTimeSpell": false,
+      "enabled": true,
       "selfHealth": 30,
       "cooldownTotal": 65,
       "cooldownActive": 19,
       "totalCooldown": 1778279901,
       "activeCooldown": 1778279856,
-      "outfitId": 185,
-      "enableTimeSpell": true,
-      "enabled": true,
-      "isTimeSpell": false,
-      "activeByOutfit": false,
-      "widgetPos": {
-        "y": 465,
-        "x": 470
-      }
+      "outfitId": 185
     },
     {
+      "enableTimeSpell": true,
+      "index": 6,
       "spellCast": "suiton suijin no jutsu",
       "orangeSpell": "suiton suijin no jutsu",
       "onScreen": "Block",
-      "widgetPos": {
-        "y": 485,
-        "x": 477
-      },
-      "cooldownTotal": 40,
-      "cooldownActive": 6,
-      "index": 6,
-      "outfitId": 0,
-      "enableTimeSpell": true,
-      "enabled": true,
       "isTimeSpell": false,
       "activeByOutfit": false,
-      "selfHealth": 40
+      "selfHealth": 40,
+      "cooldownTotal": 40,
+      "cooldownActive": 6,
+      "enabled": true,
+      "widgetPos": {
+        "x": 477,
+        "y": 485
+      },
+      "outfitId": 0
     },
     {
+      "enableTimeSpell": true,
+      "index": 7,
       "spellCast": "bunshin no jutsu",
       "orangeSpell": "bunshin no jutsu",
       "onScreen": "bunshin no jutsu",
+      "activeByOutfit": false,
+      "isTimeSpell": false,
       "selfHealth": 90,
       "cooldownTotal": 1,
-      "cooldownActive": 0,
       "widgetPos": {
-        "y": 503,
-        "x": 457
+        "x": 457,
+        "y": 503
       },
-      "outfitId": 0,
-      "enableTimeSpell": true,
       "enabled": true,
-      "isTimeSpell": false,
-      "activeByOutfit": false,
-      "index": 7
+      "cooldownActive": 0,
+      "outfitId": 0
     }
+  ],
+  "comboSpells": [
+
+  ],
+  "keySpells": [
+
   ]
 }

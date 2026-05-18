@@ -1,95 +1,95 @@
 {
   "spells": [
     {
-      "level": 100,
-      "enabled": false,
       "cooldownUntil": 0,
+      "enabled": false,
+      "level": 100,
       "spell": "suiryudan no jutsu"
     },
     {
-      "level": 125,
-      "enabled": false,
       "cooldownUntil": 0,
+      "enabled": false,
+      "level": 125,
       "spell": "suiton suigadan"
     },
     {
-      "level": 175,
-      "enabled": false,
       "cooldownUntil": 0,
+      "enabled": false,
+      "level": 175,
       "spell": "bijuu dama"
     },
     {
-      "level": 180,
-      "enabled": false,
       "cooldownUntil": 0,
+      "enabled": false,
+      "level": 180,
       "spell": "suiton dragon no jutsu"
     },
     {
-      "level": 190,
-      "enabled": false,
       "cooldownUntil": 0,
+      "enabled": false,
+      "level": 190,
       "spell": "suiton suikodan no jutsu"
     },
     {
-      "level": 210,
-      "enabled": false,
       "cooldownUntil": 0,
+      "enabled": false,
+      "level": 210,
       "spell": "suiton suijinheki no jutsu"
     },
     {
-      "level": 240,
-      "enabled": false,
       "cooldownUntil": 0,
+      "enabled": false,
+      "level": 240,
       "spell": "suiton suirou no jutsu"
     },
     {
-      "level": 270,
-      "enabled": false,
       "cooldownUntil": 0,
+      "enabled": false,
+      "level": 270,
       "spell": "suiton suisahan"
     },
     {
-      "level": 325,
-      "enabled": false,
       "cooldownUntil": 0,
+      "enabled": false,
+      "level": 325,
       "spell": "suiton goshokuzame"
     },
     {
-      "level": 350,
-      "enabled": false,
       "cooldownUntil": 0,
+      "enabled": false,
+      "level": 350,
       "spell": "suiton suisha"
     },
     {
-      "level": 375,
-      "enabled": true,
       "cooldownUntil": 0,
+      "enabled": true,
+      "level": 375,
       "spell": "sentou taifui"
     },
     {
-      "level": 400,
-      "enabled": true,
       "cooldownUntil": 0,
+      "enabled": true,
+      "level": 400,
       "spell": "suiton suichu hogeki"
     },
     {
-      "level": 425,
-      "enabled": true,
       "cooldownUntil": 0,
+      "enabled": true,
+      "level": 425,
       "spell": "sango renshou"
     },
     {
-      "level": 475,
-      "enabled": true,
       "cooldownUntil": 0,
+      "enabled": true,
+      "level": 475,
       "spell": "fuuton taifuuikka"
     },
     {
-      "level": 500,
-      "enabled": true,
       "cooldownUntil": 0,
+      "enabled": true,
+      "level": 500,
       "spell": "suiton kaisui houdan"
     }
   ],
-  "enabled": true
+  "enabled": false
 }
